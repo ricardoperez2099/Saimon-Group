@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAiMON GROUP</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- barra de progreso de scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP">
+    <nav class="header__nav">
+      <a href="#hero" class="is-active">Inicio</a>
+      <a href="#ecosistema">Nosotros</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#robotica">Robótica</a>
+      <a href="#ecosistema">Sectores</a>
+      <a href="#proyectos">Partners</a>
+      <a href="#contacto" class="pill-outline">Contacto</a>
+      <button class="lang-toggle" aria-label="Switch to English">
+        <span class="lang-toggle__active">ES</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__inactive">EN</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ SECTION 1 · HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero__bg-wrap">
+      <div class="hero__bg" data-parallax="0.08">
+        <video autoplay muted loop playsinline poster="assets/robotica.png">
+          <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="hero__content">
+      <div class="hero__intro">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Descubre Saimon Group</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h1 class="reveal reveal-d1 hero__title">Innovación que<br>protege el futuro</h1>
+        <p class="reveal reveal-d2 hero__subtitle">Un ecosistema integrado de Seguridad Integral, Inteligencia Artificial, Business Intelligence y Robótica para transformar la seguridad y la gestión inteligente.</p>
+      </div>
+
+      <div class="hero__cards" data-cards-stagger>
+        <a href="#soluciones" class="hero-card hero-card--dark">
+          <div class="hero-card__media">
+            <img src="assets/seguridad.png" alt="Seguridad">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Safe</span>
+              <span class="hero-card__label">Seguridad integral</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/videoanalitica.png" alt="Videoanalítica">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Vision</span>
+              <span class="hero-card__label">Videoanalítica</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#robotica" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/robotica.png" alt="Robótica">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Robotics</span>
+              <span class="hero-card__label">Robótica</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#ecosistema" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/business-intelligence.png" alt="Business Intelligence">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Analytics</span>
+              <span class="hero-card__label">Business Intelligence</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/inteligencia-artificial.jpg" alt="Inteligencia Artificial">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon IA</span>
+              <span class="hero-card__label">Inteligencia Artificial</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/ciudad-inteligente.png" alt="Ciudades inteligentes">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Smart</span>
+              <span class="hero-card__label">Ciudades inteligentes</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ SECTION 2 · ECOSISTEMA ============ -->
+  <section id="ecosistema" class="ecosistema">
+    <div class="scanlines" style="opacity:0.7;"></div>
+    <div class="ecosistema__inner">
+      <div class="ecosistema__header">
+        <div class="eyebrow reveal">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Un ecosistema, no una lista de productos</span>
+        </div>
+        <h2 class="ecosistema__title" data-word-reveal>Inteligencia Artificial, Business Intelligence<br>y Robótica trabajando<br>como uno solo</h2>
+      </div>
+
+      <div class="reveal reveal-d2 from-scale stats">
+        <div class="stat">
+          <div class="stat__num" data-counter="50" data-counter-prefix="+" data-counter-display="+50">+50</div>
+          <div class="stat__label">Centros de Comando<br>y Control construidos</div>
+        </div>
+        <div class="stat stat--bordered">
+          <div class="stat__num" data-counter="22" data-counter-suffix="M+" data-counter-display="22M+">22M<em>+</em></div>
+          <div class="stat__label">Personas beneficiadas en<br>México, EU y Colombia</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-counter="340" data-counter-suffix="+" data-counter-display="340+">340<em>+</em></div>
+          <div class="stat__label">Clientes B2B<br>en Robótica</div>
+        </div>
+      </div>
+
+      <div class="collage">
+        <div class="reveal from-left collage__figures">
+          <div class="collage__big"><img src="assets/corporativa-1.png" alt="Operación corporativa"></div>
+          <div class="collage__small"><img src="assets/corporativa-2.png" alt="Operación corporativa"></div>
+        </div>
+        <div class="reveal reveal-d1 from-right collage__text">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Ecosistema en acción</span>
+          </div>
+          <h3>Tecnología que ya opera en México, EU y Colombia.</h3>
+          <p>Saimon Vision combina Inteligencia Artificial, Business Intelligence y Robótica para equipar a gobiernos y empresas con las herramientas que exige la seguridad moderna — con proyectos activos en México, Estados Unidos y Colombia.</p>
+          <a href="#soluciones" class="pill-outline-lg">
+            Conoce nuestras soluciones
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · ECOSISTEMA TECNOLÓGICO ============ -->
+  <section id="ecosistema-tech" class="eco-tech">
+
+    <!-- Header — scrolls normalmente antes del sticky -->
+    <div class="eco-tech__inner">
+      <div class="eco-tech__header">
+        <div class="reveal eco-tech__badge">
+          <span>Ecosistema</span>
+        </div>
+        <h2 class="eco-tech__title">
+          <span class="reveal reveal-d1">Un ecosistema,</span>
+          <span class="reveal reveal-d2">no una lista de productos</span>
+        </h2>
+        <p class="reveal reveal-d3 eco-tech__lead">Así es como Saimon Vision conecta detección, datos, coordinación y acción en tiempo real.</p>
+        <div class="reveal reveal-d5 eco-tech__arrow">
+          <i data-lucide="arrow-down"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll track: espacio de 400vh que ancla el panel sticky -->
+    <div class="eco-tech__scroll-track" data-eco-scroll-track>
+
+      <!-- Panel sticky -->
+      <div class="eco-tech__sticky-wrap">
+
+        <!-- PASO 01 — texto izquierda, video derecha -->
+        <div class="eco-full-panel is-active" data-eco-panel="0">
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">01</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">01 · Detección</div>
+            <h3 class="eco-step__title">Un dron identifica el incidente</h3>
+            <p class="eco-step__body">Los sistemas de monitoreo detectan una anomalía en campo en tiempo real.</p>
+          </div>
+          <div class="eco-full-panel__visual">
+            <video autoplay muted loop playsinline>
+              <source src="assets/eco-paso-1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- PASO 02 — video izquierda, texto derecha -->
+        <div class="eco-full-panel eco-full-panel--reversed" data-eco-panel="1">
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">02</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">02 · Despacho</div>
+            <h3 class="eco-step__title">Business Intelligence conecta la respuesta</h3>
+            <p class="eco-step__body">Los datos se procesan y enrutan automáticamente al sistema de despacho correspondiente.</p>
+          </div>
+        </div>
+
+        <!-- PASO 03 — texto izquierda, video derecha -->
+        <div class="eco-full-panel" data-eco-panel="2">
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">03</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">03 · Coordinación</div>
+            <h3 class="eco-step__title">Un centro C4/C5 coordina la operación</h3>
+            <p class="eco-step__body">El centro de comando y control organiza y dirige la respuesta con información centralizada.</p>
+          </div>
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- PASO 04 — video izquierda, texto derecha -->
+        <div class="eco-full-panel eco-full-panel--reversed" data-eco-panel="3">
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">04</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">04 · Acción en campo</div>
+            <h3 class="eco-step__title">La robótica ejecuta la respuesta</h3>
+            <p class="eco-step__body">Robots y drones actúan directamente en el lugar del incidente, cerrando el ciclo del ecosistema.</p>
+          </div>
+        </div>
+
+        <!-- Dots de navegación: fijos en la esquina inferior izquierda -->
+        <div class="eco-tech__dots-bar">
+          <button class="eco-dot is-active" data-eco-dot="0" aria-label="Paso 1"></button>
+          <button class="eco-dot" data-eco-dot="1" aria-label="Paso 2"></button>
+          <button class="eco-dot" data-eco-dot="2" aria-label="Paso 3"></button>
+          <button class="eco-dot" data-eco-dot="3" aria-label="Paso 4"></button>
+          <div class="eco-dot__track"><div class="eco-dot__fill" data-eco-fill></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · ROBÓTICA (PREVIEW) ============ -->
+  <section id="robotica" class="robotica">
+    <div class="robotica__bg-stack" data-robo-parallax>
+      <div class="robotica__bg-slide is-active"><img src="assets/robot.seguridad.png" alt="Seguridad"></div>
+      <div class="robotica__bg-slide"><img src="assets/logistica.png" alt="Logística"></div>
+      <div class="robotica__bg-slide"><img src="assets/hoteleria.png" alt="Hotelería"></div>
+      <div class="robotica__bg-slide"><img src="assets/medicina.png" alt="Medicina"></div>
+      <div class="robotica__bg-slide"><img src="assets/alta-carga.png" alt="Alta carga"></div>
+    </div>
+    <div class="robotica__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="robotica__inner">
+      <div class="robotica__text">
+        <div class="reveal eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Robótica</span>
+        </div>
+        <h2 class="reveal reveal-d1 robotica__title">La robótica que ejecuta lo que la IA decide</h2>
+        <p class="reveal reveal-d2 robotica__body">En seguridad, nuestros drones y perros-robot son la primera línea de respuesta en campo. Y ese mismo nivel de precisión ya transforma logística, hotelería, medicina y alta carga — 80+ modelos, 340+ clientes B2B.</p>
+      </div>
+
+      <div class="reveal reveal-d4 robotica__carousel">
+        <div class="robotica__carousel-layer robotica__carousel-layer--1"></div>
+        <div class="robotica__carousel-layer robotica__carousel-layer--2"></div>
+
+        <div class="robotica__card is-active">
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Seguridad</h4></div>
+          <div class="robotica__card-media"><img src="assets/robot.seguridad.png" alt="Seguridad"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Logística</h4></div>
+          <div class="robotica__card-media"><img src="assets/logistica.png" alt="Logística"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Hotelería</h4></div>
+          <div class="robotica__card-media"><img src="assets/hoteleria.png" alt="Hotelería"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Medicina</h4></div>
+          <div class="robotica__card-media"><img src="assets/medicina.png" alt="Medicina"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Alta carga</h4></div>
+          <div class="robotica__card-media"><img src="assets/alta-carga.png" alt="Alta carga"></div>
+        </div>
+      </div>
+
+      <div class="robotica__nav">
+        <span class="robotica__arrow" data-robo-prev><i data-lucide="arrow-left"></i></span>
+        <div class="robotica__dots">
+          <span class="robotica__dot is-active"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+        </div>
+        <span class="robotica__arrow" data-robo-next><i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROBÓTICA · MARCAS + CTA ============ -->
+  <section class="robotica-cta">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span class="marquee__item">Boston Dynamics</span>
+        <span class="marquee__item">ABB Robotics</span>
+        <span class="marquee__item">FANUC</span>
+        <span class="marquee__item">KUKA</span>
+        <span class="marquee__item">Unitree</span>
+        <span class="marquee__item">Keenon</span>
+        <span class="marquee__item">Pudu Robotics</span>
+        <span class="marquee__item">Locus Robotics</span>
+        <span class="marquee__item">MiR</span>
+        <span class="marquee__item">Omron</span>
+        <span class="marquee__item">Yaskawa</span>
+        <!-- duplicado para loop continuo -->
+        <span class="marquee__item">Boston Dynamics</span>
+        <span class="marquee__item">ABB Robotics</span>
+        <span class="marquee__item">FANUC</span>
+        <span class="marquee__item">KUKA</span>
+        <span class="marquee__item">Unitree</span>
+        <span class="marquee__item">Keenon</span>
+        <span class="marquee__item">Pudu Robotics</span>
+        <span class="marquee__item">Locus Robotics</span>
+        <span class="marquee__item">MiR</span>
+        <span class="marquee__item">Omron</span>
+        <span class="marquee__item">Yaskawa</span>
+      </div>
+    </div>
+    <div class="robotica-cta__link">
+      <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="link-cta link-cta--dark">
+        Ver catálogo completo
+        <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 · SOLUCIONES ============ -->
+  <section id="soluciones" class="split-panel">
+    <div class="split-panel__text">
+      <svg class="split-panel__rings" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+        <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+        <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+        <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+      </svg>
+      <div class="split-panel__text-inner">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Nuestras Soluciones</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Más de 30 años de experiencia en tecnología para la seguridad</h2>
+        <a href="#contacto" class="reveal reveal-d3 link-cta" style="margin-top:40px;">
+          Ver soluciones
+          <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="split-panel__media">
+      <div class="split-panel__bg-stack" data-carousel-bg="soluciones">
+        <div class="split-panel__bg-slide is-active"><img src="assets/seguridad-fisica.png" alt="Seguridad física"></div>
+        <div class="split-panel__bg-slide"><img src="assets/inteligencia-datos.png" alt="Inteligencia de datos"></div>
+        <div class="split-panel__bg-slide"><img src="assets/gestion-tecnologica.png" alt="Gestión tecnológica"></div>
+      </div>
+      <div class="split-panel__media-gradient"></div>
+
+      <div class="reveal reveal-d4 floating-card" data-carousel="soluciones">
+        <div class="floating-card__label">Nuestras Soluciones</div>
+        <h4 class="floating-card__title" data-carousel-title></h4>
+        <p class="floating-card__body" data-carousel-body></p>
+        <div class="floating-card__progress">
+          <span class="floating-card__count" data-carousel-count></span>
+          <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · SECTORES ============ -->
+  <section id="sectores" class="sectores">
+    <div class="sectores__intro">
+      <svg class="sectores__intro-rings" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" fill="none">
+        <circle cx="450" cy="440" r="180" stroke="rgba(37,53,109,0.08)" stroke-width="1"></circle>
+        <circle cx="450" cy="440" r="260" stroke="rgba(37,53,109,0.06)" stroke-width="1"></circle>
+        <circle cx="450" cy="440" r="340" stroke="rgba(37,53,109,0.04)" stroke-width="1"></circle>
+      </svg>
+      <div class="reveal sectores__eyebrow">Sectores</div>
+      <h2 class="reveal reveal-d1 sectores__title">Seguridad y tecnología para<br><strong>cada tipo de operación</strong></h2>
+      <p class="reveal reveal-d2 sectores__lead">Integramos tres categorías bajo una misma plataforma: <strong>Seguridad física</strong>, <strong>Inteligencia de datos</strong> y <strong>Gestión tecnológica</strong>. Cada una diseñada para operar de forma coordinada y a escala.</p>
+    </div>
+
+    <!-- panel 1 — privado -->
+    <div class="sectores__panel-wrap split-panel split-panel--rounded">
+      <div class="split-panel__text">
+        <svg class="split-panel__rings" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Sectores</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Seguridad y tecnología para el sector privado</h2>
+          <p class="reveal reveal-d2 split-panel__body">Soluciones de IA, Business Intelligence y Robótica adaptadas a empresas, residenciales, corporativos e industria.</p>
+          <a href="#contacto" class="reveal reveal-d3 link-cta">
+            Conoce más
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg" data-parallax="0.06">
+          <img src="assets/sec-privado.png" alt="Sector privado">
+        </div>
+        <div class="split-panel__media-gradient"></div>
+
+        <div class="reveal reveal-d4 floating-card" data-carousel="privado">
+          <div class="floating-card__label">Nuestros Sub-sectores</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- panel 2 — gobierno -->
+    <div class="sectores__panel-wrap split-panel split-panel--rounded split-panel--reverse">
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg" data-parallax="0.06">
+          <img src="assets/sec-gobierno.png" alt="Sector gobierno">
+        </div>
+        <div class="split-panel__media-gradient split-panel__media-gradient--reverse"></div>
+
+        <div class="reveal reveal-d4 floating-card floating-card--left" data-carousel="gobierno">
+          <div class="floating-card__label">Nuestros Sub-sectores</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-panel__text split-panel__text--reverse" style="background:#1a1c22;">
+        <svg class="split-panel__rings split-panel__rings--right" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner split-panel__text-inner--reverse">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Sectores</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Infraestructura crítica para instituciones de gobierno</h2>
+          <p class="reveal reveal-d2 split-panel__body">Centros de Comando y Control, movilidad urbana y sistemas de seguridad pública diseñados para instituciones gubernamentales.</p>
+          <a href="#contacto" class="reveal reveal-d3 link-cta">
+            Conoce más
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 · PROYECTOS ============ -->
+  <section id="proyectos" class="proyectos">
+    <div class="proyectos__inner">
+      <div class="proyectos__header">
+        <h2 class="reveal proyectos__title">Proyectos Destacados</h2>
+        <a href="#" class="reveal reveal-d4 link-cta link-cta--dark">
+          Ver todos los proyectos
+          <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="proyectos__grid">
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/3.jpg" alt="C5i Estado de México"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
+              <div class="proyecto-card__name">C5i Estado de México</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Cliente</div>
+                <div class="proyecto-card__meta-value">Gobierno del Estado de México</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Fecha / Estatus</div>
+                <div class="proyecto-card__meta-value">En operación</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/1.jpg" alt="C5i Guanajuato"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
+              <div class="proyecto-card__name">C5i Guanajuato</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Cliente</div>
+                <div class="proyecto-card__meta-value">Gobierno de Guanajuato</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Fecha / Estatus</div>
+                <div class="proyecto-card__meta-value">En operación</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/4.jpg" alt="Walmart LATAM Robótica"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
+              <div class="proyecto-card__name">Walmart LATAM — Robótica</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Cliente</div>
+                <div class="proyecto-card__meta-value">Walmart LATAM</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Fecha / Estatus</div>
+                <div class="proyecto-card__meta-value">Cliente B2B activo</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/2.jpg" alt="IMSS Robótica"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
+              <div class="proyecto-card__name">IMSS — Robótica</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Cliente</div>
+                <div class="proyecto-card__meta-value">Instituto Mexicano del Seguro Social</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Fecha / Estatus</div>
+                <div class="proyecto-card__meta-value">Cliente B2B activo</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CIERRE / CONTACTO + FOOTER ============ -->
+  <section id="contacto" class="contacto">
+    <div class="contacto__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/fondo-footer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="contacto__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="contacto__cta">
+      <div class="contacto__cta-inner">
+        <h2 class="reveal contacto__cta-title">¿Listo para transformar<br>tu operación?</h2>
+        <p class="reveal reveal-d4 contacto__cta-body">Agenda una demo y descubre cómo Saimon Vision integra IA, Business Intelligence y Robótica para tu institución o empresa.</p>
+        <a href="#" class="reveal reveal-d3 pill-solid-lg">
+          Solicitar demo
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__divider"></div>
+
+        <div class="footer__nav">
+          <div>
+            <div class="footer__col-title">Saimon Vision</div>
+            <div class="footer__col-links">
+              <a href="#ecosistema">Nosotros</a>
+              <a href="#contacto">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Soluciones</div>
+            <div class="footer__col-links">
+              <a href="#soluciones">Seguridad física</a>
+              <a href="#soluciones">Inteligencia de datos</a>
+              <a href="#soluciones">Gestión tecnológica</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Robótica</div>
+            <div class="footer__col-links">
+              <a href="https://saimonrobotics.com" target="_blank" rel="noopener">Ver catálogo completo</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Sectores</div>
+            <div class="footer__col-links">
+              <a href="#sectores">Privado</a>
+              <a href="#sectores">Gobierno</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Redes</div>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__locations">[Ciudad, País] — pendiente de confirmar</div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <span>© 2026 Saimon Vision — Todos los derechos reservados</span>
+            <a href="#">Aviso de Privacidad (pendiente)</a>
+            <a href="#">Términos de Uso (pendiente)</a>
+          </div>
+          <a href="#hero" class="footer__back-top">Volver arriba <span>↑</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
