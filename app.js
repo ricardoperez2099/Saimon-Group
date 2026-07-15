@@ -100,18 +100,68 @@ document.addEventListener('DOMContentLoaded', () => {
     els.forEach(el => io.observe(el));
   })();
 
-  /* ---------- header: solid on scroll + active nav link ---------- */
+  /* ---------- header: smart scroll (hide↓ / float pill↑) ---------- */
   const header = document.querySelector('.header');
   const navLinks = [...document.querySelectorAll('.header__nav a[href^="#"]')];
   const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  let lastScrollY  = window.scrollY;
+  let ticking      = false;
+
+  const FLOAT_START = 80;   // px: a partir de aquí → pill flotante visible
+
+  // HIDE_START = borde inferior del bloque de stats (188 / 22M+ / 340+)
+  // Se recalcula al resize para que funcione en cualquier resolución
+  let HIDE_START = 480;
+  function calcHideStart() {
+    const stats = document.querySelector('.stats');
+    if (stats) {
+      HIDE_START = stats.getBoundingClientRect().bottom + window.scrollY + 40;
+    }
+  }
+  calcHideStart();
+  window.addEventListener('resize', calcHideStart);
+
   function updateHeader() {
-    const y = window.scrollY;
-    header && header.classList.toggle('header--scrolled', y > 60);
+    const y         = window.scrollY;
+    const delta     = y - lastScrollY;
+    const goingDown = delta > 2;
+    const goingUp   = delta < -2;
+
+    // active nav link
     let activeIdx = 0;
     sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= 80) activeIdx = i; });
     navLinks.forEach((a, i) => a.classList.toggle('is-active', i === activeIdx));
+
+    if (y <= FLOAT_START) {
+      // FASE 1 — al tope: header normal
+      header.classList.remove('header--scrolled', 'header--hidden', 'header--floating');
+
+    } else if (y > FLOAT_START && y <= HIDE_START) {
+      // FASE 2 — zona media: pill flotante siempre visible
+      header.classList.remove('header--hidden');
+      header.classList.add('header--floating', 'header--scrolled');
+
+    } else {
+      // FASE 3 — zona profunda (> HIDE_START)
+      if (goingDown) {
+        // scroll↓: ocultar pill
+        header.classList.add('header--hidden');
+        header.classList.remove('header--floating');
+      } else if (goingUp) {
+        // scroll↑: reaparece como pill
+        header.classList.remove('header--hidden');
+        header.classList.add('header--floating', 'header--scrolled');
+      }
+    }
+
+    lastScrollY = y;
+    ticking = false;
   }
-  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateHeader); ticking = true; }
+  }, { passive: true });
   updateHeader();
 
   /* ---------- reveal on scroll ---------- */
@@ -276,6 +326,119 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: 'Movilidad urbana y penitenciario', body: 'Sistemas de monitoreo para movilidad urbana y seguridad en instalaciones penitenciarias.' }
     ]
   });
+
+  /* ---------- modal de contacto ---------- */
+  (function initContactModal() {
+    const modal     = document.getElementById('contactModal');
+    const form      = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('cfSubmit');
+    const successEl = document.getElementById('cfSuccess');
+    if (!modal || !form) return;
+
+    /* — abrir / cerrar — */
+    function openModal() {
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      // re-render lucide dentro del modal
+      if (window.lucide) window.lucide.createIcons();
+      // foco al primer campo
+      setTimeout(() => {
+        const first = modal.querySelector('input, textarea, button');
+        if (first) first.focus();
+      }, 120);
+    }
+    function closeModal() {
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // triggers de apertura: botón "Contacto" en header + cualquier [data-modal-open="contact"]
+    document.querySelectorAll('[data-modal-open="contact"]').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); openModal(); });
+    });
+
+    // triggers de cierre: backdrop y botón X
+    document.querySelectorAll('[data-modal-close]').forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+
+    // tecla Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+    });
+
+    /* — validación de campos — */
+    function getError(input) {
+      const val = input.value.trim();
+      if (input.required && !val) return 'Este campo es requerido.';
+      if (input.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val))
+        return 'Ingresa un correo electrónico válido.';
+      if (input.type === 'tel' && val) {
+        const digits = val.replace(/\D/g, '');
+        if (digits.length < 10 || digits.length > 15)
+          return 'El teléfono debe tener entre 10 y 15 dígitos.';
+      }
+      return '';
+    }
+
+    function validateField(input) {
+      const msg     = getError(input);
+      const errorEl = input.closest('.contact-form__field').querySelector('.contact-form__error');
+      if (errorEl) errorEl.textContent = msg;
+      input.classList.toggle('is-error', !!msg);
+      return !msg;
+    }
+
+    function validateAll() {
+      const fields = [...form.querySelectorAll('input, textarea')];
+      return fields.map(f => (f.required || f.value.trim()) ? validateField(f) : true)
+                   .every(Boolean);
+    }
+
+    // validación en tiempo real
+    form.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('blur', () => validateField(input));
+      input.addEventListener('input', () => {
+        if (input.classList.contains('is-error')) validateField(input);
+      });
+    });
+
+    /* — envío — */
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!validateAll()) return;
+
+      // estado loading
+      submitBtn.setAttribute('data-loading', 'true');
+      submitBtn.disabled = true;
+      successEl.textContent = '';
+
+      // simulación de llamada API (reemplazar por fetch real)
+      await new Promise(r => setTimeout(r, 1800));
+
+      // éxito
+      submitBtn.removeAttribute('data-loading');
+      submitBtn.disabled = false;
+      form.reset();
+      successEl.textContent = '✓ ¡Solicitud enviada! Te contactaremos en menos de 24 horas.';
+      setTimeout(() => { successEl.textContent = ''; }, 6000);
+    });
+  })();
+
+  /* ---------- robótica: reveal al entrar en viewport ---------- */
+  (function initRoboticaReveal() {
+    const section = document.querySelector('.robotica');
+    if (!section) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        section.classList.add('in-view');
+        io.disconnect();
+      }
+    }, { threshold: 0.08 });
+    io.observe(section);
+    // fallback
+    setTimeout(() => section.classList.add('in-view'), 2000);
+  })();
 
   /* ---------- robótica: parallax de fondo ---------- */
   (function initRoboticaParallax() {

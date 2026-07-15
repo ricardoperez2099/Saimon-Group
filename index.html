@@ -22,7 +22,7 @@
       <a href="#robotica">Robótica</a>
       <a href="#ecosistema">Sectores</a>
       <a href="#proyectos">Partners</a>
-      <a href="#contacto" class="pill-outline">Contacto</a>
+      <a href="#contacto" class="pill-outline" data-modal-open="contact">Contacto</a>
       <button class="lang-toggle" aria-label="Switch to English">
         <span class="lang-toggle__active">ES</span>
         <span class="lang-toggle__sep">/</span>
@@ -157,7 +157,7 @@
 
       <div class="reveal reveal-d2 from-scale stats">
         <div class="stat">
-          <div class="stat__num" data-counter="50" data-counter-prefix="+" data-counter-display="+50">+50</div>
+          <div class="stat__num" data-counter="188" data-counter-display="188">188</div>
           <div class="stat__label">Centros de Comando<br>y Control construidos</div>
         </div>
         <div class="stat stat--bordered">
@@ -195,7 +195,7 @@
   <section id="ecosistema-tech" class="eco-tech">
 
     <!-- Header — scrolls normalmente antes del sticky -->
-    <div class="eco-tech__inner">
+    <div class="eco-tech__inner reveal from-scale">
       <div class="eco-tech__header">
         <div class="reveal eco-tech__badge">
           <span>Ecosistema</span>
@@ -227,6 +227,10 @@
             <div class="eco-step__label">01 · Detección</div>
             <h3 class="eco-step__title">Un dron identifica el incidente</h3>
             <p class="eco-step__body">Los sistemas de monitoreo detectan una anomalía en campo en tiempo real.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Conocer más</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
           </div>
           <div class="eco-full-panel__visual">
             <video autoplay muted loop playsinline>
@@ -250,6 +254,10 @@
             <div class="eco-step__label">02 · Despacho</div>
             <h3 class="eco-step__title">Business Intelligence conecta la respuesta</h3>
             <p class="eco-step__body">Los datos se procesan y enrutan automáticamente al sistema de despacho correspondiente.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Conocer más</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
           </div>
         </div>
 
@@ -263,6 +271,10 @@
             <div class="eco-step__label">03 · Coordinación</div>
             <h3 class="eco-step__title">Un centro C4/C5 coordina la operación</h3>
             <p class="eco-step__body">El centro de comando y control organiza y dirige la respuesta con información centralizada.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Conocer más</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
           </div>
           <div class="eco-full-panel__visual">
             <video muted loop playsinline>
@@ -286,6 +298,10 @@
             <div class="eco-step__label">04 · Acción en campo</div>
             <h3 class="eco-step__title">La robótica ejecuta la respuesta</h3>
             <p class="eco-step__body">Robots y drones actúan directamente en el lugar del incidente, cerrando el ciclo del ecosistema.</p>
+            <a href="#robotica" class="eco-step__cta link-cta link-cta--dark">
+              <span>Conocer más</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
           </div>
         </div>
 
@@ -466,7 +482,7 @@
         <div class="split-panel__text-inner">
           <div class="reveal eyebrow">
             <span class="eyebrow-line"></span>
-            <span class="eyebrow-label">Sectores</span>
+            <span class="eyebrow-label">Sector Privado</span>
           </div>
           <h2 class="reveal reveal-d1 split-panel__title">Seguridad y tecnología para el sector privado</h2>
           <p class="reveal reveal-d2 split-panel__body">Soluciones de IA, Business Intelligence y Robótica adaptadas a empresas, residenciales, corporativos e industria.</p>
@@ -523,7 +539,7 @@
         <div class="split-panel__text-inner split-panel__text-inner--reverse">
           <div class="reveal eyebrow">
             <span class="eyebrow-line"></span>
-            <span class="eyebrow-label">Sectores</span>
+            <span class="eyebrow-label">Sector Gobierno</span>
           </div>
           <h2 class="reveal reveal-d1 split-panel__title">Infraestructura crítica para instituciones de gobierno</h2>
           <p class="reveal reveal-d2 split-panel__body">Centros de Comando y Control, movilidad urbana y sistemas de seguridad pública diseñados para instituciones gubernamentales.</p>
@@ -631,6 +647,46 @@
     </div>
   </section>
 
+  <!-- ============ SECTION · PARTNERS TECNOLÓGICOS ============ -->
+  <section class="partners">
+    <div class="partners__inner">
+      <div class="reveal eyebrow" style="justify-content:center;">
+        <span class="eyebrow-line eyebrow-line--dark"></span>
+        <span class="eyebrow-label eyebrow-label--muted">PARTNERS TECNOLÓGICOS</span>
+        <span class="eyebrow-line eyebrow-line--dark"></span>
+      </div>
+    </div>
+    <div class="partners__marquee">
+      <div class="partners__track">
+        <span class="partners__logo">Milestone</span>
+        <span class="partners__logo">Hanwha Vision</span>
+        <span class="partners__logo">Axis Communications</span>
+        <span class="partners__logo">Genetec</span>
+        <span class="partners__logo">Hikvision</span>
+        <span class="partners__logo">Dahua</span>
+        <span class="partners__logo">Motorola Solutions</span>
+        <span class="partners__logo">Cisco Meraki</span>
+        <span class="partners__logo">Dell Technologies</span>
+        <span class="partners__logo">NVIDIA</span>
+        <span class="partners__logo">Boston Dynamics</span>
+        <span class="partners__logo">Unitree</span>
+        <!-- duplicado para loop continuo -->
+        <span class="partners__logo">Milestone</span>
+        <span class="partners__logo">Hanwha Vision</span>
+        <span class="partners__logo">Axis Communications</span>
+        <span class="partners__logo">Genetec</span>
+        <span class="partners__logo">Hikvision</span>
+        <span class="partners__logo">Dahua</span>
+        <span class="partners__logo">Motorola Solutions</span>
+        <span class="partners__logo">Cisco Meraki</span>
+        <span class="partners__logo">Dell Technologies</span>
+        <span class="partners__logo">NVIDIA</span>
+        <span class="partners__logo">Boston Dynamics</span>
+        <span class="partners__logo">Unitree</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CIERRE / CONTACTO + FOOTER ============ -->
   <section id="contacto" class="contacto">
     <div class="contacto__bg">
@@ -645,7 +701,7 @@
       <div class="contacto__cta-inner">
         <h2 class="reveal contacto__cta-title">¿Listo para transformar<br>tu operación?</h2>
         <p class="reveal reveal-d4 contacto__cta-body">Agenda una demo y descubre cómo Saimon Vision integra IA, Business Intelligence y Robótica para tu institución o empresa.</p>
-        <a href="#" class="reveal reveal-d3 pill-solid-lg">
+        <a href="#" class="reveal reveal-d3 pill-solid-lg" data-modal-open="contact">
           Solicitar demo
           <i data-lucide="arrow-right"></i>
         </a>
@@ -707,6 +763,103 @@
       </div>
     </div>
   </section>
+
+  <!-- ============ MODAL DE CONTACTO ============ -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel">
+
+      <!-- Cerrar -->
+      <button class="contact-modal__close" data-modal-close aria-label="Cerrar">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Panel izquierdo — branding -->
+      <div class="contact-modal__left">
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="contact-modal__logo">
+        <div class="contact-modal__left-body">
+          <h2 id="modalTitle" class="contact-modal__title">Solicita tu demo</h2>
+          <p class="contact-modal__subtitle">Cuéntanos sobre tu proyecto y un especialista te contactará en menos de 24 horas.</p>
+          <div class="contact-modal__info">
+            <div class="contact-modal__info-item">
+              <i data-lucide="phone" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Teléfono</span>
+                <span class="contact-modal__info-value">+52 55 1234 5678</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="mail" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Correo</span>
+                <span class="contact-modal__info-value">contacto@saimongroup.com</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="map-pin" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Ubicación</span>
+                <span class="contact-modal__info-value">Av. Paseo de la Reforma 250,<br>Col. Juárez, CDMX, México</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel derecho — formulario -->
+      <div class="contact-modal__right">
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-name">Nombre completo</label>
+              <input class="contact-form__input" type="text" id="cf-name" name="nombre"
+                     placeholder="Tu nombre completo" required autocomplete="name">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-company">Empresa / Institución</label>
+              <input class="contact-form__input" type="text" id="cf-company" name="empresa"
+                     placeholder="Nombre de tu organización" required autocomplete="organization">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Correo electrónico</label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email"
+                     placeholder="tu@empresa.com" required autocomplete="email">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-tel">Teléfono</label>
+              <input class="contact-form__input" type="tel" id="cf-tel" name="telefono"
+                     placeholder="+52 55 0000 0000" required autocomplete="tel">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-msg">Mensaje <span class="contact-form__optional">(opcional)</span></label>
+            <textarea class="contact-form__input contact-form__textarea" id="cf-msg" name="mensaje"
+                      rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+          </div>
+
+          <button type="submit" class="contact-form__submit" id="cfSubmit">
+            <span class="contact-form__submit-text">Enviar solicitud</span>
+            <svg class="contact-form__spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 20"/>
+            </svg>
+          </button>
+
+          <p class="contact-form__success" id="cfSuccess" aria-live="polite"></p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
