@@ -1052,6 +1052,15 @@ img { display: block; max-width: 100%; }
 .legado__stat { font-size: clamp(56px, 7vw, 96px); font-weight: 900; letter-spacing: -0.03em; line-height: 1; color: #fff; margin-bottom: 10px; }
 .legado__stat-caption { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 30px; }
 .legado__text p { margin: 0; font-size: 18px; line-height: 1.75; color: rgba(255,255,255,0.82); }
+.legado__partner-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 280px;
+  margin-top: 28px;
+  object-fit: contain;
+  opacity: 0.9;
+}
 
 .legado__collage { position: relative; min-height: 440px; }
 .legado__img-main { position: relative; width: 90%; height: 400px; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 50px rgba(15,22,51,0.5); }
