@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAiMON GROUP — Nosotros</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="page-nosotros">
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <a href="index.html"><img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP"></a>
+    <nav class="header__nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html" class="is-active">Nosotros</a>
+      <a href="index.html#soluciones" data-megamenu-trigger="soluciones">Soluciones</a>
+      <a href="index.html#robotica" data-megamenu-trigger="robotica">Robótica</a>
+      <a href="index.html#sectores" data-megamenu-trigger="sectores">Sectores</a>
+      <a href="#" class="pill-outline" data-modal-open="contact">Contacto</a>
+      <a href="about.html" class="lang-toggle" aria-label="Switch to English">
+        <span class="lang-toggle__active">ES</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__inactive">EN</span>
+      </a>
+    </nav>
+    <button class="header__burger" aria-label="Abrir menú" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="index.html" class="mobile-nav__link">Inicio</a>
+      <a href="nosotros.html" class="mobile-nav__link mobile-nav__link--active">Nosotros</a>
+      <a href="index.html#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Soluciones</a>
+      <a href="index.html#robotica" class="mobile-nav__link" data-megamenu-trigger="robotica" data-mobile-close>Robótica</a>
+      <a href="index.html#sectores" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectores</a>
+      <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contacto</a>
+      <div class="mobile-nav__footer">
+        <a href="about.html" class="lang-toggle" aria-label="Switch to English">
+          <span class="lang-toggle__active">ES</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__inactive">EN</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ SOLUCIONES ============ -->
+  <div class="megamenu" id="megamenu-soluciones" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="index.html#soluciones" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/seguridad-fisica.png" alt="Saimon Public Safety"></div>
+          <span class="megamenu__thumb-label">SAIMON PUBLIC SAFETY <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="index.html#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="Saimon Robotics"></div>
+          <span class="megamenu__thumb-label">SAIMON ROBOTICS <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON PUBLIC SAFETY</span>
+          <a href="index.html#soluciones" data-megamenu-close>Seguridad integral</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON VISION</span>
+          <a href="index.html#soluciones" data-megamenu-close>Videoanalítica</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ROBOTICS</span>
+          <a href="index.html#robotica" data-megamenu-close>Robótica</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ANALYTICS</span>
+          <a href="index.html#soluciones" data-megamenu-close>Business Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON IA</span>
+          <a href="index.html#soluciones" data-megamenu-close>Inteligencia Artificial</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON SMART CITIES</span>
+          <a href="index.html#soluciones" data-megamenu-close>Ciudades inteligentes</a>
+        </div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ SECTORES ============ -->
+  <div class="megamenu" id="megamenu-sectores" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="index.html#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-privado.png" alt="Sector Privado"></div>
+          <span class="megamenu__thumb-label">PRIVADO <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="index.html#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-gobierno.png" alt="Sector Gobierno"></div>
+          <span class="megamenu__thumb-label">GOBIERNO <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="index.html#sectores" data-megamenu-close>Corporativo</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="index.html#sectores" data-megamenu-close>Residencial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="index.html#sectores" data-megamenu-close>Comercial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="index.html#sectores" data-megamenu-close>Seguridad Pública</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="index.html#sectores" data-megamenu-close>Salud</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="index.html#sectores" data-megamenu-close>Control de Aguas</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="index.html#sectores" data-megamenu-close>Sistema Penitenciario</a></div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ ROBÓTICA ============ -->
+  <div class="megamenu" id="megamenu-robotica" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="index.html#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/robot.seguridad.png" alt="Catálogo RoboSector"></div>
+          <span class="megamenu__thumb-label">CATÁLOGO ROBOSECTOR <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="index.html#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="SaimonIQ"></div>
+          <span class="megamenu__thumb-label">SAIMONIQ <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">CATÁLOGO</span><a href="index.html#robotica" data-megamenu-close>RoboSector — 9 sectores, 80+ modelos</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">IMPLEMENTACIÓN</span><a href="index.html#robotica" data-megamenu-close>SaimonDeploy — consultoría e integración</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">SERVICIOS</span><a href="index.html#robotica" data-megamenu-close>RoboAlliance — renta, capacitación y soporte</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GESTIÓN</span><a href="index.html#robotica" data-megamenu-close>SaimonIQ — control de flota en tiempo real</a></div>
+        <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="megamenu__catalog-btn">Ver catálogo completo <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 1 · HERO ============ -->
+  <section id="nos-hero" class="nos-hero">
+    <div class="nos-hero__bg" data-parallax="0.08">
+      <img src="assets/nos-hero-bg.jpg" alt="Equipo Saimon Vision">
+    </div>
+    <div class="nos-hero__overlay"></div>
+    <div class="scanlines"></div>
+    <div class="nos-hero__content">
+      <div class="eyebrow reveal">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-label">Nosotros</span>
+      </div>
+      <h1 class="nos-hero__title" data-word-reveal>Más de 30 años protegiendo lo que más importa</h1>
+      <p class="reveal nos-hero__subtitle">Saimon Group, empresa mexicana líder en soluciones integrales de tecnología para la seguridad, con presencia en todo el continente americano.</p>
+    </div>
+  </section>
+
+  <!-- ============ 2 · TECNOLOGÍA CON PROPÓSITO ============ -->
+  <section class="proposito">
+    <div class="proposito__grid">
+      <div class="reveal from-left proposito__text">
+        <div class="eyebrow eyebrow--dark">
+          <span class="eyebrow-line eyebrow-line--dark"></span>
+          <span class="eyebrow-label eyebrow-label--dark">Con integridad en el centro</span>
+        </div>
+        <h2 class="proposito__title">Tecnología con propósito</h2>
+        <p>En un entorno que exige respuestas inmediatas e inteligentes, incorporamos lo más avanzado en Inteligencia Artificial, Machine Learning y Generative AI para crear sistemas que transforman la forma de prevenir, gestionar y resolver emergencias.</p>
+        <p>Nuestras soluciones procesan grandes volúmenes de datos en segundos, identifican patrones no visibles y anticipan riesgos, proporcionando a autoridades y centros de emergencia herramientas estratégicas para actuar con precisión, eficiencia y confianza.</p>
+      </div>
+      <div class="reveal from-right proposito__media">
+        <img src="assets/nos-proposito-img.jpg" alt="Centro de monitoreo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · LEGADO ============ -->
+  <section class="legado">
+    <div class="scanlines scanlines--light"></div>
+    <div class="legado__grid">
+      <div class="reveal from-left legado__text">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Nuestro legado</span>
+        </div>
+        <div class="legado__stat" data-counter="30" data-counter-prefix="+" data-counter-suffix=" años" data-counter-display="+30 años">+30 años</div>
+        <div class="legado__stat-caption">de experiencia en tecnología para la seguridad</div>
+        <p>Saimon Group nació de la necesidad de dar respuesta a los retos crecientes de seguridad en México, en colaboración con Seguritech. Hoy, con certificaciones ISO 9000, PMI e ITIL, hemos construido más de 188 Centros de Comando y Control, beneficiando a 22 millones de personas en México, Estados Unidos y Colombia.</p>
+      </div>
+      <div class="reveal from-right legado__collage">
+        <div class="legado__img-main">
+          <img src="assets/_C5H8479.jpg" alt="Centro de comando Saimon">
+        </div>
+        <div class="legado__img-small">
+          <img src="assets/30-1.jpg" alt="Instalación Saimon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · TIMELINE ============ -->
+  <section class="timeline">
+    <div class="timeline__top">
+      <h2 class="reveal timeline__heading" data-word-reveal>Nuestra historia</h2>
+      <div class="timeline__controls reveal">
+        <button class="circle-btn" data-tl-prev aria-label="Anterior"><i data-lucide="arrow-left"></i></button>
+        <button class="circle-btn" data-tl-next aria-label="Siguiente"><i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="timeline__track" data-tl-track>
+      <div class="timeline__card">
+        <span class="timeline__card-year">1998</span>
+        <h3 class="timeline__card-title">Los primeros pasos</h3>
+        <p class="timeline__card-body">Fundación de la empresa como Seguritech por Simon Picker, comenzando operaciones de seguridad electrónica.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+      <div class="timeline__card">
+        <span class="timeline__card-year">2005</span>
+        <h3 class="timeline__card-title">Primer centro C4</h3>
+        <p class="timeline__card-body">Construcción del primer Centro de Comando, Control, Comunicaciones y Cómputo para gobierno estatal.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+      <div class="timeline__card">
+        <span class="timeline__card-year">2012</span>
+        <h3 class="timeline__card-title">Expansión nacional</h3>
+        <p class="timeline__card-body">Presencia en más de 20 estados del país con infraestructura de videovigilancia y centros de monitoreo.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+      <div class="timeline__card">
+        <span class="timeline__card-year">2019</span>
+        <h3 class="timeline__card-title">Una nueva visión</h3>
+        <p class="timeline__card-body">Transición a Saimon Group, integrando IA, Business Intelligence y Robótica como un solo ecosistema.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+      <div class="timeline__card">
+        <span class="timeline__card-year">2023</span>
+        <h3 class="timeline__card-title">Expansión internacional</h3>
+        <p class="timeline__card-body">Operaciones consolidadas en México, Estados Unidos y Colombia con más de 188 proyectos entregados.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+      <div class="timeline__card">
+        <span class="timeline__card-year">Hoy</span>
+        <h3 class="timeline__card-title">Un ecosistema en expansión</h3>
+        <p class="timeline__card-body">Robótica, IA y analítica de datos convergiendo en un solo ecosistema para cualquier industria.</p>
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · MISIÓN Y VISIÓN ============ -->
+  <section class="mv">
+    <div class="mv__bg" data-parallax="0.12"><img src="assets/fondo-1.jpg" alt=""></div>
+    <div class="mv__bg-overlay"></div>
+    <div class="mv__intro">
+      <span class="reveal mv__eyebrow">Nuestra brújula</span>
+      <h2 class="reveal mv__title" data-word-reveal>Sabemos hacia dónde vamos</h2>
+    </div>
+    <div class="mv__grid">
+      <div class="reveal from-left mv__card">
+        <div class="mv__card-media">
+          <img src="assets/mision.png" alt="Misión">
+        </div>
+        <div class="mv__card-footer">
+          <h3>Misión</h3>
+        </div>
+        <p>Superar las expectativas de nuestros clientes a través de desarrollos tecnológicos de vanguardia en Inteligencia Artificial, Business Intelligence y Robótica.</p>
+      </div>
+      <div class="reveal from-right mv__card">
+        <div class="mv__card-media">
+          <img src="assets/vision.png" alt="Visión">
+        </div>
+        <div class="mv__card-footer">
+          <h3>Visión</h3>
+        </div>
+        <p>Ser el ecosistema tecnológico de referencia en América para la prevención, gestión y resolución de emergencias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · EQUIPO DIRECTIVO ============ -->
+  <section class="team">
+    <div class="team__header">
+      <div class="eyebrow eyebrow--dark reveal">
+        <span class="eyebrow-line eyebrow-line--dark"></span>
+        <span class="eyebrow-label eyebrow-label--muted">Nuestro equipo</span>
+      </div>
+      <h2 class="reveal">Liderazgo con visión de futuro</h2>
+      <p class="reveal">La fortaleza de Saimon Group está en las personas que la impulsan.</p>
+    </div>
+    <div class="team__grid">
+      <div class="reveal team-card">
+        <div class="team-card__media"><img src="assets/simon-picker.png" alt="Simon Picker"></div>
+        <div class="team-card__body"><div class="team-card__name">Simon Picker</div><div class="team-card__role">Presidente & Fundador</div></div>
+      </div>
+      <div class="reveal team-card">
+        <div class="team-card__media"><img src="assets/ariel-picker.png" alt="Ariel Picker"></div>
+        <div class="team-card__body"><div class="team-card__name">Ariel Picker</div><div class="team-card__role">Director General</div></div>
+      </div>
+      <div class="reveal team-card">
+        <div class="team-card__media"><div class="placeholder-img">Fotografía real — pendiente</div></div>
+        <div class="team-card__body"><div class="team-card__name">[Nombre Apellido]</div><div class="team-card__role">Director de Operaciones</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA + FOOTER ============ -->
+  <section class="contacto">
+    <div class="contacto__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/fondo-footer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="contacto__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="contacto__cta">
+      <div class="contacto__cta-inner">
+        <h2 class="reveal contacto__cta-title">¿Listo para transformar<br>tu operación?</h2>
+        <p class="reveal reveal-d4 contacto__cta-body">Agenda una demo y descubre cómo Saimon Group integra IA, Business Intelligence y Robótica para tu institución o empresa.</p>
+        <a href="#" class="reveal reveal-d3 pill-solid-lg" data-modal-open="contact">
+          Solicitar demo
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__divider"></div>
+        <div class="footer__nav">
+          <div>
+            <div class="footer__col-title">Saimon Group</div>
+            <div class="footer__col-links">
+              <a href="nosotros.html">Nosotros</a>
+              <a href="#" data-modal-open="contact">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Soluciones</div>
+            <div class="footer__col-links">
+              <a href="index.html#soluciones">Seguridad física</a>
+              <a href="index.html#soluciones">Inteligencia de datos</a>
+              <a href="index.html#soluciones">Gestión tecnológica</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Robótica</div>
+            <div class="footer__col-links">
+              <a href="https://saimonrobotics.com" target="_blank" rel="noopener">Ver catálogo completo</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Sectores</div>
+            <div class="footer__col-links">
+              <a href="index.html#sectores">Privado</a>
+              <a href="index.html#sectores">Gobierno</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Redes</div>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <span>© 2026 Saimon Group — Todos los derechos reservados</span>
+            <a href="#">Aviso de Privacidad (pendiente)</a>
+            <a href="#">Términos de Uso (pendiente)</a>
+          </div>
+          <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="footer__partner-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODAL DE CONTACTO ============ -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel">
+      <button class="contact-modal__close" data-modal-close aria-label="Cerrar">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="contact-modal__left">
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="contact-modal__logo">
+        <div class="contact-modal__left-body">
+          <h2 id="modalTitle" class="contact-modal__title">Solicita tu demo</h2>
+          <p class="contact-modal__subtitle">Cuéntanos sobre tu proyecto y un especialista te contactará en menos de 24 horas.</p>
+          <div class="contact-modal__info">
+            <div class="contact-modal__info-item">
+              <i data-lucide="phone" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Teléfono</span>
+                <span class="contact-modal__info-value">+52 (55) 5083 0000</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="mail" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Correo</span>
+                <span class="contact-modal__info-value">contacto@saimongroup.com</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="map-pin" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Ubicación</span>
+                <span class="contact-modal__info-value">Bosque de Alisos 45B | Palo Alto (Granjas), CDMX, México.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-modal__right">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-name">Nombre completo</label>
+              <input class="contact-form__input" type="text" id="cf-name" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-company">Empresa / Institución</label>
+              <input class="contact-form__input" type="text" id="cf-company" name="empresa" placeholder="Nombre de tu organización" required autocomplete="organization">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Correo electrónico</label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-tel">Teléfono</label>
+              <input class="contact-form__input" type="tel" id="cf-tel" name="telefono" placeholder="+52 55 0000 0000" required autocomplete="tel">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-msg">Mensaje <span class="contact-form__optional">(opcional)</span></label>
+            <textarea class="contact-form__input contact-form__textarea" id="cf-msg" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+          </div>
+          <button type="submit" class="contact-form__submit" id="cfSubmit">
+            <span class="contact-form__submit-text">Enviar solicitud</span>
+            <svg class="contact-form__spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 20"/>
+            </svg>
+          </button>
+          <p class="contact-form__success" id="cfSuccess" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>

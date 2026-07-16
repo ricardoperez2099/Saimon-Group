@@ -45,11 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (fallbackMs) setTimeout(() => el.classList.add('words-visible'), fallbackMs);
   }
 
-  // Hero title (ya visible al cargar → fallback rápido)
+  // Hero titles (ya visibles al cargar → fallback rápido)
   applyWordReveal(document.querySelector('.hero__title'), { fallbackMs: 600 });
+  applyWordReveal(document.querySelector('.nos-hero__title'), { fallbackMs: 600 });
 
   // Títulos con data-word-reveal (activados por scroll)
-  document.querySelectorAll('[data-word-reveal]').forEach(el => applyWordReveal(el));
+  document.querySelectorAll('[data-word-reveal]').forEach(el => {
+    if (el.classList.contains('nos-hero__title')) return;
+    applyWordReveal(el);
+  });
 
   /* ---------- hero cards: stagger al cargar ---------- */
   (function initHeroCardsStagger() {
@@ -102,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- header: smart scroll (hide↓ / float pill↑) ---------- */
   const header = document.querySelector('.header');
-  const navLinks = [...document.querySelectorAll('.header__nav a[href^="#"]')];
-  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const navLinks = [...document.querySelectorAll('.header__nav a[href^="#"]')].filter(a => a.getAttribute('href').length > 1);
+  const sections = navLinks.map(a => { try { return document.querySelector(a.getAttribute('href')); } catch(e) { return null; } }).filter(Boolean);
 
   let lastScrollY  = window.scrollY;
   let ticking      = false;
@@ -236,12 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (fillEl) fillEl.style.width = (STEPS > 1 ? (step / (STEPS - 1)) * 100 : 100).toFixed(1) + '%';
 
-      // Play video activo, pausa los demás
       panels.forEach((panel, i) => {
-        const video = panel.querySelector('video');
-        if (!video) return;
-        if (i === step) { video.play().catch(() => {}); }
-        else { video.pause(); }
+        const videos = panel.querySelectorAll('video');
+        videos.forEach(v => {
+          if (i === step) { v.play().catch(() => {}); }
+          else { v.pause(); }
+        });
       });
     }
 
@@ -300,7 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initTextCarousel({
     rootSelector: '[data-carousel="soluciones"]',
     intervalMs: 4500,
-    items: [
+    items: document.documentElement.lang === 'en' ? [
+      { name: 'Physical Security', body: 'Intelligent video surveillance, access control and perimeter protection with proactive AI detection to safeguard people and assets.' },
+      { name: 'Data Intelligence', body: 'Business Intelligence that turns every event into actionable metrics: foot traffic, dwell-time and loss prevention, in real time.' },
+      { name: 'Technology Management', body: 'Integration and operation of C4/C5 infrastructure and robotics, orchestrating drone, dispatch and response as a single system.' }
+    ] : [
       { name: 'Seguridad física', body: 'Videovigilancia inteligente, control de accesos y protección perimetral con detección proactiva por IA para resguardar personas y activos.' },
       { name: 'Inteligencia de datos', body: 'Business Intelligence que convierte cada evento en métricas accionables: afluencia, dwell-time y mermas evitadas, en tiempo real.' },
       { name: 'Gestión tecnológica', body: 'Integración y operación de infraestructura C4/C5 y robótica, orquestando dron, despacho y respuesta como un solo sistema.' }
@@ -310,7 +318,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initTextCarousel({
     rootSelector: '[data-carousel="privado"]',
     intervalMs: 4200,
-    items: [
+    items: document.documentElement.lang === 'en' ? [
+      { name: 'Corporate', body: 'Comprehensive corporate security: access control, intelligent video surveillance and continuous facility monitoring.' },
+      { name: 'Residential', body: 'Intelligent residential management with proactive detection and coordinated response for developments and condominiums.' },
+      { name: 'Industrial', body: 'Industrial monitoring and applied robotics to protect plants, warehouses and production lines.' }
+    ] : [
       { name: 'Empresas', body: 'Seguridad corporativa integral: control de accesos, videovigilancia inteligente y monitoreo continuo de instalaciones.' },
       { name: 'Residencial', body: 'Gestión residencial inteligente con detección proactiva y respuesta coordinada para fraccionamientos y condominios.' },
       { name: 'Industria', body: 'Monitoreo industrial y robótica aplicada para proteger plantas, almacenes y líneas de producción.' }
@@ -320,7 +332,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initTextCarousel({
     rootSelector: '[data-carousel="gobierno"]',
     intervalMs: 4800,
-    items: [
+    items: document.documentElement.lang === 'en' ? [
+      { name: 'Public Safety', body: 'Video surveillance and intelligence platforms for prevention and response to incidents in public spaces.' },
+      { name: 'Municipalities', body: 'Municipal technology infrastructure integrated with command centers for safer urban management.' },
+      { name: 'Urban Mobility & Penitentiary', body: 'Monitoring systems for urban mobility and security in penitentiary facilities.' }
+    ] : [
       { name: 'Seguridad pública', body: 'Plataformas de videovigilancia e inteligencia para la prevención y respuesta ante incidentes en el espacio público.' },
       { name: 'Municipios', body: 'Infraestructura tecnológica municipal integrada a centros de comando para una gestión urbana más segura.' },
       { name: 'Movilidad urbana y penitenciario', body: 'Sistemas de monitoreo para movilidad urbana y seguridad en instalaciones penitenciarias.' }
@@ -425,6 +441,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  /* ---------- nosotros: timeline card carousel ---------- */
+  (function initTimeline() {
+    const track = document.querySelector('[data-tl-track]');
+    if (!track) return;
+
+    const prevBtn = document.querySelector('[data-tl-prev]');
+    const nextBtn = document.querySelector('[data-tl-next]');
+    const card = track.querySelector('.timeline__card');
+    if (!card) return;
+
+    function getScrollAmount() {
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 24;
+      return card.offsetWidth + gap;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+  })();
+
   /* ---------- robótica: reveal al entrar en viewport ---------- */
   (function initRoboticaReveal() {
     const section = document.querySelector('.robotica');
@@ -498,5 +538,111 @@ document.addEventListener('DOMContentLoaded', () => {
 
     render();
     startAutoplay();
+  })();
+
+  /* ---------- Back-to-top button ---------- */
+  (function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    const SHOW_AT = 600;
+
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('is-visible', window.scrollY > SHOW_AT);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  /* ---------- Mobile Nav (hamburger) ---------- */
+  (function initMobileNav() {
+    const burger = document.querySelector('[data-burger]');
+    const mobileNav = document.getElementById('mobileNav');
+    if (!burger || !mobileNav) return;
+
+    function openNav() {
+      burger.classList.add('is-open');
+      mobileNav.classList.add('is-open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+      burger.classList.remove('is-open');
+      mobileNav.classList.remove('is-open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    burger.addEventListener('click', () => {
+      mobileNav.classList.contains('is-open') ? closeNav() : openNav();
+    });
+
+    mobileNav.querySelectorAll('[data-mobile-close]').forEach(link => {
+      link.addEventListener('click', () => closeNav());
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeNav();
+    });
+  })();
+
+  /* ---------- Mega-menús (Soluciones + Sectores + Robótica) ---------- */
+  (function initMegamenus() {
+    const allMenus = document.querySelectorAll('.megamenu');
+    if (!allMenus.length) return;
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'megamenu-backdrop';
+    document.body.appendChild(backdrop);
+
+    function closeAll() {
+      allMenus.forEach(m => {
+        m.classList.remove('is-open');
+        m.setAttribute('aria-hidden', 'true');
+      });
+      backdrop.classList.remove('is-visible');
+      document.body.style.overflow = '';
+    }
+
+    function openMenu(id) {
+      closeAll();
+      // close mobile nav if open
+      const burger = document.querySelector('[data-burger]');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav && mobileNav.classList.contains('is-open')) {
+        mobileNav.classList.remove('is-open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        if (burger) burger.classList.remove('is-open');
+      }
+      const menu = document.getElementById('megamenu-' + id);
+      if (!menu) return;
+      menu.classList.add('is-open');
+      menu.setAttribute('aria-hidden', 'false');
+      backdrop.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    document.querySelectorAll('[data-megamenu-trigger]').forEach(t => {
+      t.addEventListener('click', e => {
+        e.preventDefault();
+        openMenu(t.getAttribute('data-megamenu-trigger'));
+      });
+    });
+
+    allMenus.forEach(menu => {
+      menu.querySelectorAll('[data-megamenu-close]').forEach(c => {
+        c.addEventListener('click', () => setTimeout(closeAll, 10));
+      });
+    });
+
+    backdrop.addEventListener('click', closeAll);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeAll();
+    });
   })();
 });

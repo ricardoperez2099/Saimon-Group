@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAiMON GROUP</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP">
+    <nav class="header__nav">
+      <a href="#hero" class="is-active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#soluciones" data-megamenu-trigger="soluciones">Solutions</a>
+      <a href="#robotica" data-megamenu-trigger="robotica">Robotics</a>
+      <a href="#sectores" data-megamenu-trigger="sectores">Sectors</a>
+      <a href="#contacto" class="pill-outline" data-modal-open="contact">Contact</a>
+      <a href="index.html" class="lang-toggle" aria-label="Switch to Spanish">
+        <span class="lang-toggle__active">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__inactive">ES</span>
+      </a>
+    </nav>
+    <button class="header__burger" aria-label="Open menu" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="#hero" class="mobile-nav__link" data-mobile-close>Home</a>
+      <a href="about.html" class="mobile-nav__link">About Us</a>
+      <a href="#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
+      <a href="#robotica" class="mobile-nav__link" data-megamenu-trigger="robotica" data-mobile-close>Robotics</a>
+      <a href="#sectores" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
+      <a href="#contacto" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contact</a>
+      <div class="mobile-nav__footer">
+        <a href="index.html" class="lang-toggle" aria-label="Switch to Spanish">
+          <span class="lang-toggle__active">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__inactive">ES</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENU SOLUTIONS ============ -->
+  <div class="megamenu" id="megamenu-soluciones" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#soluciones" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/seguridad-fisica.png" alt="Saimon Public Safety"></div>
+          <span class="megamenu__thumb-label">SAIMON PUBLIC SAFETY <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="Saimon Robotics"></div>
+          <span class="megamenu__thumb-label">SAIMON ROBOTICS <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON PUBLIC SAFETY</span>
+          <a href="#soluciones" data-megamenu-close>Comprehensive Security</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON VISION</span>
+          <a href="#soluciones" data-megamenu-close>Video Analytics</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ROBOTICS</span>
+          <a href="#robotica" data-megamenu-close>Robotics</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ANALYTICS</span>
+          <a href="#soluciones" data-megamenu-close>Business Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON IA</span>
+          <a href="#soluciones" data-megamenu-close>Artificial Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON SMART CITIES</span>
+          <a href="#soluciones" data-megamenu-close>Smart Cities</a>
+        </div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ SECTORES ============ -->
+  <div class="megamenu" id="megamenu-sectores" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-privado.png" alt="Private Sector"></div>
+          <span class="megamenu__thumb-label">PRIVATE <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-gobierno.png" alt="Government Sector"></div>
+          <span class="megamenu__thumb-label">GOVERNMENT <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="#sectores" data-megamenu-close>Corporate</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="#sectores" data-megamenu-close>Residential</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="#sectores" data-megamenu-close>Commercial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="#sectores" data-megamenu-close>Public Safety</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="#sectores" data-megamenu-close>Health</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="#sectores" data-megamenu-close>Water Management</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="#sectores" data-megamenu-close>Penitentiary System</a></div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ ROBÓTICA ============ -->
+  <div class="megamenu" id="megamenu-robotica" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/robot.seguridad.png" alt="RoboSector Catalog"></div>
+          <span class="megamenu__thumb-label">ROBOSECTOR CATALOG <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="SaimonIQ"></div>
+          <span class="megamenu__thumb-label">SAIMONIQ <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">CATALOG</span><a href="#robotica" data-megamenu-close>RoboSector — 9 sectors, 80+ models</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">DEPLOYMENT</span><a href="#robotica" data-megamenu-close>SaimonDeploy — consulting & integration</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">SERVICES</span><a href="#robotica" data-megamenu-close>RoboAlliance — rental, training & support</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">MANAGEMENT</span><a href="#robotica" data-megamenu-close>SaimonIQ — real-time fleet control</a></div>
+        <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="megamenu__catalog-btn">View full catalog <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 1 · HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero__bg-wrap">
+      <div class="hero__bg" data-parallax="0.08">
+        <video autoplay muted loop playsinline poster="assets/robotica.png">
+          <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="hero__content">
+      <div class="hero__intro">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Discover Saimon Group</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h1 class="reveal reveal-d1 hero__title">Innovation that<br>protects the future</h1>
+        <p class="reveal reveal-d2 hero__subtitle">An integrated ecosystem of Comprehensive Security, Artificial Intelligence, Business Intelligence and Robotics to transform security and intelligent management.</p>
+      </div>
+
+      <div class="hero__cards" data-cards-stagger>
+        <a href="#soluciones" class="hero-card hero-card--dark">
+          <div class="hero-card__media">
+            <img src="assets/seguridad.png" alt="Seguridad">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">SAIMON PUBLIC SAFETY</span>
+              <span class="hero-card__label">Comprehensive Security</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/videoanalitica.png" alt="Videoanalítica">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Vision</span>
+              <span class="hero-card__label">Video Analytics</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#robotica" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/robotica.png" alt="Robótica">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Robotics</span>
+              <span class="hero-card__label">Robotics</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#ecosistema" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/business-intelligence.png" alt="Business Intelligence">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon Analytics</span>
+              <span class="hero-card__label">Business Intelligence</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/inteligencia-artificial.jpg" alt="Inteligencia Artificial">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">Saimon IA</span>
+              <span class="hero-card__label">Artificial Intelligence</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#soluciones" class="hero-card">
+          <div class="hero-card__media">
+            <img src="assets/ciudad-inteligente.png" alt="Ciudades inteligentes">
+            <div class="hero-card__gradient"></div>
+          </div>
+          <div class="hero-card__body">
+            <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
+            <div class="hero-card__label-group">
+              <span class="hero-card__sublabel">SAIMON SMART CITIES</span>
+              <span class="hero-card__label">Smart Cities</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ SECTION 2 · ECOSISTEMA ============ -->
+  <section id="ecosistema" class="ecosistema">
+    <div class="scanlines" style="opacity:0.7;"></div>
+    <div class="ecosistema__inner">
+      <div class="ecosistema__header">
+        <div class="eyebrow reveal">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">An ecosystem, not a list of products</span>
+        </div>
+        <h2 class="ecosistema__title" data-word-reveal>Artificial Intelligence, Business Intelligence<br>and Robotics working<br>as one</h2>
+      </div>
+
+      <div class="reveal reveal-d2 from-scale stats">
+        <div class="stat">
+          <div class="stat__num" data-counter="188" data-counter-display="188">188</div>
+          <div class="stat__label">Command & Control<br>Centers built</div>
+        </div>
+        <div class="stat stat--bordered">
+          <div class="stat__num" data-counter="22" data-counter-suffix="M+" data-counter-display="22M+">22M<em>+</em></div>
+          <div class="stat__label">People benefited in<br>Mexico, US & Colombia</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-counter="340" data-counter-suffix="+" data-counter-display="340+">340<em>+</em></div>
+          <div class="stat__label">B2B Clients<br>in Robotics</div>
+        </div>
+      </div>
+
+      <div class="collage">
+        <div class="reveal from-left collage__figures">
+          <div class="collage__big"><img src="assets/corporativa-1.png" alt="Operación corporativa"></div>
+          <div class="collage__small"><img src="assets/corporativa-2.png" alt="Operación corporativa"></div>
+        </div>
+        <div class="reveal reveal-d1 from-right collage__text">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Ecosystem in action</span>
+          </div>
+          <h3>Technology already operating in Mexico, US and Colombia.</h3>
+          <p>Saimon Vision combines Artificial Intelligence, Business Intelligence and Robotics to equip governments and companies with the tools that modern security demands — with active projects in Mexico, the United States and Colombia, in partnership with Seguritech.</p>
+          <a href="#soluciones" class="pill-outline-lg">
+            Explore our solutions
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · ECOSISTEMA TECNOLÓGICO ============ -->
+  <section id="ecosistema-tech" class="eco-tech">
+
+    <!-- Header — scrolls normally before sticky -->
+    <div class="eco-tech__inner reveal from-scale">
+      <div class="eco-tech__header">
+        <div class="reveal eco-tech__badge">
+          <span>Ecosystem</span>
+        </div>
+        <h2 class="eco-tech__title">
+          <span class="reveal reveal-d1">An ecosystem,</span>
+          <span class="reveal reveal-d2">not a list of products</span>
+        </h2>
+        <p class="reveal reveal-d3 eco-tech__lead">This is how Saimon Vision connects detection, data, coordination and action in real time.</p>
+        <div class="reveal reveal-d5 eco-tech__arrow">
+          <i data-lucide="arrow-down"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll track: 400vh space that anchors the sticky panel -->
+    <div class="eco-tech__scroll-track" data-eco-scroll-track>
+
+      <!-- Sticky panel -->
+      <div class="eco-tech__sticky-wrap">
+
+        <!-- STEP 01 — text left, video right (navy) -->
+        <div class="eco-full-panel eco-full-panel--navy is-active" data-eco-panel="0">
+          <video class="eco-full-panel__bg-video" autoplay muted loop playsinline>
+            <source src="assets/eco-paso-1.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">01</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">01 · Detection</div>
+            <h3 class="eco-step__title">A drone identifies the incident</h3>
+            <p class="eco-step__body">Monitoring systems detect an anomaly in the field in real time.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Learn more</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="eco-full-panel__visual">
+            <video autoplay muted loop playsinline>
+              <source src="assets/eco-paso-1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- STEP 02 — video left, text right (light) -->
+        <div class="eco-full-panel eco-full-panel--reversed eco-full-panel--light" data-eco-panel="1">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-2.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">02</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">02 · Dispatch</div>
+            <h3 class="eco-step__title">Business Intelligence connects the response</h3>
+            <p class="eco-step__body">Data is processed and automatically routed to the corresponding dispatch system.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Learn more</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- STEP 03 — text left, video right (navy) -->
+        <div class="eco-full-panel eco-full-panel--navy" data-eco-panel="2">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-3.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">03</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">03 · Coordination</div>
+            <h3 class="eco-step__title">A C4/C5 center coordinates the operation</h3>
+            <p class="eco-step__body">The command and control center organizes and directs the response with centralized information.</p>
+            <a href="#soluciones" class="eco-step__cta link-cta link-cta--dark">
+              <span>Learn more</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- STEP 04 — video left, text right (light) -->
+        <div class="eco-full-panel eco-full-panel--reversed eco-full-panel--light" data-eco-panel="3">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-4.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
+          <div class="eco-full-panel__visual">
+            <video muted loop playsinline>
+              <source src="assets/paso-4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="eco-full-panel__text">
+            <div class="eco-full-panel__counter">
+              <span class="eco-full-panel__num">04</span>
+              <span class="eco-full-panel__sep">/ 04</span>
+            </div>
+            <div class="eco-step__label">04 · Field action</div>
+            <h3 class="eco-step__title">Robotics executes the response</h3>
+            <p class="eco-step__body">Robots and drones act directly at the incident site, closing the ecosystem cycle.</p>
+            <a href="#robotica" class="eco-step__cta link-cta link-cta--dark">
+              <span>Learn more</span>
+              <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation dots: fixed at bottom left corner -->
+        <div class="eco-tech__dots-bar">
+          <button class="eco-dot is-active" data-eco-dot="0" aria-label="Step 1"></button>
+          <button class="eco-dot" data-eco-dot="1" aria-label="Step 2"></button>
+          <button class="eco-dot" data-eco-dot="2" aria-label="Step 3"></button>
+          <button class="eco-dot" data-eco-dot="3" aria-label="Step 4"></button>
+          <div class="eco-dot__track"><div class="eco-dot__fill" data-eco-fill></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · ROBÓTICA (PREVIEW) ============ -->
+  <section id="robotica" class="robotica">
+    <div class="robotica__bg-stack" data-robo-parallax>
+      <div class="robotica__bg-slide is-active"><img src="assets/robot.seguridad.png" alt="Seguridad"></div>
+      <div class="robotica__bg-slide"><img src="assets/logistica.png" alt="Logística"></div>
+      <div class="robotica__bg-slide"><img src="assets/hoteleria.png" alt="Hotelería"></div>
+      <div class="robotica__bg-slide"><img src="assets/medicina.png" alt="Medicina"></div>
+      <div class="robotica__bg-slide"><img src="assets/alta-carga.png" alt="Alta carga"></div>
+    </div>
+    <div class="robotica__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="robotica__inner">
+      <div class="robotica__text">
+        <div class="reveal eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Robotics</span>
+        </div>
+        <h2 class="reveal reveal-d1 robotica__title">One ecosystem, any operation</h2>
+        <p class="reveal reveal-d2 robotica__body">From security to industry, the same intelligent robotics adapts to every challenge: drones, robot dogs, logistics, hospitality, healthcare and heavy load — 80+ models, 340+ B2B clients.</p>
+      </div>
+
+      <div class="reveal reveal-d4 robotica__carousel">
+        <div class="robotica__carousel-layer robotica__carousel-layer--1"></div>
+        <div class="robotica__carousel-layer robotica__carousel-layer--2"></div>
+
+        <div class="robotica__card is-active">
+          <div><div class="robotica__card-label">Category</div><h4 class="robotica__card-title">Security</h4><p class="robotica__card-desc">Drones and robot dogs on the front line of response.</p></div>
+          <div class="robotica__card-media"><img src="assets/robot.seguridad.png" alt="Seguridad"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Category</div><h4 class="robotica__card-title">Logistics</h4><p class="robotica__card-desc">Automation that accelerates every delivery.</p></div>
+          <div class="robotica__card-media"><img src="assets/logistica.png" alt="Logística"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Category</div><h4 class="robotica__card-title">Hospitality</h4><p class="robotica__card-desc">Robotic service that elevates the experience.</p></div>
+          <div class="robotica__card-media"><img src="assets/hoteleria.png" alt="Hotelería"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Category</div><h4 class="robotica__card-title">Healthcare</h4><p class="robotica__card-desc">Robotic precision in the service of health.</p></div>
+          <div class="robotica__card-media"><img src="assets/medicina.png" alt="Medicina"></div>
+        </div>
+        <div class="robotica__card">
+          <div><div class="robotica__card-label">Category</div><h4 class="robotica__card-title">Heavy load</h4><p class="robotica__card-desc">Strength and precision to move the heaviest loads.</p></div>
+          <div class="robotica__card-media"><img src="assets/alta-carga.png" alt="Alta carga"></div>
+        </div>
+      </div>
+
+      <div class="robotica__nav">
+        <span class="robotica__arrow" data-robo-prev><i data-lucide="arrow-left"></i></span>
+        <div class="robotica__dots">
+          <span class="robotica__dot is-active"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+          <span class="robotica__dot"></span>
+        </div>
+        <span class="robotica__arrow" data-robo-next><i data-lucide="arrow-right"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROBÓTICA · MARCAS + CTA ============ -->
+  <section class="robotica-cta">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span class="marquee__item">Boston Dynamics</span>
+        <span class="marquee__item">ABB Robotics</span>
+        <span class="marquee__item">FANUC</span>
+        <span class="marquee__item">KUKA</span>
+        <span class="marquee__item">Unitree</span>
+        <span class="marquee__item">Keenon</span>
+        <span class="marquee__item">Pudu Robotics</span>
+        <span class="marquee__item">Locus Robotics</span>
+        <span class="marquee__item">MiR</span>
+        <span class="marquee__item">Omron</span>
+        <span class="marquee__item">Yaskawa</span>
+        <!-- duplicate for continuous loop -->
+        <span class="marquee__item">Boston Dynamics</span>
+        <span class="marquee__item">ABB Robotics</span>
+        <span class="marquee__item">FANUC</span>
+        <span class="marquee__item">KUKA</span>
+        <span class="marquee__item">Unitree</span>
+        <span class="marquee__item">Keenon</span>
+        <span class="marquee__item">Pudu Robotics</span>
+        <span class="marquee__item">Locus Robotics</span>
+        <span class="marquee__item">MiR</span>
+        <span class="marquee__item">Omron</span>
+        <span class="marquee__item">Yaskawa</span>
+      </div>
+    </div>
+    <div class="robotica-cta__link">
+      <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="link-cta link-cta--dark">
+        View full catalog
+        <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 · SOLUCIONES ============ -->
+  <section id="soluciones" class="split-panel">
+    <div class="split-panel__text">
+      <svg class="split-panel__rings" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+        <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+        <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+        <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+      </svg>
+      <div class="split-panel__text-inner">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Our Solutions</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Over 30 years of experience in security technology</h2>
+        <a href="#contacto" class="reveal reveal-d3 link-cta" style="margin-top:40px;">
+          View solutions
+          <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="split-panel__media">
+      <div class="split-panel__bg-stack" data-carousel-bg="soluciones">
+        <div class="split-panel__bg-slide is-active"><img src="assets/seguridad-fisica.png" alt="Seguridad física"></div>
+        <div class="split-panel__bg-slide"><img src="assets/inteligencia-datos.png" alt="Inteligencia de datos"></div>
+        <div class="split-panel__bg-slide"><img src="assets/gestion-tecnologica.png" alt="Gestión tecnológica"></div>
+      </div>
+      <div class="split-panel__media-gradient"></div>
+
+      <div class="reveal reveal-d4 floating-card" data-carousel="soluciones">
+        <div class="floating-card__label">Our Solutions</div>
+        <h4 class="floating-card__title" data-carousel-title></h4>
+        <p class="floating-card__body" data-carousel-body></p>
+        <div class="floating-card__progress">
+          <span class="floating-card__count" data-carousel-count></span>
+          <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · SECTORES ============ -->
+  <section id="sectores" class="sectores">
+    <div class="sectores__intro">
+      <svg class="sectores__intro-rings" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" fill="none">
+        <circle cx="450" cy="440" r="180" stroke="rgba(37,53,109,0.08)" stroke-width="1"></circle>
+        <circle cx="450" cy="440" r="260" stroke="rgba(37,53,109,0.06)" stroke-width="1"></circle>
+        <circle cx="450" cy="440" r="340" stroke="rgba(37,53,109,0.04)" stroke-width="1"></circle>
+      </svg>
+      <div class="reveal sectores__eyebrow">Sectors</div>
+      <h2 class="reveal reveal-d1 sectores__title">Security and technology for<br><strong>every type of operation</strong></h2>
+      <p class="reveal reveal-d2 sectores__lead">We integrate three categories under a single platform: <strong>Physical Security</strong>, <strong>Data Intelligence</strong> and <strong>Technology Management</strong>. Each one designed to operate in a coordinated manner and at scale.</p>
+    </div>
+
+    <!-- panel 1 — private -->
+    <div class="sectores__panel-wrap split-panel split-panel--rounded">
+      <div class="split-panel__text">
+        <svg class="split-panel__rings" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Private Sector</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Security and technology for the private sector</h2>
+          <p class="reveal reveal-d2 split-panel__body">AI, Business Intelligence and Robotics solutions adapted to businesses, residential, corporate and industrial environments.</p>
+          <a href="#contacto" class="reveal reveal-d3 link-cta">
+            Learn more
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg" data-parallax="0.06">
+          <img src="assets/sec-privado.png" alt="Sector privado">
+        </div>
+        <div class="split-panel__media-gradient"></div>
+
+        <div class="reveal reveal-d4 floating-card" data-carousel="privado">
+          <div class="floating-card__label">Our Sub-sectors</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- panel 2 — government -->
+    <div class="sectores__panel-wrap split-panel split-panel--rounded split-panel--reverse">
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg" data-parallax="0.06">
+          <img src="assets/sec-gobierno.png" alt="Sector gobierno">
+        </div>
+        <div class="split-panel__media-gradient split-panel__media-gradient--reverse"></div>
+
+        <div class="reveal reveal-d4 floating-card floating-card--left" data-carousel="gobierno">
+          <div class="floating-card__label">Our Sub-sectors</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-panel__text split-panel__text--reverse" style="background:#1a1c22;">
+        <svg class="split-panel__rings split-panel__rings--right" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner split-panel__text-inner--reverse">
+          <div class="reveal eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Government Sector</span>
+          </div>
+          <h2 class="reveal reveal-d1 split-panel__title">Critical infrastructure for government institutions</h2>
+          <p class="reveal reveal-d2 split-panel__body">Command & Control Centers, urban mobility and public safety systems designed for government institutions.</p>
+          <a href="#contacto" class="reveal reveal-d3 link-cta">
+            Learn more
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 · PROYECTOS ============ -->
+  <section id="proyectos" class="proyectos">
+    <div class="proyectos__inner">
+      <div class="proyectos__header">
+        <h2 class="reveal proyectos__title">Featured Projects</h2>
+        <a href="#" class="reveal reveal-d4 link-cta link-cta--dark">
+          View all projects
+          <span class="btn-circle btn-circle--dark"><i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="proyectos__grid">
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/c5-edomex.jpg" alt="C5i Estado de México"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Featured project</div>
+              <div class="proyecto-card__name">C5i Estado de México</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Client</div>
+                <div class="proyecto-card__meta-value">Government of the State of Mexico</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Date / Status</div>
+                <div class="proyecto-card__meta-value">In operation</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/1.jpg" alt="C5i Guanajuato"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Featured project</div>
+              <div class="proyecto-card__name">C5i Guanajuato</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Client</div>
+                <div class="proyecto-card__meta-value">Government of Guanajuato</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Date / Status</div>
+                <div class="proyecto-card__meta-value">In operation</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/4.jpg" alt="Walmart LATAM Robótica"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Featured project</div>
+              <div class="proyecto-card__name">C5i Querétaro</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Client</div>
+                <div class="proyecto-card__meta-value">Government of the State of Querétaro</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Date / Status</div>
+                <div class="proyecto-card__meta-value">Active B2B client</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal proyecto-card">
+          <div class="proyecto-card__media"><img src="assets/3.jpg" alt="C5i Hidalgo"></div>
+          <div class="proyecto-card__body">
+            <div>
+              <div class="floating-card__label" style="margin-bottom:10px;">Featured project</div>
+              <div class="proyecto-card__name">C5i Hidalgo</div>
+            </div>
+            <div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Client</div>
+                <div class="proyecto-card__meta-value">Government of the State of Hidalgo</div>
+              </div>
+              <div class="proyecto-card__meta">
+                <div class="proyecto-card__meta-label">Date / Status</div>
+                <div class="proyecto-card__meta-value">Active B2B client</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION · PARTNERS TECNOLÓGICOS ============ -->
+  <section class="partners">
+    <div class="partners__inner">
+      <div class="reveal eyebrow" style="justify-content:center;">
+        <span class="eyebrow-line eyebrow-line--dark"></span>
+        <span class="eyebrow-label eyebrow-label--muted">TECHNOLOGY PARTNERS</span>
+        <span class="eyebrow-line eyebrow-line--dark"></span>
+      </div>
+    </div>
+    <div class="partners__marquee">
+      <div class="partners__track">
+        <span class="partners__logo">Milestone</span>
+        <span class="partners__logo">Hanwha Vision</span>
+        <span class="partners__logo">Axis Communications</span>
+        <span class="partners__logo">Genetec</span>
+        <span class="partners__logo">Hikvision</span>
+        <span class="partners__logo">Dahua</span>
+        <span class="partners__logo">Motorola Solutions</span>
+        <span class="partners__logo">Cisco Meraki</span>
+        <span class="partners__logo">Dell Technologies</span>
+        <span class="partners__logo">NVIDIA</span>
+        <span class="partners__logo">Boston Dynamics</span>
+        <span class="partners__logo">Unitree</span>
+        <!-- duplicate for continuous loop -->
+        <span class="partners__logo">Milestone</span>
+        <span class="partners__logo">Hanwha Vision</span>
+        <span class="partners__logo">Axis Communications</span>
+        <span class="partners__logo">Genetec</span>
+        <span class="partners__logo">Hikvision</span>
+        <span class="partners__logo">Dahua</span>
+        <span class="partners__logo">Motorola Solutions</span>
+        <span class="partners__logo">Cisco Meraki</span>
+        <span class="partners__logo">Dell Technologies</span>
+        <span class="partners__logo">NVIDIA</span>
+        <span class="partners__logo">Boston Dynamics</span>
+        <span class="partners__logo">Unitree</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CIERRE / CONTACTO + FOOTER ============ -->
+  <section id="contacto" class="contacto">
+    <div class="contacto__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/fondo-footer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="contacto__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="contacto__cta">
+      <div class="contacto__cta-inner">
+        <h2 class="reveal contacto__cta-title">Ready to transform<br>your operation?</h2>
+        <p class="reveal reveal-d4 contacto__cta-body">Schedule a demo and discover how Saimon Vision integrates AI, Business Intelligence and Robotics for your institution or company.</p>
+        <a href="#" class="reveal reveal-d3 pill-solid-lg" data-modal-open="contact">
+          Request demo
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__divider"></div>
+
+        <div class="footer__nav">
+          <div>
+            <div class="footer__col-title">Saimon Vision</div>
+            <div class="footer__col-links">
+              <a href="about.html">About Us</a>
+              <a href="#contacto" data-modal-open="contact">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Solutions</div>
+            <div class="footer__col-links">
+              <a href="#soluciones">Physical Security</a>
+              <a href="#soluciones">Data Intelligence</a>
+              <a href="#soluciones">Technology Management</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Robotics</div>
+            <div class="footer__col-links">
+              <a href="https://saimonrobotics.com" target="_blank" rel="noopener">View full catalog</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Sectors</div>
+            <div class="footer__col-links">
+              <a href="#sectores">Private</a>
+              <a href="#sectores">Government</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Social</div>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <span>© 2026 Saimon Vision — All rights reserved</span>
+            <a href="#">Privacy Policy (pendiente)</a>
+            <a href="#">Terms of Use (pendiente)</a>
+          </div>
+          <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="footer__partner-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODAL DE CONTACTO ============ -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel">
+
+      <!-- Close -->
+      <button class="contact-modal__close" data-modal-close aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Left panel — branding -->
+      <div class="contact-modal__left">
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="contact-modal__logo">
+        <div class="contact-modal__left-body">
+          <h2 id="modalTitle" class="contact-modal__title">Request your demo</h2>
+          <p class="contact-modal__subtitle">Tell us about your project and a specialist will contact you within 24 hours.</p>
+          <div class="contact-modal__info">
+            <div class="contact-modal__info-item">
+              <i data-lucide="phone" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Phone</span>
+                <span class="contact-modal__info-value">+52 (55) 5083 0000</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="mail" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Email</span>
+                <span class="contact-modal__info-value">contacto@saimongroup.com</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="map-pin" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Location</span>
+                <span class="contact-modal__info-value">Bosque de Alisos 45B | Palo Alto (Granjas), CDMX, México.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right panel — form -->
+      <div class="contact-modal__right">
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-name">Full name</label>
+              <input class="contact-form__input" type="text" id="cf-name" name="nombre"
+                     placeholder="Your full name" required autocomplete="name">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-company">Company / Institution</label>
+              <input class="contact-form__input" type="text" id="cf-company" name="empresa"
+                     placeholder="Your organization name" required autocomplete="organization">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Email address</label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email"
+                     placeholder="you@company.com" required autocomplete="email">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-tel">Phone</label>
+              <input class="contact-form__input" type="tel" id="cf-tel" name="telefono"
+                     placeholder="+52 55 0000 0000" required autocomplete="tel">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-msg">Message <span class="contact-form__optional">(optional)</span></label>
+            <textarea class="contact-form__input contact-form__textarea" id="cf-msg" name="mensaje"
+                      rows="4" placeholder="Tell us what you need..."></textarea>
+          </div>
+
+          <button type="submit" class="contact-form__submit" id="cfSubmit">
+            <span class="contact-form__submit-text">Send request</span>
+            <svg class="contact-form__spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 20"/>
+            </svg>
+          </button>
+
+          <p class="contact-form__success" id="cfSuccess" aria-live="polite"></p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>

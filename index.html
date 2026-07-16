@@ -17,19 +17,205 @@
     <img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP">
     <nav class="header__nav">
       <a href="#hero" class="is-active">Inicio</a>
-      <a href="#ecosistema">Nosotros</a>
-      <a href="#soluciones">Soluciones</a>
-      <a href="#robotica">Robótica</a>
-      <a href="#ecosistema">Sectores</a>
-      <a href="#proyectos">Partners</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#soluciones" data-megamenu-trigger="soluciones">Soluciones</a>
+      <a href="#robotica" data-megamenu-trigger="robotica">Robótica</a>
+      <a href="#sectores" data-megamenu-trigger="sectores">Sectores</a>
       <a href="#contacto" class="pill-outline" data-modal-open="contact">Contacto</a>
-      <button class="lang-toggle" aria-label="Switch to English">
+      <a href="index-en.html" class="lang-toggle" aria-label="Switch to English">
         <span class="lang-toggle__active">ES</span>
         <span class="lang-toggle__sep">/</span>
         <span class="lang-toggle__inactive">EN</span>
-      </button>
+      </a>
     </nav>
+    <button class="header__burger" aria-label="Abrir menú" data-burger>
+      <span></span><span></span><span></span>
+    </button>
   </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="#hero" class="mobile-nav__link" data-mobile-close>Inicio</a>
+      <a href="nosotros.html" class="mobile-nav__link">Nosotros</a>
+      <a href="#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Soluciones</a>
+      <a href="#robotica" class="mobile-nav__link" data-megamenu-trigger="robotica" data-mobile-close>Robótica</a>
+      <a href="#sectores" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectores</a>
+      <a href="#contacto" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contacto</a>
+      <div class="mobile-nav__footer">
+        <a href="index-en.html" class="lang-toggle" aria-label="Switch to English">
+          <span class="lang-toggle__active">ES</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__inactive">EN</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ SOLUCIONES ============ -->
+  <div class="megamenu" id="megamenu-soluciones" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#soluciones" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/seguridad-fisica.png" alt="Saimon Public Safety"></div>
+          <span class="megamenu__thumb-label">SAIMON PUBLIC SAFETY <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="Saimon Robotics"></div>
+          <span class="megamenu__thumb-label">SAIMON ROBOTICS <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON PUBLIC SAFETY</span>
+          <a href="#soluciones" data-megamenu-close>Seguridad integral</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON VISION</span>
+          <a href="#soluciones" data-megamenu-close>Videoanalítica</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ROBOTICS</span>
+          <a href="#robotica" data-megamenu-close>Robótica</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ANALYTICS</span>
+          <a href="#soluciones" data-megamenu-close>Business Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON IA</span>
+          <a href="#soluciones" data-megamenu-close>Inteligencia Artificial</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON SMART CITIES</span>
+          <a href="#soluciones" data-megamenu-close>Ciudades inteligentes</a>
+        </div>
+      </div>
+
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ SECTORES ============ -->
+  <div class="megamenu" id="megamenu-sectores" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-privado.png" alt="Sector Privado"></div>
+          <span class="megamenu__thumb-label">PRIVADO <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#sectores" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-gobierno.png" alt="Sector Gobierno"></div>
+          <span class="megamenu__thumb-label">GOBIERNO <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">PRIVADO</span>
+          <a href="#sectores" data-megamenu-close>Corporativo</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">PRIVADO</span>
+          <a href="#sectores" data-megamenu-close>Residencial</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">PRIVADO</span>
+          <a href="#sectores" data-megamenu-close>Comercial</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">GOBIERNO</span>
+          <a href="#sectores" data-megamenu-close>Seguridad Pública</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">GOBIERNO</span>
+          <a href="#sectores" data-megamenu-close>Salud</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">GOBIERNO</span>
+          <a href="#sectores" data-megamenu-close>Control de Aguas</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">GOBIERNO</span>
+          <a href="#sectores" data-megamenu-close>Sistema Penitenciario</a>
+        </div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENÚ ROBÓTICA ============ -->
+  <div class="megamenu" id="megamenu-robotica" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/robot.seguridad.png" alt="Catálogo RoboSector"></div>
+          <span class="megamenu__thumb-label">CATÁLOGO ROBOSECTOR <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="#robotica" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="SaimonIQ"></div>
+          <span class="megamenu__thumb-label">SAIMONIQ <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">CATÁLOGO</span>
+          <a href="#robotica" data-megamenu-close>RoboSector — 9 sectores, 80+ modelos</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">IMPLEMENTACIÓN</span>
+          <a href="#robotica" data-megamenu-close>SaimonDeploy — consultoría e integración</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SERVICIOS</span>
+          <a href="#robotica" data-megamenu-close>RoboAlliance — renta, capacitación y soporte</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">GESTIÓN</span>
+          <a href="#robotica" data-megamenu-close>SaimonIQ — control de flota en tiempo real</a>
+        </div>
+        <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="megamenu__catalog-btn">Ver catálogo completo <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contacto@saimongroup.com" class="megamenu__contact-email">contacto@saimongroup.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ SECTION 1 · HERO ============ -->
   <section id="hero" class="hero">
@@ -63,7 +249,7 @@
           <div class="hero-card__body">
             <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
             <div class="hero-card__label-group">
-              <span class="hero-card__sublabel">Saimon Safe</span>
+              <span class="hero-card__sublabel">SAIMON PUBLIC SAFETY</span>
               <span class="hero-card__label">Seguridad integral</span>
             </div>
           </div>
@@ -133,7 +319,7 @@
           <div class="hero-card__body">
             <i data-lucide="arrow-up-right" class="hero-card__icon"></i>
             <div class="hero-card__label-group">
-              <span class="hero-card__sublabel">Saimon Smart</span>
+              <span class="hero-card__sublabel">SAIMON SMART CITIES</span>
               <span class="hero-card__label">Ciudades inteligentes</span>
             </div>
           </div>
@@ -181,7 +367,7 @@
             <span class="eyebrow-label">Ecosistema en acción</span>
           </div>
           <h3>Tecnología que ya opera en México, EU y Colombia.</h3>
-          <p>Saimon Vision combina Inteligencia Artificial, Business Intelligence y Robótica para equipar a gobiernos y empresas con las herramientas que exige la seguridad moderna — con proyectos activos en México, Estados Unidos y Colombia.</p>
+          <p>Saimon Vision combina Inteligencia Artificial, Business Intelligence y Robótica para equipar a gobiernos y empresas con las herramientas que exige la seguridad moderna — con proyectos activos en México, Estados Unidos y Colombia, en alianza con Seguritech.</p>
           <a href="#soluciones" class="pill-outline-lg">
             Conoce nuestras soluciones
             <i data-lucide="arrow-right"></i>
@@ -217,8 +403,12 @@
       <!-- Panel sticky -->
       <div class="eco-tech__sticky-wrap">
 
-        <!-- PASO 01 — texto izquierda, video derecha -->
-        <div class="eco-full-panel is-active" data-eco-panel="0">
+        <!-- PASO 01 — texto izquierda, video derecha (azul) -->
+        <div class="eco-full-panel eco-full-panel--navy is-active" data-eco-panel="0">
+          <video class="eco-full-panel__bg-video" autoplay muted loop playsinline>
+            <source src="assets/eco-paso-1.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
           <div class="eco-full-panel__text">
             <div class="eco-full-panel__counter">
               <span class="eco-full-panel__num">01</span>
@@ -239,8 +429,12 @@
           </div>
         </div>
 
-        <!-- PASO 02 — video izquierda, texto derecha -->
-        <div class="eco-full-panel eco-full-panel--reversed" data-eco-panel="1">
+        <!-- PASO 02 — video izquierda, texto derecha (blanco) -->
+        <div class="eco-full-panel eco-full-panel--reversed eco-full-panel--light" data-eco-panel="1">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-2.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
           <div class="eco-full-panel__visual">
             <video muted loop playsinline>
               <source src="assets/paso-2.mp4" type="video/mp4">
@@ -261,8 +455,12 @@
           </div>
         </div>
 
-        <!-- PASO 03 — texto izquierda, video derecha -->
-        <div class="eco-full-panel" data-eco-panel="2">
+        <!-- PASO 03 — texto izquierda, video derecha (azul) -->
+        <div class="eco-full-panel eco-full-panel--navy" data-eco-panel="2">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-3.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
           <div class="eco-full-panel__text">
             <div class="eco-full-panel__counter">
               <span class="eco-full-panel__num">03</span>
@@ -283,8 +481,12 @@
           </div>
         </div>
 
-        <!-- PASO 04 — video izquierda, texto derecha -->
-        <div class="eco-full-panel eco-full-panel--reversed" data-eco-panel="3">
+        <!-- PASO 04 — video izquierda, texto derecha (blanco) -->
+        <div class="eco-full-panel eco-full-panel--reversed eco-full-panel--light" data-eco-panel="3">
+          <video class="eco-full-panel__bg-video" muted loop playsinline>
+            <source src="assets/paso-4.mp4" type="video/mp4">
+          </video>
+          <div class="eco-full-panel__overlay"></div>
           <div class="eco-full-panel__visual">
             <video muted loop playsinline>
               <source src="assets/paso-4.mp4" type="video/mp4">
@@ -336,8 +538,8 @@
           <span class="eyebrow-line"></span>
           <span class="eyebrow-label">Robótica</span>
         </div>
-        <h2 class="reveal reveal-d1 robotica__title">La robótica que ejecuta lo que la IA decide</h2>
-        <p class="reveal reveal-d2 robotica__body">En seguridad, nuestros drones y perros-robot son la primera línea de respuesta en campo. Y ese mismo nivel de precisión ya transforma logística, hotelería, medicina y alta carga — 80+ modelos, 340+ clientes B2B.</p>
+        <h2 class="reveal reveal-d1 robotica__title">Un ecosistema, cualquier operación</h2>
+        <p class="reveal reveal-d2 robotica__body">De la seguridad a la industria, la misma robótica inteligente cambia de forma según el reto: drones, perros-robot, logística, hotelería, medicina y alta carga — 80+ modelos, 340+ clientes B2B.</p>
       </div>
 
       <div class="reveal reveal-d4 robotica__carousel">
@@ -345,23 +547,23 @@
         <div class="robotica__carousel-layer robotica__carousel-layer--2"></div>
 
         <div class="robotica__card is-active">
-          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Seguridad</h4></div>
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Seguridad</h4><p class="robotica__card-desc">Drones y perros-robot en la primera línea de respuesta.</p></div>
           <div class="robotica__card-media"><img src="assets/robot.seguridad.png" alt="Seguridad"></div>
         </div>
         <div class="robotica__card">
-          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Logística</h4></div>
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Logística</h4><p class="robotica__card-desc">Automatización que acelera cada entrega.</p></div>
           <div class="robotica__card-media"><img src="assets/logistica.png" alt="Logística"></div>
         </div>
         <div class="robotica__card">
-          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Hotelería</h4></div>
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Hotelería</h4><p class="robotica__card-desc">Servicio robótico que eleva la experiencia.</p></div>
           <div class="robotica__card-media"><img src="assets/hoteleria.png" alt="Hotelería"></div>
         </div>
         <div class="robotica__card">
-          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Medicina</h4></div>
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Medicina</h4><p class="robotica__card-desc">Precisión robótica al servicio de la salud.</p></div>
           <div class="robotica__card-media"><img src="assets/medicina.png" alt="Medicina"></div>
         </div>
         <div class="robotica__card">
-          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Alta carga</h4></div>
+          <div><div class="robotica__card-label">Categoría</div><h4 class="robotica__card-title">Alta carga</h4><p class="robotica__card-desc">Fuerza y precisión para mover lo pesado.</p></div>
           <div class="robotica__card-media"><img src="assets/alta-carga.png" alt="Alta carga"></div>
         </div>
       </div>
@@ -565,7 +767,7 @@
 
       <div class="proyectos__grid">
         <article class="reveal proyecto-card">
-          <div class="proyecto-card__media"><img src="assets/3.jpg" alt="C5i Estado de México"></div>
+          <div class="proyecto-card__media"><img src="assets/c5-edomex.jpg" alt="C5i Estado de México"></div>
           <div class="proyecto-card__body">
             <div>
               <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
@@ -609,12 +811,12 @@
           <div class="proyecto-card__body">
             <div>
               <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
-              <div class="proyecto-card__name">Walmart LATAM — Robótica</div>
+              <div class="proyecto-card__name">C5i Querétaro</div>
             </div>
             <div>
               <div class="proyecto-card__meta">
                 <div class="proyecto-card__meta-label">Cliente</div>
-                <div class="proyecto-card__meta-value">Walmart LATAM</div>
+                <div class="proyecto-card__meta-value">Gobierno del Estado de Querétaro</div>
               </div>
               <div class="proyecto-card__meta">
                 <div class="proyecto-card__meta-label">Fecha / Estatus</div>
@@ -625,16 +827,16 @@
         </article>
 
         <article class="reveal proyecto-card">
-          <div class="proyecto-card__media"><img src="assets/2.jpg" alt="IMSS Robótica"></div>
+          <div class="proyecto-card__media"><img src="assets/3.jpg" alt="C5i Hidalgo"></div>
           <div class="proyecto-card__body">
             <div>
               <div class="floating-card__label" style="margin-bottom:10px;">Proyecto destacado</div>
-              <div class="proyecto-card__name">IMSS — Robótica</div>
+              <div class="proyecto-card__name">C5i Hidalgo</div>
             </div>
             <div>
               <div class="proyecto-card__meta">
                 <div class="proyecto-card__meta-label">Cliente</div>
-                <div class="proyecto-card__meta-value">Instituto Mexicano del Seguro Social</div>
+                <div class="proyecto-card__meta-value">Gobierno del Estado de Hidalgo</div>
               </div>
               <div class="proyecto-card__meta">
                 <div class="proyecto-card__meta-label">Fecha / Estatus</div>
@@ -716,8 +918,8 @@
           <div>
             <div class="footer__col-title">Saimon Vision</div>
             <div class="footer__col-links">
-              <a href="#ecosistema">Nosotros</a>
-              <a href="#contacto">Contacto</a>
+              <a href="nosotros.html">Nosotros</a>
+              <a href="#contacto" data-modal-open="contact">Contacto</a>
             </div>
           </div>
           <div>
@@ -750,15 +952,13 @@
           </div>
         </div>
 
-        <div class="footer__locations">[Ciudad, País] — pendiente de confirmar</div>
-
         <div class="footer__bottom">
           <div class="footer__bottom-left">
             <span>© 2026 Saimon Vision — Todos los derechos reservados</span>
             <a href="#">Aviso de Privacidad (pendiente)</a>
             <a href="#">Términos de Uso (pendiente)</a>
           </div>
-          <a href="#hero" class="footer__back-top">Volver arriba <span>↑</span></a>
+          <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="footer__partner-logo">
         </div>
       </div>
     </div>
@@ -785,7 +985,7 @@
               <i data-lucide="phone" class="contact-modal__info-icon"></i>
               <div>
                 <span class="contact-modal__info-label">Teléfono</span>
-                <span class="contact-modal__info-value">+52 55 1234 5678</span>
+                <span class="contact-modal__info-value">+52 (55) 5083 0000</span>
               </div>
             </div>
             <div class="contact-modal__info-item">
@@ -799,7 +999,7 @@
               <i data-lucide="map-pin" class="contact-modal__info-icon"></i>
               <div>
                 <span class="contact-modal__info-label">Ubicación</span>
-                <span class="contact-modal__info-value">Av. Paseo de la Reforma 250,<br>Col. Juárez, CDMX, México</span>
+                <span class="contact-modal__info-value">Bosque de Alisos 45B | Palo Alto (Granjas), CDMX, México.</span>
               </div>
             </div>
           </div>
@@ -860,6 +1060,10 @@
 
     </div>
   </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
   <script src="app.js"></script>
 </body>
