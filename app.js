@@ -707,7 +707,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     allMenus.forEach(menu => {
       menu.querySelectorAll('[data-megamenu-close]').forEach(c => {
-        c.addEventListener('click', () => setTimeout(closeAll, 10));
+        c.addEventListener('click', (e) => {
+          const href = c.getAttribute('href');
+          const isPageLink = href && href !== '#' && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:');
+          closeAll();
+          if (isPageLink && c.tagName === 'A') {
+            e.preventDefault();
+            window.location.assign(href);
+          }
+        });
       });
     });
 
@@ -717,4 +725,39 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape') closeAll();
     });
   })();
+
+  /* ---------- sectores: carruseles de sub-sector ---------- */
+  document.querySelectorAll('[data-ss-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-ss-track]');
+    const dotsWrap = carousel.querySelector('[data-ss-dots]');
+    const prevBtn = carousel.querySelector('[data-ss-prev]');
+    const nextBtn = carousel.querySelector('[data-ss-next]');
+    if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+    const slides = [...track.querySelectorAll('.ss-carousel__slide')];
+    if (!slides.length) return;
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = [...dotsWrap.querySelectorAll('button')];
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    }
+    function goTo(i) {
+      index = i;
+      render();
+    }
+
+    prevBtn.addEventListener('click', () => goTo((index - 1 + slides.length) % slides.length));
+    nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
+    render();
+  });
 });
