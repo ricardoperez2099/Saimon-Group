@@ -527,6 +527,14 @@ img { display: block; max-width: 100%; }
 .ecosistema__inner { position: relative; max-width: 1180px; margin: 0 auto; }
 .ecosistema__header { text-align: center; max-width: 840px; margin: 0 auto 72px; }
 .ecosistema__header .eyebrow { justify-content: center; }
+.ecosistema__partner-logo {
+  display: block;
+  height: 63px;
+  width: auto;
+  margin: 0 auto 20px;
+  object-fit: contain;
+  opacity: 0.9;
+}
 .ecosistema__title { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; font-weight: 900; letter-spacing: -0.02em; }
 
 .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; max-width: 940px; margin: 0 auto 96px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.12); }
