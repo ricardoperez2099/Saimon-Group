@@ -63,6 +63,64 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => cards.classList.add('cards-active'), 300);
   })();
 
+  /* ---------- hero cards: carrusel mobile ---------- */
+  (function initHeroCarousel() {
+    const track = document.querySelector('[data-hero-track]');
+    const carousel = track && track.closest('.hero__carousel');
+    if (!track || !carousel) return;
+
+    const cards = [...track.querySelectorAll('.hero-card')];
+    const prevBtn = carousel.querySelector('[data-hero-prev]');
+    const nextBtn = carousel.querySelector('[data-hero-next]');
+    const dotsWrap = carousel.querySelector('[data-hero-dots]');
+    if (!cards.length || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    let index = 0;
+
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'hero__carousel-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    const dots = [...dotsWrap.querySelectorAll('.hero__carousel-dot')];
+
+    function goTo(i) {
+      index = Math.max(0, Math.min(i, cards.length - 1));
+      const card = cards[index];
+      track.scrollTo({ left: card.offsetLeft, behavior: 'smooth' });
+      dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+    }
+
+    prevBtn.addEventListener('click', () => goTo(index - 1));
+    nextBtn.addEventListener('click', () => goTo(index + 1));
+
+    let scrollTimer;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const center = track.scrollLeft + track.clientWidth / 2;
+        let nearest = 0;
+        let nearestDist = Infinity;
+        cards.forEach((card, i) => {
+          const mid = card.offsetLeft + card.offsetWidth / 2;
+          const dist = Math.abs(mid - center);
+          if (dist < nearestDist) {
+            nearestDist = dist;
+            nearest = i;
+          }
+        });
+        index = nearest;
+        dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+      }, 60);
+    }, { passive: true });
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  })();
+
   /* ---------- contadores animados ---------- */
   (function initCounters() {
     const els = document.querySelectorAll('[data-counter]');
@@ -131,11 +189,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const delta     = y - lastScrollY;
     const goingDown = delta > 2;
     const goingUp   = delta < -2;
+    const isMobile  = window.matchMedia('(max-width: 1080px)').matches;
 
     // active nav link
     let activeIdx = 0;
     sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= 80) activeIdx = i; });
     navLinks.forEach((a, i) => a.classList.toggle('is-active', i === activeIdx));
+
+    // En mobile el header (hamburguesa) nunca se oculta
+    if (isMobile) {
+      header.classList.remove('header--hidden', 'header--floating');
+      if (y <= FLOAT_START) {
+        header.classList.remove('header--scrolled');
+      } else {
+        header.classList.add('header--scrolled');
+      }
+      lastScrollY = y;
+      ticking = false;
+      return;
+    }
 
     if (y <= FLOAT_START) {
       // FASE 1 — al tope: header normal

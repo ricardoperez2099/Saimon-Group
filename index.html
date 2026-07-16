@@ -240,7 +240,8 @@
         <p class="reveal reveal-d2 hero__subtitle">Un ecosistema integrado de Seguridad Integral, Inteligencia Artificial, Business Intelligence y Robótica para transformar la seguridad y la gestión inteligente.</p>
       </div>
 
-      <div class="hero__cards" data-cards-stagger>
+      <div class="hero__carousel">
+      <div class="hero__cards" data-cards-stagger data-hero-track>
         <a href="#soluciones" class="hero-card hero-card--dark">
           <div class="hero-card__media">
             <img src="assets/seguridad.png" alt="Seguridad">
@@ -324,6 +325,16 @@
             </div>
           </div>
         </a>
+      </div>
+      <div class="hero__carousel-controls">
+        <button type="button" class="hero__carousel-btn" data-hero-prev aria-label="Anterior">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <div class="hero__carousel-dots" data-hero-dots></div>
+        <button type="button" class="hero__carousel-btn" data-hero-next aria-label="Siguiente">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
       </div>
     </div>
 
