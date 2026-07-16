@@ -525,13 +525,21 @@ img { display: block; max-width: 100%; }
    ========================================================= */
 .ecosistema { position: relative; background: #25356d; padding: 120px 48px 130px; overflow: hidden; }
 .ecosistema__inner { position: relative; max-width: 1180px; margin: 0 auto; }
-.ecosistema__header { text-align: center; max-width: 840px; margin: 0 auto 72px; }
+.ecosistema__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 72px;
+}
 .ecosistema__header .eyebrow { justify-content: center; }
 .ecosistema__partner-logo {
   display: block;
   height: 63px;
   width: auto;
-  margin: 0 auto 20px;
+  max-width: min(320px, 80vw);
+  margin: 0 0 20px;
   object-fit: contain;
   opacity: 0.9;
 }
