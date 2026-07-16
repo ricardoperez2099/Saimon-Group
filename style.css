@@ -1032,6 +1032,15 @@ img { display: block; max-width: 100%; }
 .nos-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
 .nos-hero__overlay { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(37,53,109,0.25) 0%, rgba(37,53,109,0.55) 45%, #25356d 100%); }
 .nos-hero__content { position: relative; z-index: 5; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 48px 90px; }
+.nos-hero__partner-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: min(280px, 70vw);
+  margin: 28px 0 0;
+  object-fit: contain;
+  opacity: 0.95;
+}
 .nos-hero__title { max-width: 720px; margin: 0 0 22px; font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; font-weight: 900; letter-spacing: -0.02em; color: #fff; }
 .nos-hero__subtitle { max-width: 600px; margin: 0; font-size: 19px; line-height: 1.65; color: rgba(255,255,255,0.82); }
 
@@ -1073,6 +1082,14 @@ img { display: block; max-width: 100%; }
    NOSOTROS — TIMELINE
    ========================================================= */
 .timeline { position: relative; background: #fff; padding: 150px 0 180px; overflow: hidden; }
+.timeline__partner-logo {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: min(280px, 70vw);
+  margin: 56px auto 0;
+  object-fit: contain;
+}
 .timeline__top { max-width: 1180px; margin: 0 auto 56px; padding: 0 48px; display: flex; align-items: center; gap: 24px; }
 .timeline__heading { margin: 0; font-size: clamp(30px, 3.6vw, 46px); font-weight: 900; letter-spacing: -0.02em; color: #1c2b57; }
 .timeline__controls { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -1623,12 +1640,42 @@ img { display: block; max-width: 100%; }
   .proyectos__header { flex-direction: column; align-items: flex-start; }
 
   /* Nosotros */
-  .proposito__grid, .legado__grid, .mv__grid { grid-template-columns: 1fr; gap: 40px; }
+  .reveal.from-left,
+  .reveal.from-right {
+    transform: translateY(20px);
+  }
+  .reveal.from-left.visible,
+  .reveal.from-right.visible {
+    transform: none;
+  }
+  .proposito__grid, .legado__grid, .mv__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+    min-width: 0;
+  }
   .valores__grid, .team__grid { grid-template-columns: repeat(2, 1fr); }
-  .proposito__media { height: 400px; }
-  .legado__collage { min-height: 360px; }
-  .legado__img-main { height: 340px; }
-  .legado__img-small { height: 200px; }
+  .proposito__media { height: 360px; width: 100%; }
+  .legado__collage {
+    min-height: 0;
+    height: 0;
+    padding-bottom: 70%;
+    overflow: hidden;
+    position: relative;
+  }
+  .legado__img-main {
+    position: absolute;
+    top: 0; left: 0;
+    width: 78%;
+    height: 82%;
+  }
+  .legado__img-small {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    height: 48%;
+  }
   .timeline__top { padding: 0 32px; }
   .timeline__track { padding: 0 0 0 32px; }
   .timeline__card { flex: 0 0 290px; }
@@ -2014,20 +2061,126 @@ img { display: block; max-width: 100%; }
   .nos-hero__content { padding: 0 20px 60px; }
   .nos-hero__title { font-size: clamp(28px, 7vw, 42px); }
   .nos-hero__subtitle { font-size: 15px; }
-  .proposito { padding: 60px 20px; }
-  .proposito__media { height: 300px; }
-  .legado { padding: 60px 20px; }
-  .legado__collage { min-height: 280px; }
-  .legado__img-main { width: 100%; height: 280px; }
-  .legado__img-small { width: 60%; height: 180px; right: -10px; bottom: -20px; }
+
+  /* Evita que from-left/from-right corten texto e imágenes en mobile */
+  .reveal.from-left,
+  .reveal.from-right {
+    transform: translateY(20px);
+  }
+  .reveal.from-left.visible,
+  .reveal.from-right.visible {
+    transform: none;
+  }
+
+  .proposito {
+    padding: 60px 20px;
+    overflow-x: clip;
+  }
+  .proposito__grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 28px;
+  }
+  .proposito__text,
+  .proposito__media {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .proposito__text p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .proposito__media {
+    height: 260px;
+    width: 100%;
+  }
+
+  .legado {
+    padding: 60px 20px;
+    overflow-x: clip;
+  }
+  .legado__grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 32px;
+  }
+  .legado__text,
+  .legado__collage {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .legado__text p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .legado__partner-logo {
+    max-width: min(240px, 100%);
+    height: auto;
+    max-height: 42px;
+  }
+  .legado__collage {
+    min-height: 0;
+    height: 0;
+    padding-bottom: 75%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .legado__img-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78%;
+    height: 82%;
+  }
+  .legado__img-small {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    height: 48%;
+    border-width: 3px;
+  }
   .legado__stat { font-size: clamp(44px, 12vw, 72px); }
+
   .timeline { padding: 90px 0; }
   .timeline__top { padding: 0 20px; flex-wrap: wrap; gap: 16px; }
   .timeline__track { padding: 0 0 0 20px; gap: 16px; }
   .timeline__card { flex: 0 0 260px; padding: 28px 24px; }
-  .mv { padding: 60px 20px; }
-  .mv__grid { grid-template-columns: 1fr; gap: 48px; }
-  .mv__card-media { height: 280px; }
+
+  .mv {
+    padding: 60px 20px;
+    overflow-x: clip;
+  }
+  .mv__intro {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .mv__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .mv__card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .mv__card-media {
+    height: 240px;
+    width: 100%;
+  }
+  .mv__card-footer h3,
+  .mv__card p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
   .valores { padding: 60px 20px; }
   .valores__grid { grid-template-columns: 1fr 1fr; }
   .team { padding: 60px 20px 80px; }
