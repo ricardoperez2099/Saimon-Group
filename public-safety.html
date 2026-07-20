@@ -191,7 +191,7 @@
         <span class="eyebrow-line"></span>
         <span class="eyebrow-label">Saimon Public Safety</span>
       </div>
-      <h1 class="reveal">Seguridad integral, de la calle al centro de mando</h1>
+      <h1 class="ps-hero__title" data-word-reveal>Seguridad integral, de la calle al centro de mando</h1>
       <p class="reveal">Sistemas de despacho, monitoreo e infraestructura crítica que protegen comunidades enteras en tiempo real.</p>
       <button type="button" class="reveal btn-white" data-modal-open="contact">
         Solicitar demo
@@ -203,17 +203,17 @@
   <!-- ============ 2 · CAD SAIMON ============ -->
   <section class="ps-cad">
     <div class="ps-cad__inner">
-      <div class="reveal ps-cad__intro">
-        <div class="eyebrow eyebrow--center">
+      <div class="ps-cad__intro">
+        <div class="reveal eyebrow eyebrow--center">
           <span class="eyebrow-line"></span>
           <span class="eyebrow-label">Producto insignia</span>
           <span class="eyebrow-line"></span>
         </div>
-        <h2>PSAP and Dispatcher Saimon: cuidamos lo que más importa</h2>
-        <p>Una Plataforma Integral de Despacho y Atención de Emergencias, escalable, flexible y adaptable — diseñada para optimizar la interoperabilidad entre el Centro de Emergencias municipal y sus instituciones.</p>
+        <h2 class="ps-cad__title" data-word-reveal>CAD Saimon: cuidamos lo que más importa</h2>
+        <p class="reveal">Una Plataforma Integral de Despacho y Atención de Emergencias, escalable, flexible y adaptable — diseñada para optimizar la interoperabilidad entre el Centro de Emergencias municipal y sus instituciones.</p>
       </div>
       <div class="reveal ps-cad__media">
-        <video class="ps-cad__video" muted loop playsinline controls>
+        <video class="ps-cad__video" muted loop playsinline controls poster="assets/portada-video.png">
           <source src="assets/Funcionamiento_CAD_ENG_V1.mp4" type="video/mp4">
         </video>
       </div>
@@ -221,7 +221,7 @@
   </section>
 
   <!-- ============ 3 · MÓDULOS ============ -->
-  <section class="ps-modulos">
+  <section class="ps-modulos" data-ps-modulos>
     <div class="ps-modulos__inner">
       <div class="reveal ps-modulos__header">
         <div class="eyebrow eyebrow--center eyebrow--navy">
@@ -229,44 +229,68 @@
           <span class="eyebrow-label">Módulos del sistema</span>
           <span class="eyebrow-line"></span>
         </div>
-        <h3>PSAP and Dispatcher Saimon: cuidamos lo que más importa</h3>
-        <p>Una Plataforma Integral de Despacho y Atención de Emergencias, escalable, flexible y adaptable — diseñada para optimizar la interoperabilidad entre el Centro de Emergencias municipal y sus instituciones.</p>
+        <h3>Una plataforma, todos los módulos que necesitas</h3>
+        <p>Desde la primera llamada al 9-1-1 hasta el reporte final, CAD Saimon conecta cada paso de la respuesta a emergencias en un solo sistema.</p>
       </div>
       <div class="ps-modulos__row2">
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="phone"></i></div>
-          <h4>Emergencias 9-1-1</h4>
-          <p>Recepción, atención y seguimiento de incidentes.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-tl">
+          <div class="ps-modulo-card__text">
+            <h4>Emergencias 9-1-1</h4>
+            <p>Recepción, atención y seguimiento de incidentes con despacho inteligente, del primer contacto al cierre del caso.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/emergencias911.png" alt="Emergencias 9-1-1">
+          </div>
         </div>
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="users"></i></div>
-          <h4>Servicio a la Ciudadanía</h4>
-          <p>Reportes ciudadanos y servicios públicos.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-tr">
+          <div class="ps-modulo-card__text">
+            <h4>Servicio a la Ciudadanía</h4>
+            <p>Reportes ciudadanos coordinados con servicios públicos locales para una respuesta más ágil.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/servicio-ciudadania.png" alt="Servicio a la Ciudadanía">
+          </div>
         </div>
       </div>
       <div class="ps-modulos__grid">
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="bell"></i></div>
-          <h4>Alerta Ciudadana</h4>
-          <p>App móvil con botón virtual de activación de alarma.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-ml">
+          <div class="ps-modulo-card__text">
+            <h4>Alerta Ciudadana</h4>
+            <p>App móvil con botón virtual de pánico para activación inmediata de alarmas en segundos.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/alerta-ciudadana.png" alt="Alerta Ciudadana">
+          </div>
         </div>
-        <div class="ps-modulo-photo reveal">
-          <div class="placeholder-img">Fotografía real — operador de centro de emergencias en su estación de trabajo</div>
+        <div class="ps-modulo-photo ps-modulo-photo--from-center">
+          <img src="assets/CAD-1.png" alt="Operador de centro de emergencias en su estación de trabajo">
         </div>
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="truck"></i></div>
-          <h4>Despacho Móvil</h4>
-          <p>Recepción y envío de información del evento: fotos, video, audio y traza de ruta.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-mr">
+          <div class="ps-modulo-card__text">
+            <h4>Despacho Móvil</h4>
+            <p>Recepción y envío de información del evento en ruta: fotos, audio, video y trazabilidad completa.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/despacho-movil.png" alt="Despacho Móvil">
+          </div>
         </div>
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="shield-check"></i></div>
-          <h4>Control de Detenidos</h4>
-          <p>Registro de detenidos, revisión médica y control de sanciones.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-bl">
+          <div class="ps-modulo-card__text">
+            <h4>Control de Detenidos</h4>
+            <p>Registro de detenidos, control de celdas, revisión médica y multas en una sola plataforma.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/control-detenidos.png" alt="Control de Detenidos">
+          </div>
         </div>
-        <div class="ps-modulo-card reveal">
-          <div class="ps-modulo-card__icon"><i data-lucide="bar-chart-3"></i></div>
-          <h4>Tablero y Reportes</h4>
-          <p>Estadísticas gráficas y generación de reportes operativos.</p>
+        <div class="ps-modulo-card ps-modulo-card--from-br">
+          <div class="ps-modulo-card__text">
+            <h4>Tablero y Reportes</h4>
+            <p>Estadísticas de incidentes, mapas de calor y reportes operativos automatizados en tiempo real.</p>
+          </div>
+          <div class="ps-modulo-card__photo">
+            <img src="assets/tableros-reportes.png" alt="Tablero y Reportes">
+          </div>
         </div>
       </div>
     </div>
@@ -274,7 +298,14 @@
 
   <!-- ============ 4 · OTROS PRODUCTOS ============ -->
   <section class="ps-prod">
-    <div class="ps-prod__bg"><div class="placeholder-img">Fotografía real — centro de mando con oficiales y monitores</div></div>
+    <div class="ps-prod__bg" data-ps-prod-bg data-ps-prod-parallax>
+      <div class="ps-prod__bg-slide is-active"><img src="assets/altos-mandos.png" alt=""></div>
+      <div class="ps-prod__bg-slide"><img src="assets/sistema-penitenciario.png" alt=""></div>
+      <div class="ps-prod__bg-slide"><img src="assets/mujer-segura.png" alt=""></div>
+      <div class="ps-prod__bg-slide"><img src="assets/monitoreo-gps.png" alt=""></div>
+      <div class="ps-prod__bg-slide"><img src="assets/salud-digital.png" alt=""></div>
+      <div class="ps-prod__bg-slide"><img src="assets/seguriman.png" alt=""></div>
+    </div>
     <div class="ps-prod__overlay"></div>
     <div class="ps-prod__inner">
       <div class="reveal ps-prod__intro">
@@ -290,27 +321,27 @@
           <div class="ps-prod__track" data-ps-track>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>Altos Mandos</h4><p>Consulta y seguimiento estratégico de incidentes críticos para la toma de decisiones.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — sala de altos mandos con tableros</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/altos-mandos.png" alt="Altos Mandos"></div>
             </div>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>Sistema Penitenciario</h4><p>Monitoreo GPS satelital para preliberados y arresto domiciliario.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — brazalete de monitoreo GPS</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/sistema-penitenciario.png" alt="Sistema Penitenciario"></div>
             </div>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>Mujer Segura</h4><p>Aplicación de protección y respuesta rápida ante situaciones de riesgo.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — persona usando app de seguridad en celular</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/mujer-segura.png" alt="Mujer Segura"></div>
             </div>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>Monitoreo GPS</h4><p>Rastreo satelital en tiempo real con notificaciones de geocerca.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — operador monitoreando rutas GPS en mapa</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/monitoreo-gps.png" alt="Monitoreo GPS"></div>
             </div>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>Salud Digital</h4><p>Gestión hospitalaria y expediente clínico integrado al ecosistema de emergencias.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — personal médico usando expediente digital</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/salud-digital.png" alt="Salud Digital"></div>
             </div>
             <div class="ps-prod__slide">
               <div class="ps-prod__slide-text"><h4>SeguriMan</h4><p>Sistema de gestión y monitoreo para personal de seguridad en campo.</p></div>
-              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — guardia de seguridad en campo con tablet</div></div>
+              <div class="ps-prod__slide-photo"><img src="assets/seguriman.png" alt="SeguriMan"></div>
             </div>
           </div>
         </div>
@@ -346,39 +377,31 @@
       <div class="reveal ps-proyectos__header"><h2>Proyectos destacados</h2></div>
       <div class="ps-proyectos__grid">
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Hidalgo</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/3.jpg" alt="C5i Hidalgo"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Hidalgo</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Estado de México</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/c5-edomex.jpg" alt="C5i Estado de México"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de México (sede principal y Ecatepec)</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Guanajuato</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/1.jpg" alt="C5i Guanajuato"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Guanajuato</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Michoacán</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/c5-michoacan.jpg" alt="C5i Michoacán"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Michoacán</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Sonora</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/c5-sonora.jpg" alt="C5i Sonora"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Sonora</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
         <div class="reveal ps-proj-card">
-          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5 Puebla</div></div>
+          <div class="ps-proj-card__photo"><img src="assets/c5-puebla.jpg" alt="C5 Puebla"></div>
           <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5</div><div class="ps-proj-card__client">Estado de Puebla — Complejo Metropolitano de Seguridad Pública</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ============ 7 · CIERRE ============ -->
-  <section class="ps-cierre">
-    <button type="button" class="btn-navy" data-modal-open="contact">
-      Habla con un especialista
-      <i data-lucide="arrow-right"></i>
-    </button>
   </section>
 
   <!-- ============ CTA + FOOTER ============ -->

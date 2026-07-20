@@ -48,10 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hero titles (ya visibles al cargar → fallback rápido)
   applyWordReveal(document.querySelector('.hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.nos-hero__title'), { fallbackMs: 600 });
+  applyWordReveal(document.querySelector('.ps-hero__title'), { fallbackMs: 600 });
 
   // Títulos con data-word-reveal (activados por scroll)
   document.querySelectorAll('[data-word-reveal]').forEach(el => {
     if (el.classList.contains('nos-hero__title')) return;
+    if (el.classList.contains('ps-hero__title')) return;
     applyWordReveal(el);
   });
 
@@ -761,6 +763,49 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
   });
 
+  /* ---------- public safety: parallax de fondo productos ---------- */
+  (function initPsProdParallax() {
+    const stack = document.querySelector('[data-ps-prod-parallax]');
+    if (!stack) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const STRENGTH = 0.14;
+    let current = 0;
+    let target = 0;
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function update() {
+      const section = stack.closest('.ps-prod') || stack.parentElement;
+      const rect = section.getBoundingClientRect();
+      const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+      target = center * STRENGTH;
+      current = lerp(current, target, 0.07);
+      stack.style.transform = `translate3d(0, ${current.toFixed(2)}px, 0)`;
+      requestAnimationFrame(update);
+    }
+    update();
+  })();
+
+  /* ---------- public safety: módulos assemble on scroll ---------- */
+  (function initPsModulosAssemble() {
+    const section = document.querySelector('[data-ps-modulos]');
+    if (!section) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      section.classList.add('is-inview');
+      return;
+    }
+    if (!('IntersectionObserver' in window)) {
+      section.classList.add('is-inview');
+      return;
+    }
+    const io = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      section.classList.add('is-inview');
+      io.disconnect();
+    }, { threshold: 0.18, rootMargin: '0px 0px -10% 0px' });
+    io.observe(section);
+  })();
+
   /* ---------- public safety: carrusel de productos ---------- */
   document.querySelectorAll('[data-ps-prod]').forEach((carousel) => {
     const track = carousel.querySelector('[data-ps-track]');
@@ -773,6 +818,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slides = [...track.querySelectorAll('.ps-prod__slide')];
     if (!slides.length) return;
+
+    const section = carousel.closest('.ps-prod');
+    const bgSlides = section
+      ? [...section.querySelectorAll('.ps-prod__bg-slide')]
+      : [];
     let index = 0;
 
     slides.forEach((_, i) => {
@@ -787,6 +837,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function render() {
       track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+      bgSlides.forEach((el, i) => el.classList.toggle('is-active', i === index));
     }
     function goTo(i) {
       index = i;
