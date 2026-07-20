@@ -568,7 +568,8 @@ img { display: block; max-width: 100%; }
 .collage__small { position: absolute; bottom: 0; right: 0; width: 48%; height: 46%; border-radius: 14px; overflow: hidden; border: 4px solid #25356d; box-shadow: 0 20px 44px rgba(15,22,51,0.6); }
 .collage__big img, .collage__small img, .collage__big .placeholder-img, .collage__small .placeholder-img { width: 100%; height: 100%; object-fit: cover; }
 .collage__text h3 { margin: 0 0 22px; font-size: clamp(28px,3.2vw,42px); line-height: 1.1; font-weight: 900; letter-spacing: -0.02em; }
-.collage__text p { margin: 0 0 32px; font-size: 19px; line-height: 1.7; color: rgba(255,255,255,0.8); }
+.collage__text p { margin: 0; font-size: 19px; line-height: 1.7; color: rgba(255,255,255,0.8); }
+.collage__text .pill-outline-lg { margin-top: 32px; }
 
 /* =========================================================
    ECOSISTEMA TECNOLÓGICO — sticky scroll storytelling
