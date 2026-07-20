@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAiMON GROUP — Nosotros</title>
+<title>SAiMON GROUP — Public Safety</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="page-nosotros">
+<body class="page-public-safety">
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -16,12 +16,12 @@
     <a href="index.html"><img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP"></a>
     <nav class="header__nav">
       <a href="index.html">Inicio</a>
-      <a href="nosotros.html" class="is-active">Nosotros</a>
-      <a href="index.html#soluciones" data-megamenu-trigger="soluciones">Soluciones</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="index.html#soluciones" class="is-active" data-megamenu-trigger="soluciones">Soluciones</a>
       <a href="index.html#robotica" data-megamenu-trigger="robotica">Robótica</a>
-      <a href="index.html#sectores" data-megamenu-trigger="sectores">Sectores</a>
+      <a href="sectores.html" data-megamenu-trigger="sectores">Sectores</a>
       <a href="#" class="pill-outline" data-modal-open="contact">Contacto</a>
-      <a href="about.html" class="lang-toggle" aria-label="Switch to English">
+      <a href="public-safety-en.html" class="lang-toggle" aria-label="Switch to English">
         <span class="lang-toggle__active">ES</span>
         <span class="lang-toggle__sep">/</span>
         <span class="lang-toggle__inactive">EN</span>
@@ -36,13 +36,13 @@
   <div class="mobile-nav" id="mobileNav" aria-hidden="true">
     <div class="mobile-nav__inner">
       <a href="index.html" class="mobile-nav__link">Inicio</a>
-      <a href="nosotros.html" class="mobile-nav__link mobile-nav__link--active">Nosotros</a>
-      <a href="index.html#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Soluciones</a>
+      <a href="nosotros.html" class="mobile-nav__link">Nosotros</a>
+      <a href="index.html#soluciones" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="soluciones" data-mobile-close>Soluciones</a>
       <a href="index.html#robotica" class="mobile-nav__link" data-megamenu-trigger="robotica" data-mobile-close>Robótica</a>
-      <a href="index.html#sectores" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectores</a>
+      <a href="sectores.html" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectores</a>
       <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contacto</a>
       <div class="mobile-nav__footer">
-        <a href="about.html" class="lang-toggle" aria-label="Switch to English">
+        <a href="public-safety-en.html" class="lang-toggle" aria-label="Switch to English">
           <span class="lang-toggle__active">ES</span>
           <span class="lang-toggle__sep">/</span>
           <span class="lang-toggle__inactive">EN</span>
@@ -180,171 +180,205 @@
     </div>
   </div>
 
+
+
   <!-- ============ 1 · HERO ============ -->
-  <section id="nos-hero" class="nos-hero">
-    <div class="nos-hero__bg" data-parallax="0.08">
-      <img src="assets/nos-hero-bg.jpg" alt="Equipo Saimon Vision">
-    </div>
-    <div class="nos-hero__overlay"></div>
-    <div class="scanlines"></div>
-    <div class="nos-hero__content">
-      <div class="eyebrow reveal">
+  <section class="ps-hero">
+    <div class="ps-hero__bg"><img src="assets/pubsafety-hero-bg.jpg" alt="Centro de control de seguridad pública"></div>
+    <div class="ps-hero__overlay"></div>
+    <div class="ps-hero__content">
+      <div class="reveal eyebrow">
         <span class="eyebrow-line"></span>
-        <span class="eyebrow-label">Nosotros</span>
+        <span class="eyebrow-label">Saimon Public Safety</span>
       </div>
-      <h1 class="nos-hero__title" data-word-reveal>Más de 30 años protegiendo lo que más importa</h1>
-      <p class="reveal nos-hero__subtitle">Saimon Group, empresa líder con sede en Estados Unidos en soluciones integrales de tecnología para la seguridad, con presencia en todo el continente americano.</p>
-      <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="nos-hero__partner-logo">
+      <h1 class="reveal">Seguridad integral, de la calle al centro de mando</h1>
+      <p class="reveal">Sistemas de despacho, monitoreo e infraestructura crítica que protegen comunidades enteras en tiempo real.</p>
+      <button type="button" class="reveal btn-white" data-modal-open="contact">
+        Solicitar demo
+        <i data-lucide="arrow-right"></i>
+      </button>
     </div>
   </section>
 
-  <!-- ============ 2 · TECNOLOGÍA CON PROPÓSITO ============ -->
-  <section class="proposito">
-    <div class="proposito__grid">
-      <div class="reveal from-left proposito__text">
-        <div class="eyebrow eyebrow--dark">
-          <span class="eyebrow-line eyebrow-line--dark"></span>
-          <span class="eyebrow-label eyebrow-label--dark">Con integridad en el centro</span>
+  <!-- ============ 2 · CAD SAIMON ============ -->
+  <section class="ps-cad">
+    <div class="ps-cad__inner">
+      <div class="reveal ps-cad__intro">
+        <div class="eyebrow eyebrow--center">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Producto insignia</span>
+          <span class="eyebrow-line"></span>
         </div>
-        <h2 class="proposito__title">Tecnología con propósito</h2>
-        <p>En un entorno que exige respuestas inmediatas e inteligentes, incorporamos lo más avanzado en Inteligencia Artificial, Machine Learning y Generative AI para crear sistemas que transforman la forma de prevenir, gestionar y resolver emergencias.</p>
-        <p>Nuestras soluciones procesan grandes volúmenes de datos en segundos, identifican patrones no visibles y anticipan riesgos, proporcionando a nuestros clientes herramientas estratégicas para actuar con precisión, eficiencia y confianza.</p>
+        <h2>PSAP and Dispatcher Saimon: cuidamos lo que más importa</h2>
+        <p>Una Plataforma Integral de Despacho y Atención de Emergencias, escalable, flexible y adaptable — diseñada para optimizar la interoperabilidad entre el Centro de Emergencias municipal y sus instituciones.</p>
       </div>
-      <div class="reveal from-right proposito__media">
-        <img src="assets/nos-proposito-img.jpg" alt="Centro de monitoreo">
+      <div class="reveal ps-cad__media">
+        <video class="ps-cad__video" muted loop playsinline controls>
+          <source src="assets/Funcionamiento_CAD_ENG_V1.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
 
-  <!-- ============ 3 · LEGADO ============ -->
-  <section class="legado">
-    <div class="scanlines scanlines--light"></div>
-    <div class="legado__grid">
-      <div class="reveal from-left legado__text">
+  <!-- ============ 3 · MÓDULOS ============ -->
+  <section class="ps-modulos">
+    <div class="ps-modulos__inner">
+      <div class="reveal ps-modulos__header">
+        <div class="eyebrow eyebrow--center eyebrow--navy">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Módulos del sistema</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h3>PSAP and Dispatcher Saimon: cuidamos lo que más importa</h3>
+        <p>Una Plataforma Integral de Despacho y Atención de Emergencias, escalable, flexible y adaptable — diseñada para optimizar la interoperabilidad entre el Centro de Emergencias municipal y sus instituciones.</p>
+      </div>
+      <div class="ps-modulos__row2">
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="phone"></i></div>
+          <h4>Emergencias 9-1-1</h4>
+          <p>Recepción, atención y seguimiento de incidentes.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="users"></i></div>
+          <h4>Servicio a la Ciudadanía</h4>
+          <p>Reportes ciudadanos y servicios públicos.</p>
+        </div>
+      </div>
+      <div class="ps-modulos__grid">
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="bell"></i></div>
+          <h4>Alerta Ciudadana</h4>
+          <p>App móvil con botón virtual de activación de alarma.</p>
+        </div>
+        <div class="ps-modulo-photo reveal">
+          <div class="placeholder-img">Fotografía real — operador de centro de emergencias en su estación de trabajo</div>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="truck"></i></div>
+          <h4>Despacho Móvil</h4>
+          <p>Recepción y envío de información del evento: fotos, video, audio y traza de ruta.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="shield-check"></i></div>
+          <h4>Control de Detenidos</h4>
+          <p>Registro de detenidos, revisión médica y control de sanciones.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="bar-chart-3"></i></div>
+          <h4>Tablero y Reportes</h4>
+          <p>Estadísticas gráficas y generación de reportes operativos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · OTROS PRODUCTOS ============ -->
+  <section class="ps-prod">
+    <div class="ps-prod__bg"><div class="placeholder-img">Fotografía real — centro de mando con oficiales y monitores</div></div>
+    <div class="ps-prod__overlay"></div>
+    <div class="ps-prod__inner">
+      <div class="reveal ps-prod__intro">
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-label">Nuestro legado</span>
+          <span class="eyebrow-label">Más soluciones</span>
         </div>
-        <div class="legado__stat" data-counter="30" data-counter-prefix="+" data-counter-suffix=" años" data-counter-display="+30 años">+30 años</div>
-        <div class="legado__stat-caption">de experiencia en tecnología para la seguridad</div>
-        <p>Saimon Group representa una evolución para responder a la necesidad de analizar grandes volúmenes de datos en bruto y empoderar a quienes toman decisiones. Nuestra experiencia se nutre de décadas construyendo más de 188 centros de crimen en tiempo real, que hoy ofrecen el rango completo de servicios de seguridad pública a más de 22 millones de personas en algunas de las ubicaciones más desafiantes del hemisferio occidental.</p>
-        <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="legado__partner-logo">
+        <h3>Más soluciones de Saimon Public Safety</h3>
+        <p>Un ecosistema completo para la seguridad pública.</p>
       </div>
-      <div class="reveal from-right legado__collage">
-        <div class="legado__img-main">
-          <img src="assets/C5H8479.jpg" alt="Centro de comando Saimon">
+      <div class="reveal ps-prod__carousel" data-ps-prod>
+        <div class="ps-prod__viewport">
+          <div class="ps-prod__track" data-ps-track>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Altos Mandos</h4><p>Consulta y seguimiento estratégico de incidentes críticos para la toma de decisiones.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — sala de altos mandos con tableros</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Sistema Penitenciario</h4><p>Monitoreo GPS satelital para preliberados y arresto domiciliario.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — brazalete de monitoreo GPS</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Mujer Segura</h4><p>Aplicación de protección y respuesta rápida ante situaciones de riesgo.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — persona usando app de seguridad en celular</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Monitoreo GPS</h4><p>Rastreo satelital en tiempo real con notificaciones de geocerca.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — operador monitoreando rutas GPS en mapa</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Salud Digital</h4><p>Gestión hospitalaria y expediente clínico integrado al ecosistema de emergencias.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — personal médico usando expediente digital</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>SeguriMan</h4><p>Sistema de gestión y monitoreo para personal de seguridad en campo.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Fotografía real — guardia de seguridad en campo con tablet</div></div>
+            </div>
+          </div>
         </div>
-        <div class="legado__img-small">
-          <img src="assets/30-1.jpg" alt="Instalación Saimon">
+        <button type="button" class="ps-prod__arrow ps-prod__arrow--prev" data-ps-prev aria-label="Anterior">‹</button>
+        <button type="button" class="ps-prod__arrow ps-prod__arrow--next" data-ps-next aria-label="Siguiente">›</button>
+      </div>
+      <div class="ps-prod__dots" data-ps-dots></div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · INFRAESTRUCTURA ============ -->
+  <section class="ps-infra">
+    <div class="ps-infra__scanlines"></div>
+    <div class="ps-infra__grid">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Infraestructura crítica</span>
+        </div>
+        <h2>Centros de Comando y Control diseñados para durar</h2>
+        <p>Diseñamos, construimos y operamos Centros de Comando, Comunicaciones, Cómputo, Control y Coordinación (C4/C5) para gobiernos estatales, con certificaciones ISO 9000, PMI e ITIL.</p>
+      </div>
+      <div class="reveal">
+        <div class="ps-infra__stat">+50</div>
+        <p>Centros de Comando y Control construidos, beneficiando a 22 millones de personas en México, Estados Unidos y Colombia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · PROYECTOS ============ -->
+  <section class="ps-proyectos">
+    <div class="ps-proyectos__inner">
+      <div class="reveal ps-proyectos__header"><h2>Proyectos destacados</h2></div>
+      <div class="ps-proyectos__grid">
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Hidalgo</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Hidalgo</div><span class="ps-proj-card__status">Operando</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Estado de México</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de México (sede principal y Ecatepec)</div><span class="ps-proj-card__status">Operando</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Guanajuato</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Guanajuato</div><span class="ps-proj-card__status">Operando</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Michoacán</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Michoacán</div><span class="ps-proj-card__status">Operando</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5i Sonora</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">Estado de Sonora</div><span class="ps-proj-card__status">Operando</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Fotografía real — C5 Puebla</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5</div><div class="ps-proj-card__client">Estado de Puebla — Complejo Metropolitano de Seguridad Pública</div><span class="ps-proj-card__status">Operando</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 4 · TIMELINE ============ -->
-  <section class="timeline">
-    <div class="timeline__top">
-      <h2 class="reveal timeline__heading" data-word-reveal>Nuestra historia</h2>
-      <div class="timeline__controls reveal">
-        <button class="circle-btn" data-tl-prev aria-label="Anterior"><i data-lucide="arrow-left"></i></button>
-        <button class="circle-btn" data-tl-next aria-label="Siguiente"><i data-lucide="arrow-right"></i></button>
-      </div>
-    </div>
-    <div class="timeline__track" data-tl-track>
-      <div class="timeline__card">
-        <span class="timeline__card-year">1998</span>
-        <h3 class="timeline__card-title">Los primeros pasos</h3>
-        <p class="timeline__card-body">Fundación de la empresa como Seguritech por Simon Picker, comenzando operaciones de seguridad electrónica.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-      <div class="timeline__card">
-        <span class="timeline__card-year">2005</span>
-        <h3 class="timeline__card-title">Primer centro C4</h3>
-        <p class="timeline__card-body">Construcción del primer Centro de Comando, Control, Comunicaciones y Cómputo para gobierno estatal.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-      <div class="timeline__card">
-        <span class="timeline__card-year">2012</span>
-        <h3 class="timeline__card-title">Expansión nacional</h3>
-        <p class="timeline__card-body">Presencia en más de 20 estados del país con infraestructura de videovigilancia y centros de monitoreo.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-      <div class="timeline__card">
-        <span class="timeline__card-year">2019</span>
-        <h3 class="timeline__card-title">Una nueva visión</h3>
-        <p class="timeline__card-body">Transición a Saimon Group, integrando IA, Business Intelligence y Robótica como un solo ecosistema.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-      <div class="timeline__card">
-        <span class="timeline__card-year">2023</span>
-        <h3 class="timeline__card-title">Expansión internacional</h3>
-        <p class="timeline__card-body">Operaciones consolidadas en México, Estados Unidos y Colombia con más de 188 proyectos entregados.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-      <div class="timeline__card">
-        <span class="timeline__card-year">Hoy</span>
-        <h3 class="timeline__card-title">Un ecosistema en expansión</h3>
-        <p class="timeline__card-body">Robótica, IA y analítica de datos convergiendo en un solo ecosistema para cualquier industria.</p>
-        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON" class="timeline__card-logo">
-      </div>
-    </div>
-    <img src="assets/Logo_Seguritech_color.png" alt="by SeguriTech" class="timeline__partner-logo">
-  </section>
-
-  <!-- ============ 5 · MISIÓN Y VISIÓN ============ -->
-  <section class="mv">
-    <div class="mv__bg" data-parallax="0.12"><img src="assets/fondo-1.jpg" alt=""></div>
-    <div class="mv__bg-overlay"></div>
-    <div class="mv__intro">
-      <span class="reveal mv__eyebrow">Nuestra brújula</span>
-      <h2 class="reveal mv__title" data-word-reveal>Sabemos hacia dónde vamos</h2>
-    </div>
-    <div class="mv__grid">
-      <div class="reveal from-left mv__card">
-        <div class="mv__card-media">
-          <img src="assets/mision.png" alt="Misión">
-        </div>
-        <div class="mv__card-footer">
-          <h3>Misión</h3>
-        </div>
-        <p>Superar las expectativas de nuestros clientes a través de desarrollos tecnológicos de vanguardia en Inteligencia Artificial, Business Intelligence y Robótica.</p>
-      </div>
-      <div class="reveal from-right mv__card">
-        <div class="mv__card-media">
-          <img src="assets/vision.png" alt="Visión">
-        </div>
-        <div class="mv__card-footer">
-          <h3>Visión</h3>
-        </div>
-        <p>Proveer el ecosistema tecnológico líder en las Américas para la prevención, gestión y resolución de emergencias y riesgos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 6 · EQUIPO DIRECTIVO ============ -->
-  <section class="team">
-    <div class="team__header">
-      <div class="eyebrow eyebrow--dark reveal">
-        <span class="eyebrow-line eyebrow-line--dark"></span>
-        <span class="eyebrow-label eyebrow-label--muted">Nuestro equipo</span>
-      </div>
-      <h2 class="reveal">Liderazgo con visión de futuro</h2>
-      <p class="reveal">La fortaleza de Saimon Group está en las personas que la impulsan.</p>
-    </div>
-    <div class="team__grid">
-      <div class="reveal team-card">
-        <div class="team-card__media"><img src="assets/simon-picker.png" alt="Simon Picker"></div>
-        <div class="team-card__body"><div class="team-card__name">Simon Picker</div><div class="team-card__role">Presidente & Fundador</div></div>
-      </div>
-      <div class="reveal team-card">
-        <div class="team-card__media"><img src="assets/ariel-picker.png" alt="Ariel Picker"></div>
-        <div class="team-card__body"><div class="team-card__name">Ariel Picker</div><div class="team-card__role">Director General</div></div>
-      </div>
-      <div class="reveal team-card">
-        <div class="team-card__media"><div class="placeholder-img">Fotografía real — pendiente</div></div>
-        <div class="team-card__body"><div class="team-card__name">[Nombre Apellido]</div><div class="team-card__role">Director de Operaciones</div></div>
-      </div>
-    </div>
+  <!-- ============ 7 · CIERRE ============ -->
+  <section class="ps-cierre">
+    <button type="button" class="btn-navy" data-modal-open="contact">
+      Habla con un especialista
+      <i data-lucide="arrow-right"></i>
+    </button>
   </section>
 
   <!-- ============ CTA + FOOTER ============ -->
@@ -382,7 +416,7 @@
           <div>
             <div class="footer__col-title">Soluciones</div>
             <div class="footer__col-links">
-              <a href="index.html#soluciones">Seguridad física</a>
+              <a href="public-safety.html">Seguridad física</a>
               <a href="index.html#soluciones">Inteligencia de datos</a>
               <a href="index.html#soluciones">Gestión tecnológica</a>
             </div>

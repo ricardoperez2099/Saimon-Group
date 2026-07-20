@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAiMON GROUP — Sectors · Government</title>
+<title>SAiMON GROUP — Public Safety</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="page-gobierno">
+<body class="page-public-safety">
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -17,11 +17,11 @@
     <nav class="header__nav">
       <a href="index-en.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="index-en.html#soluciones" data-megamenu-trigger="soluciones">Solutions</a>
+      <a href="index-en.html#soluciones" class="is-active" data-megamenu-trigger="soluciones">Solutions</a>
       <a href="index-en.html#robotica" data-megamenu-trigger="robotica">Robotics</a>
-      <a href="sectors.html" class="is-active" data-megamenu-trigger="sectores">Sectors</a>
+      <a href="sectors.html" data-megamenu-trigger="sectores">Sectors</a>
       <a href="#" class="pill-outline" data-modal-open="contact">Contact</a>
-      <a href="gobierno.html" class="lang-toggle" aria-label="Switch to Spanish">
+      <a href="public-safety.html" class="lang-toggle" aria-label="Switch to Spanish">
         <span class="lang-toggle__active">EN</span>
         <span class="lang-toggle__sep">/</span>
         <span class="lang-toggle__inactive">ES</span>
@@ -37,12 +37,12 @@
     <div class="mobile-nav__inner">
       <a href="index-en.html" class="mobile-nav__link">Home</a>
       <a href="about.html" class="mobile-nav__link">About Us</a>
-      <a href="index-en.html#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
+      <a href="index-en.html#soluciones" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
       <a href="index-en.html#robotica" class="mobile-nav__link" data-megamenu-trigger="robotica" data-mobile-close>Robotics</a>
-      <a href="sectors.html" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
+      <a href="sectors.html" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
       <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contact</a>
       <div class="mobile-nav__footer">
-        <a href="gobierno.html" class="lang-toggle" aria-label="Switch to Spanish">
+        <a href="public-safety.html" class="lang-toggle" aria-label="Switch to Spanish">
           <span class="lang-toggle__active">EN</span>
           <span class="lang-toggle__sep">/</span>
           <span class="lang-toggle__inactive">ES</span>
@@ -181,189 +181,204 @@
   </div>
 
 
-  <!-- ============ GOVERNMENT · INTRO ============ -->
-  <section class="gob-intro">
-    <div class="gob-intro__bg"><img src="assets/gob-intro-bg.png" alt=""></div>
-    <div class="gob-intro__overlay"></div>
-    <div class="gob-intro__grid">
-      <div class="reveal gob-intro__text">
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="ps-hero">
+    <div class="ps-hero__bg"><img src="assets/pubsafety-hero-bg.jpg" alt="Public safety command center"></div>
+    <div class="ps-hero__overlay"></div>
+    <div class="ps-hero__content">
+      <div class="reveal eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-label">Saimon Public Safety</span>
+      </div>
+      <h1 class="reveal">End-to-end security, from the street to the command center</h1>
+      <p class="reveal">Dispatch, monitoring and critical infrastructure systems that protect entire communities in real time.</p>
+      <button type="button" class="reveal btn-white" data-modal-open="contact">
+        Request a demo
+        <i data-lucide="arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ 2 · CAD SAIMON ============ -->
+  <section class="ps-cad">
+    <div class="ps-cad__inner">
+      <div class="reveal ps-cad__intro">
+        <div class="eyebrow eyebrow--center">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Flagship product</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2>PSAP and Dispatcher Saimon: we protect what matters most</h2>
+        <p>An integrated Emergency Dispatch and Response Platform — scalable, flexible and adaptable — designed to optimize interoperability between municipal Emergency Centers and their institutions.</p>
+      </div>
+      <div class="reveal ps-cad__media">
+        <video class="ps-cad__video" muted loop playsinline controls>
+          <source src="assets/Funcionamiento_CAD_ENG_V1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · MODULES ============ -->
+  <section class="ps-modulos">
+    <div class="ps-modulos__inner">
+      <div class="reveal ps-modulos__header">
+        <div class="eyebrow eyebrow--center eyebrow--navy">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">System modules</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h3>PSAP and Dispatcher Saimon: we protect what matters most</h3>
+        <p>An integrated Emergency Dispatch and Response Platform — scalable, flexible and adaptable — designed to optimize interoperability between municipal Emergency Centers and their institutions.</p>
+      </div>
+      <div class="ps-modulos__row2">
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="phone"></i></div>
+          <h4>9-1-1 Emergencies</h4>
+          <p>Reception, handling and follow-up of incidents.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="users"></i></div>
+          <h4>Citizen Services</h4>
+          <p>Citizen reports and public services.</p>
+        </div>
+      </div>
+      <div class="ps-modulos__grid">
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="bell"></i></div>
+          <h4>Citizen Alert</h4>
+          <p>Mobile app with a virtual alarm activation button.</p>
+        </div>
+        <div class="ps-modulo-photo reveal">
+          <div class="placeholder-img">Real photography — emergency center operator at workstation</div>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="truck"></i></div>
+          <h4>Mobile Dispatch</h4>
+          <p>Receive and send event information: photos, video, audio and route tracking.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="shield-check"></i></div>
+          <h4>Detainee Control</h4>
+          <p>Detainee registration, medical review and sanctions control.</p>
+        </div>
+        <div class="ps-modulo-card reveal">
+          <div class="ps-modulo-card__icon"><i data-lucide="bar-chart-3"></i></div>
+          <h4>Dashboards & Reports</h4>
+          <p>Graphic statistics and operational report generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · OTHER PRODUCTS ============ -->
+  <section class="ps-prod">
+    <div class="ps-prod__bg"><div class="placeholder-img">Real photography — command center with officers and monitors</div></div>
+    <div class="ps-prod__overlay"></div>
+    <div class="ps-prod__inner">
+      <div class="reveal ps-prod__intro">
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-label">Solutions for the government sector</span>
+          <span class="eyebrow-label">More solutions</span>
         </div>
-        <h1>Technology at the service of security and public services</h1>
-        <p>AI, Business Intelligence and monitoring systems applied to public safety, health, water infrastructure and penitentiary systems.</p>
+        <h3>More Saimon Public Safety solutions</h3>
+        <p>A complete ecosystem for public safety.</p>
       </div>
-      <div class="reveal reveal-d2 gob-intro__media">
-        <img src="assets/portada-sector-gobierno.png" alt="Command center and technology for the government sector">
+      <div class="reveal ps-prod__carousel" data-ps-prod>
+        <div class="ps-prod__viewport">
+          <div class="ps-prod__track" data-ps-track>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Senior Command</h4><p>Strategic consultation and tracking of critical incidents for decision-making.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — senior command room with dashboards</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Penitentiary System</h4><p>Satellite GPS monitoring for early release and house arrest.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — GPS monitoring bracelet</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Mujer Segura</h4><p>Protection app with rapid response in risk situations.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — person using a safety app on a phone</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>GPS Monitoring</h4><p>Real-time satellite tracking with geofence notifications.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — operator monitoring GPS routes on a map</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>Digital Health</h4><p>Hospital management and clinical records integrated into the emergency ecosystem.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — medical staff using digital clinical records</div></div>
+            </div>
+            <div class="ps-prod__slide">
+              <div class="ps-prod__slide-text"><h4>SeguriMan</h4><p>Management and monitoring system for field security personnel.</p></div>
+              <div class="ps-prod__slide-photo"><div class="placeholder-img">Real photography — security guard in the field with a tablet</div></div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="ps-prod__arrow ps-prod__arrow--prev" data-ps-prev aria-label="Previous">‹</button>
+        <button type="button" class="ps-prod__arrow ps-prod__arrow--next" data-ps-next aria-label="Next">›</button>
+      </div>
+      <div class="ps-prod__dots" data-ps-dots></div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · INFRASTRUCTURE ============ -->
+  <section class="ps-infra">
+    <div class="ps-infra__scanlines"></div>
+    <div class="ps-infra__grid">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Critical infrastructure</span>
+        </div>
+        <h2>Command and Control Centers built to last</h2>
+        <p>We design, build and operate Command, Communications, Computing, Control and Coordination Centers (C4/C5) for state governments, with ISO 9000, PMI and ITIL certifications.</p>
+      </div>
+      <div class="reveal">
+        <div class="ps-infra__stat">+50</div>
+        <p>Command and Control Centers built, benefiting 22 million people in Mexico, the United States and Colombia.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · PUBLIC SAFETY ============ -->
-  <section id="public-safety" class="subsector subsector--light">
-    <div class="subsector__header reveal">
-      <h3>Public safety</h3>
-      <p>Coordination and emergency response in real time.</p>
-    </div>
-    <div class="ss-carousel ss-carousel--light reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev ss-carousel__arrow--light" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next ss-carousel__arrow--light" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/despacho-automatico.png" alt="Automatic dispatch">
-            <div class="ss-carousel__caption">
-              <h4>Automatic dispatch</h4>
-              <p>Automated distribution of calls and incidents in real time to the corresponding units.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/altos-mandos.png" alt="Senior command">
-            <div class="ss-carousel__caption">
-              <h4>Senior command</h4>
-              <p>Strategic consultation and tracking of critical incidents, with precise information for decision-making.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/botones-panico.png" alt="Panic buttons and LPR/RFID integration">
-            <div class="ss-carousel__caption">
-              <h4>Panic buttons and LPR/RFID integration</h4>
-              <p>Immediate alert reception and automated vehicle plate reading for agile response.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/tableros-reportes.png" alt="Dashboards and reports">
-            <div class="ss-carousel__caption">
-              <h4>Dashboards and reports</h4>
-              <p>Centralized visibility of operational performance for command and coordination.</p>
-            </div>
-          </div>
+  <!-- ============ 6 · PROJECTS ============ -->
+  <section class="ps-proyectos">
+    <div class="ps-proyectos__inner">
+      <div class="reveal ps-proyectos__header"><h2>Featured projects</h2></div>
+      <div class="ps-proyectos__grid">
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5i Hidalgo</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">State of Hidalgo</div><span class="ps-proj-card__status">Operating</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5i State of Mexico</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">State of Mexico (main HQ and Ecatepec)</div><span class="ps-proj-card__status">Operating</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5i Guanajuato</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">State of Guanajuato</div><span class="ps-proj-card__status">Operating</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5i Michoacán</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">State of Michoacán</div><span class="ps-proj-card__status">Operating</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5i Sonora</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5i</div><div class="ps-proj-card__client">State of Sonora</div><span class="ps-proj-card__status">Operating</span></div>
+        </div>
+        <div class="reveal ps-proj-card">
+          <div class="ps-proj-card__photo"><div class="placeholder-img">Real photography — C5 Puebla</div></div>
+          <div class="ps-proj-card__body"><div class="ps-proj-card__name">C5</div><div class="ps-proj-card__client">State of Puebla — Metropolitan Public Safety Complex</div><span class="ps-proj-card__status">Operating</span></div>
         </div>
       </div>
-      <div class="ss-carousel__dots ss-carousel__dots--light" data-ss-dots></div>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · HEALTH ============ -->
-  <section id="health" class="subsector subsector--navy">
-    <div class="subsector__header reveal">
-      <h3>Health</h3>
-      <p>Monitoring and management systems for the health sector.</p>
-    </div>
-    <div class="ss-carousel reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/administracion-hospitalaria.png" alt="Hospital administration">
-            <div class="ss-carousel__caption">
-              <h4>Hospital administration</h4>
-              <p>Centralization of clinical and operational processes on a single platform.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/expediente-clinico.png" alt="Clinical record">
-            <div class="ss-carousel__caption">
-              <h4>Clinical record</h4>
-              <p>Secure, accessible digital medical history for healthcare staff.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/administracion-citas-medias.png" alt="Medical appointment management">
-            <div class="ss-carousel__caption">
-              <h4>Medical appointment management</h4>
-              <p>Efficient agenda and care management across all locations.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/consulta-estudios-clinicos.png" alt="Clinical studies consultation">
-            <div class="ss-carousel__caption">
-              <h4>Clinical studies consultation</h4>
-              <p>Quick access to results and hospitalization from a single system.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots" data-ss-dots></div>
-    </div>
-  </section>
-
-  <!-- ============ SUB-SECTOR · WATER MANAGEMENT ============ -->
-  <section id="water-management" class="subsector subsector--light">
-    <div class="subsector__header reveal">
-      <h3>Water management</h3>
-      <p>Water infrastructure monitoring.</p>
-    </div>
-    <div class="ss-carousel ss-carousel--light reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev ss-carousel__arrow--light" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next ss-carousel__arrow--light" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/monitoreo-infraestructura.png" alt="Infrastructure monitoring">
-            <div class="ss-carousel__caption">
-              <h4>Infrastructure monitoring</h4>
-              <p>Real-time supervision of plants and water distribution networks.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/deteccion-fugas.png" alt="Leak detection">
-            <div class="ss-carousel__caption">
-              <h4>Leak detection</h4>
-              <p>Early identification of anomalies for rapid response.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/reportes-consumo.png" alt="Consumption reports">
-            <div class="ss-carousel__caption">
-              <h4>Consumption reports</h4>
-              <p>Centralized visibility of water network usage and status.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots ss-carousel__dots--light" data-ss-dots></div>
-    </div>
-  </section>
-
-  <!-- ============ SUB-SECTOR · PENITENTIARY SYSTEM ============ -->
-  <section id="penitentiary" class="subsector subsector--navy">
-    <div class="subsector__header reveal">
-      <h3>Penitentiary system</h3>
-      <p>Security and control in penitentiary facilities.</p>
-    </div>
-    <div class="ss-carousel reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/monitoreo-gps.png" alt="Real-time GPS monitoring">
-            <div class="ss-carousel__caption">
-              <h4>Real-time GPS monitoring</h4>
-              <p>Location and tracking of persons under judicial processes via satellite bracelet.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/notificaciones-geocerca.png" alt="Geofence notifications">
-            <div class="ss-carousel__caption">
-              <h4>Geofence notifications</h4>
-              <p>Automatic alerts when restricted zones are violated.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/trazabilidad-ruta.png" alt="Route traceability">
-            <div class="ss-carousel__caption">
-              <h4>Route traceability</h4>
-              <p>Complete movement history for reports and auditing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots" data-ss-dots></div>
-    </div>
+  <!-- ============ 7 · CLOSE ============ -->
+  <section class="ps-cierre">
+    <button type="button" class="btn-navy" data-modal-open="contact">
+      Talk to a specialist
+      <i data-lucide="arrow-right"></i>
+    </button>
   </section>
 
   <!-- ============ CTA + FOOTER ============ -->
@@ -401,7 +416,7 @@
           <div>
             <div class="footer__col-title">Solutions</div>
             <div class="footer__col-links">
-              <a href="index-en.html#soluciones">Physical security</a>
+              <a href="public-safety-en.html">Physical security</a>
               <a href="index-en.html#soluciones">Data intelligence</a>
               <a href="index-en.html#soluciones">Technology management</a>
             </div>

@@ -16,3 +16,6 @@ __pycache__/
 
 # Logs
 *.log
+
+# Large media pending optimization (do not publish yet)
+assets/Funcionamiento_CAD_ENG_V1.mp4

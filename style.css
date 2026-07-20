@@ -500,6 +500,12 @@ img { display: block; max-width: 100%; }
 
 .hero__cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
 .hero__carousel-controls { display: none; }
+/* Temporarily hide all Seguritech logos sitewide */
+.hero__partner-logo,
+.footer__partner-logo,
+.nos-hero__partner-logo,
+.legado__partner-logo,
+.timeline__partner-logo { display: none !important; }
 .hero__partner-logo {
   display: block;
   height: 52px;
@@ -1084,7 +1090,7 @@ img { display: block; max-width: 100%; }
 /* =========================================================
    NOSOTROS — TIMELINE
    ========================================================= */
-.timeline { position: relative; background: #fff; padding: 150px 0 180px; overflow: hidden; }
+.timeline { display: none; position: relative; background: #fff; padding: 150px 0 180px; overflow: hidden; }
 .timeline__partner-logo {
   display: block;
   height: 52px;
@@ -2554,4 +2560,350 @@ img { display: block; max-width: 100%; }
 @media (max-width: 640px) {
   .gob-intro, .subsector--navy, .subsector--light { padding-left: 24px; padding-right: 24px; }
   .gob-intro { padding-top: 140px; padding-bottom: 80px; }
+}
+
+/* =========================================================
+   PUBLIC SAFETY (página dedicada)
+   ========================================================= */
+.page-public-safety { background: #fff; color: #14161c; }
+
+.eyebrow--center { justify-content: center; }
+.eyebrow--navy .eyebrow-line { background: #25356d; }
+.eyebrow--navy .eyebrow-label { color: #25356d; }
+
+.btn-white, .btn-navy {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.btn-white { background: #fff; color: #25356d; }
+.btn-white:hover { background: #e0e3ea; }
+.btn-navy { background: #25356d; color: #fff; }
+.btn-navy:hover { background: #1c2b57; }
+
+.ps-hero {
+  position: relative;
+  min-height: 70.4vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #25356d;
+}
+.ps-hero__bg { position: absolute; inset: 0; z-index: 0; }
+.ps-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+.ps-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(37,53,109,0.3) 0%, rgba(37,53,109,0.6) 45%, #25356d 100%);
+}
+.ps-hero__content {
+  position: relative;
+  z-index: 5;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 48px 100px;
+}
+.ps-hero__content h1 {
+  max-width: 760px;
+  margin: 0 0 22px;
+  font-size: clamp(36px,5.2vw,60px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.ps-hero__content p {
+  max-width: 600px;
+  margin: 0 0 36px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.82);
+}
+
+.ps-cad {
+  position: relative;
+  background: #25356d;
+  padding: 120px 48px 96px;
+  z-index: 2;
+}
+.ps-cad__inner { max-width: 1180px; margin: 0 auto; }
+.ps-cad__intro { text-align: center; margin-bottom: 64px; }
+.ps-cad__intro h2 {
+  margin: 0 0 20px;
+  font-size: clamp(30px,3.6vw,46px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.ps-cad__intro p {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+}
+.ps-cad__media {
+  position: relative;
+  z-index: 3;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f1633;
+  box-shadow:
+    0 28px 60px rgba(15, 22, 51, 0.45),
+    0 10px 24px rgba(15, 22, 51, 0.28);
+}
+.ps-cad__video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ps-modulos {
+  position: relative;
+  background: #fff;
+  padding: 100px 48px;
+  z-index: 1;
+}
+.ps-modulos__inner { max-width: 1180px; margin: 0 auto; }
+.ps-modulos__header { text-align: center; margin-bottom: 56px; }
+.ps-modulos__header h3 {
+  margin: 0 0 20px;
+  font-size: clamp(26px,3vw,38px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #1c2b57;
+}
+.ps-modulos__header p {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #4b5163;
+}
+.ps-modulos__row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.ps-modulos__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.ps-modulo-card {
+  background: #fff;
+  border: 1px solid #e6e8ee;
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.ps-modulo-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: #eef1f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #25356d;
+}
+.ps-modulo-card h4 {
+  margin: 0 0 8px;
+  font-size: 16.5px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1c1f2b;
+}
+.ps-modulo-card p { margin: 0; font-size: 14px; line-height: 1.6; color: #5b6172; }
+.ps-modulo-photo { grid-row: span 2; border-radius: 16px; overflow: hidden; min-height: 280px; }
+
+.ps-prod { position: relative; min-height: 620px; overflow: hidden; background: #172247; }
+.ps-prod__bg { position: absolute; inset: 0; z-index: 0; }
+.ps-prod__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(15,22,51,0.94) 0%, rgba(15,22,51,0.78) 32%, rgba(15,22,51,0.15) 62%, rgba(15,22,51,0) 100%);
+}
+.ps-prod__inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 100px 48px; }
+.ps-prod__intro { max-width: 520px; margin-bottom: 44px; }
+.ps-prod__intro h3 {
+  margin: 0 0 14px;
+  font-size: clamp(28px,3.2vw,42px);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #fff;
+}
+.ps-prod__intro p { margin: 0; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.82); }
+.ps-prod__carousel { position: relative; display: flex; align-items: center; gap: 16px; }
+.ps-prod__viewport { overflow: hidden; border-radius: 20px; max-width: 460px; }
+.ps-prod__track { display: flex; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.ps-prod__slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 24px 50px rgba(15,22,51,0.28);
+}
+.ps-prod__slide-text { flex: 1; min-width: 0; }
+.ps-prod__slide-text h4 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1c2b57;
+}
+.ps-prod__slide-text p { margin: 0; font-size: 14px; line-height: 1.6; color: #5b6172; }
+.ps-prod__slide-photo { flex: 0 0 130px; height: 130px; border-radius: 14px; overflow: hidden; }
+.ps-prod__arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.ps-prod__arrow:hover { background: rgba(255,255,255,0.26); }
+.ps-prod__dots { display: flex; align-items: center; gap: 10px; margin-top: 26px; }
+.ps-prod__dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  transition: all .3s ease;
+  padding: 0;
+}
+.ps-prod__dots button.is-active { width: 26px; background: #fff; }
+
+.ps-infra { position: relative; background: #25356d; padding: 120px 48px; overflow: hidden; }
+.ps-infra__scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 5px);
+}
+.ps-infra__grid {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 72px;
+  align-items: center;
+}
+.ps-infra__grid h2 {
+  margin: 0 0 24px;
+  font-size: clamp(30px,3.4vw,44px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.ps-infra__grid p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  max-width: 520px;
+}
+.ps-infra__stat {
+  font-size: clamp(48px,6vw,76px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.ps-proyectos { position: relative; background: #fff; padding: 120px 48px; }
+.ps-proyectos__inner { max-width: 1180px; margin: 0 auto; }
+.ps-proyectos__header { text-align: center; margin-bottom: 60px; }
+.ps-proyectos__header h2 {
+  margin: 0;
+  font-size: clamp(30px,3.6vw,46px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #1c2b57;
+}
+.ps-proyectos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ps-proj-card {
+  background: #fff;
+  border: 1px solid #e6e8ee;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15,22,51,0.06);
+}
+.ps-proj-card__photo { height: 200px; }
+.ps-proj-card__body { padding: 22px 22px 26px; }
+.ps-proj-card__name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1c1f2b;
+  margin-bottom: 6px;
+}
+.ps-proj-card__client {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5b6172;
+  margin-bottom: 12px;
+}
+.ps-proj-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #eef1f8;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #25356d;
+}
+
+.ps-cierre { position: relative; background: #f7f8fa; padding: 120px 48px; text-align: center; }
+
+@media (max-width: 1080px) {
+  .ps-modulos__row2, .ps-modulos__grid { grid-template-columns: 1fr; }
+  .ps-modulo-photo { grid-row: auto; height: 240px; min-height: 240px; }
+  .ps-infra__grid { grid-template-columns: 1fr; gap: 40px; }
+  .ps-proyectos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .ps-hero__content, .ps-cad, .ps-modulos, .ps-prod__inner, .ps-infra, .ps-proyectos, .ps-cierre {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .ps-prod__slide { flex-direction: column; }
+  .ps-prod__viewport { max-width: 100%; }
+  .ps-proyectos__grid { grid-template-columns: 1fr; }
+  .ps-cad__arrow { display: none; }
+  .ps-cad {
+    padding-bottom: 72px;
+  }
+  .ps-cad__media {
+    border-radius: 12px;
+  }
 }

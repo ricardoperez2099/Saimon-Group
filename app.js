@@ -379,11 +379,11 @@ document.addEventListener('DOMContentLoaded', () => {
     items: document.documentElement.lang === 'en' ? [
       { name: 'Physical Security', body: 'Intelligent video surveillance, access control and perimeter protection with proactive AI detection to safeguard people and assets.' },
       { name: 'Data Intelligence', body: 'Business Intelligence that turns every event into actionable metrics: foot traffic, dwell-time and loss prevention, in real time.' },
-      { name: 'Technology Management', body: 'Integration and operation of C4/C5 infrastructure and robotics, orchestrating drone, dispatch and response as a single system.' }
+      { name: 'Technology Management', body: 'Integration of different technologies to improve the performance of real time crime center infrastructure, orchestrating sensors like robotics, drones, license plate readers, cameras and dispatch processes to perform as a single system.' }
     ] : [
       { name: 'Seguridad física', body: 'Videovigilancia inteligente, control de accesos y protección perimetral con detección proactiva por IA para resguardar personas y activos.' },
       { name: 'Inteligencia de datos', body: 'Business Intelligence que convierte cada evento en métricas accionables: afluencia, dwell-time y mermas evitadas, en tiempo real.' },
-      { name: 'Gestión tecnológica', body: 'Integración y operación de infraestructura C4/C5 y robótica, orquestando dron, despacho y respuesta como un solo sistema.' }
+      { name: 'Gestión tecnológica', body: 'Integración de distintas tecnologías para mejorar el desempeño de la infraestructura de centros de crimen en tiempo real, orquestando sensores como robótica, drones, lectores de placas, cámaras y procesos de despacho para operar como un solo sistema.' }
     ]
   });
 
@@ -405,11 +405,11 @@ document.addEventListener('DOMContentLoaded', () => {
     rootSelector: '[data-carousel="gobierno"]',
     intervalMs: 4800,
     items: document.documentElement.lang === 'en' ? [
-      { name: 'Public Safety', body: 'Video surveillance and intelligence platforms for prevention and response to incidents in public spaces.' },
+      { name: 'Public Safety', body: 'Video surveillance and intelligence platforms to improve prevention and response capabilities through unmatched exploitation tools.' },
       { name: 'Municipalities', body: 'Municipal technology infrastructure integrated with command centers for safer urban management.' },
       { name: 'Urban Mobility & Penitentiary', body: 'Monitoring systems for urban mobility and security in penitentiary facilities.' }
     ] : [
-      { name: 'Seguridad pública', body: 'Plataformas de videovigilancia e inteligencia para la prevención y respuesta ante incidentes en el espacio público.' },
+      { name: 'Seguridad pública', body: 'Plataformas de videovigilancia e inteligencia para mejorar las capacidades de prevención y respuesta mediante herramientas de explotación sin igual.' },
       { name: 'Municipios', body: 'Infraestructura tecnológica municipal integrada a centros de comando para una gestión urbana más segura.' },
       { name: 'Movilidad urbana y penitenciario', body: 'Sistemas de monitoreo para movilidad urbana y seguridad en instalaciones penitenciarias.' }
     ]
@@ -735,6 +735,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
 
     const slides = [...track.querySelectorAll('.ss-carousel__slide')];
+    if (!slides.length) return;
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = [...dotsWrap.querySelectorAll('button')];
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    }
+    function goTo(i) {
+      index = i;
+      render();
+    }
+
+    prevBtn.addEventListener('click', () => goTo((index - 1 + slides.length) % slides.length));
+    nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
+    render();
+  });
+
+  /* ---------- public safety: carrusel de productos ---------- */
+  document.querySelectorAll('[data-ps-prod]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-ps-track]');
+    const dotsWrap = carousel.parentElement
+      ? carousel.parentElement.querySelector('[data-ps-dots]')
+      : null;
+    const prevBtn = carousel.querySelector('[data-ps-prev]');
+    const nextBtn = carousel.querySelector('[data-ps-next]');
+    if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+    const slides = [...track.querySelectorAll('.ps-prod__slide')];
     if (!slides.length) return;
     let index = 0;
 
