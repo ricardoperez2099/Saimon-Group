@@ -49,11 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
   applyWordReveal(document.querySelector('.hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.nos-hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.ps-hero__title'), { fallbackMs: 600 });
+  applyWordReveal(document.querySelector('.v-hero__title'), { fallbackMs: 600 });
 
   // Títulos con data-word-reveal (activados por scroll)
   document.querySelectorAll('[data-word-reveal]').forEach(el => {
     if (el.classList.contains('nos-hero__title')) return;
     if (el.classList.contains('ps-hero__title')) return;
+    if (el.classList.contains('v-hero__title')) return;
     applyWordReveal(el);
   });
 
@@ -848,4 +850,91 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
     render();
   });
+
+  /* ---------- saimon vision: video fallback ---------- */
+  (function initVisionVideoFallback() {
+    const video = document.querySelector('[data-v-video]');
+    const fallback = document.querySelector('[data-v-video-fallback]');
+    if (!video) return;
+    const showFallback = () => {
+      video.style.display = 'none';
+      if (fallback) fallback.hidden = false;
+    };
+    video.addEventListener('error', showFallback);
+    const source = video.querySelector('source');
+    if (source) source.addEventListener('error', showFallback);
+  })();
+
+  /* ---------- saimon vision: sector carousel ---------- */
+  document.querySelectorAll('[data-v-sect]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-v-track]');
+    const dotsWrap = carousel.querySelector('[data-v-dots]');
+    const prevBtn = carousel.querySelector('[data-v-prev]');
+    const nextBtn = carousel.querySelector('[data-v-next]');
+    if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+    const slides = [...track.querySelectorAll('.v-sect__slide')];
+    if (!slides.length) return;
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = [...dotsWrap.querySelectorAll('button')];
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    }
+    function goTo(i) {
+      index = i;
+      render();
+    }
+
+    prevBtn.addEventListener('click', () => goTo((index - 1 + slides.length) % slides.length));
+    nextBtn.addEventListener('click', () => goTo((index + 1) % slides.length));
+    render();
+  });
+
+  /* ---------- saimon vision: rotating platform card ---------- */
+  (function initVisionPlatformCard() {
+    const platCard = document.querySelector('[data-v-plat-card]');
+    if (!platCard) return;
+    const isEn = document.documentElement.lang === 'en';
+    const items = isEn ? [
+      { label: 'Advanced Analytics', body: 'AI models that turn video into structured, actionable information in real time.' },
+      { label: 'BI Dashboards', body: 'Business Intelligence with clear operational indicators for decision-making.' },
+      { label: 'Big Data', body: 'Correlation of large volumes of data from sensors and existing systems.' },
+      { label: 'Link Networks', body: 'Relate events and entities to reveal patterns that used to go unnoticed.' }
+    ] : [
+      { label: 'Analítica Avanzada', body: 'Modelos de IA que convierten video en información estructurada y accionable en tiempo real.' },
+      { label: 'Tableros BI', body: 'Business Intelligence con indicadores operativos claros para la toma de decisiones.' },
+      { label: 'Big Data', body: 'Correlación de grandes volúmenes de datos provenientes de sensores y sistemas existentes.' },
+      { label: 'Redes de Vínculos', body: 'Relaciona eventos y entidades para revelar patrones que antes pasaban desapercibidos.' }
+    ];
+    const titleEl = document.querySelector('[data-v-plat-title]');
+    const bodyEl = document.querySelector('[data-v-plat-body]');
+    const counterEl = document.querySelector('[data-v-plat-counter]');
+    const barEl = document.querySelector('[data-v-plat-bar]');
+    const bgSlides = [...document.querySelectorAll('[data-v-plat-bg] .v-plat__photo-slide')];
+    let platIdx = 0;
+    function renderPlat() {
+      const p = items[platIdx];
+      if (titleEl) titleEl.textContent = p.label;
+      if (bodyEl) bodyEl.textContent = p.body;
+      if (counterEl) counterEl.textContent = `${platIdx + 1} / ${items.length}`;
+      if (barEl) barEl.style.width = `${((platIdx + 1) / items.length) * 100}%`;
+      bgSlides.forEach((el, i) => el.classList.toggle('is-active', i === platIdx));
+    }
+    renderPlat();
+    setInterval(() => {
+      platIdx = (platIdx + 1) % items.length;
+      renderPlat();
+    }, 4200);
+  })();
+
 });
