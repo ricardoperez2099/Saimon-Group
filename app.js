@@ -50,12 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
   applyWordReveal(document.querySelector('.nos-hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.ps-hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.v-hero__title'), { fallbackMs: 600 });
+  applyWordReveal(document.querySelector('.rb-hero__title'), { fallbackMs: 600 });
 
   // Títulos con data-word-reveal (activados por scroll)
   document.querySelectorAll('[data-word-reveal]').forEach(el => {
     if (el.classList.contains('nos-hero__title')) return;
     if (el.classList.contains('ps-hero__title')) return;
     if (el.classList.contains('v-hero__title')) return;
+    if (el.classList.contains('rb-hero__title')) return;
     applyWordReveal(el);
   });
 
@@ -416,6 +418,34 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: 'Seguridad pública', body: 'Plataformas de videovigilancia e inteligencia para mejorar las capacidades de prevención y respuesta mediante herramientas de explotación sin igual.' },
       { name: 'Municipios', body: 'Infraestructura tecnológica municipal integrada a centros de comando para una gestión urbana más segura.' },
       { name: 'Movilidad urbana y penitenciario', body: 'Sistemas de monitoreo para movilidad urbana y seguridad en instalaciones penitenciarias.' }
+    ]
+  });
+
+  initTextCarousel({
+    rootSelector: '[data-carousel="rb-deploy"]',
+    intervalMs: 4200,
+    items: document.documentElement.lang === 'en' ? [
+      { name: 'Assessment', body: 'We evaluate your operation to identify where robotics can create the most impact.' },
+      { name: 'Integration', body: 'We design the right model integration into your existing workflows and infrastructure.' },
+      { name: 'Go-live', body: 'We train your team and support deployment until the fleet is running at full capacity.' }
+    ] : [
+      { name: 'Evaluación', body: 'Analizamos tu operación para identificar dónde la robótica genera mayor impacto.' },
+      { name: 'Integración', body: 'Diseñamos la integración del modelo correcto a tus flujos e infraestructura existentes.' },
+      { name: 'Puesta en marcha', body: 'Capacitamos a tu equipo y acompañamos el go-live hasta que la flota opere a capacidad.' }
+    ]
+  });
+
+  initTextCarousel({
+    rootSelector: '[data-carousel="rb-iq"]',
+    intervalMs: 4200,
+    items: document.documentElement.lang === 'en' ? [
+      { name: 'Fleet status', body: 'Track the operational health of every unit from a single real-time dashboard.' },
+      { name: 'GPS location', body: 'Locate each robot on the map with precision, wherever your fleet is deployed.' },
+      { name: 'Live camera', body: 'View the camera feed of every unit without switching between systems.' }
+    ] : [
+      { name: 'Estado de flota', body: 'Consulta el estado operativo de cada unidad desde un solo panel en tiempo real.' },
+      { name: 'Ubicación GPS', body: 'Ubica cada robot en el mapa con precisión, sin importar dónde opere tu flota.' },
+      { name: 'Cámara en vivo', body: 'Visualiza la cámara de cada unidad sin cambiar de sistema.' }
     ]
   });
 
@@ -935,6 +965,95 @@ document.addEventListener('DOMContentLoaded', () => {
       platIdx = (platIdx + 1) % items.length;
       renderPlat();
     }, 4200);
+  })();
+
+  /* ---------- saimon robotics: categories carousel (infinite loop) ---------- */
+  (function initRoboticsCats() {
+    const section = document.querySelector('[data-rb-cats]');
+    if (!section) return;
+    const track = section.querySelector('[data-rb-cats-track]');
+    const prevBtn = section.querySelector('[data-rb-cats-prev]');
+    const nextBtn = section.querySelector('[data-rb-cats-next]');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const originals = [...track.children];
+    const total = originals.length;
+    if (!total) return;
+
+    function cloneCard(node) {
+      const clone = node.cloneNode(true);
+      clone.classList.add('visible');
+      clone.setAttribute('aria-hidden', 'true');
+      clone.tabIndex = -1;
+      return clone;
+    }
+
+    // Only append clones (no prepend) so the initial state has nothing peeking on the left
+    originals.forEach((card) => track.appendChild(cloneCard(card)));
+
+    let idx = 0;
+    let animating = false;
+
+    function gap() {
+      const g = parseFloat(getComputedStyle(track).gap);
+      return Number.isFinite(g) ? g : 24;
+    }
+
+    function step() {
+      const card = track.children[0];
+      if (!card) return 0;
+      return card.getBoundingClientRect().width + gap();
+    }
+
+    function setX(animate) {
+      track.style.transition = animate
+        ? 'transform .5s cubic-bezier(.16,1,.3,1)'
+        : 'none';
+      track.style.transform = 'translate3d(' + (-idx * step()) + 'px,0,0)';
+    }
+
+    function go(dir) {
+      if (animating) return;
+      animating = true;
+
+      if (dir < 0 && idx === 0) {
+        // Jump to the cloned set (same visual as start), then step back to last card
+        idx = total;
+        setX(false);
+        void track.offsetWidth;
+        idx = total - 1;
+        setX(true);
+        return;
+      }
+
+      idx += dir;
+      setX(true);
+    }
+
+    track.addEventListener('transitionend', (e) => {
+      if (e.target !== track || e.propertyName !== 'transform') return;
+      if (idx >= total) {
+        idx -= total;
+        setX(false);
+      }
+      animating = false;
+    });
+
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+    prevBtn.addEventListener('click', () => go(-1));
+    nextBtn.addEventListener('click', () => go(1));
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (idx >= total) idx -= total;
+        setX(false);
+      }, 100);
+    });
+
+    setX(false);
   })();
 
 });

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAiMON GROUP — Saimon Robotics</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="page-robotics">
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <a href="index-en.html"><img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP"></a>
+    <nav class="header__nav">
+      <a href="index-en.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="index-en.html#soluciones" data-megamenu-trigger="soluciones">Solutions</a>
+      <a href="robotics-en.html" class="is-active" data-megamenu-trigger="robotica">Robotics</a>
+      <a href="sectors.html" data-megamenu-trigger="sectores">Sectors</a>
+      <a href="#" class="pill-outline" data-modal-open="contact">Contact</a>
+      <a href="robotics.html" class="lang-toggle" aria-label="Switch to Spanish">
+        <span class="lang-toggle__active">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__inactive">ES</span>
+      </a>
+    </nav>
+    <button class="header__burger" aria-label="Open menu" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="index-en.html" class="mobile-nav__link">Home</a>
+      <a href="about.html" class="mobile-nav__link">About Us</a>
+      <a href="index-en.html#soluciones" class="mobile-nav__link " data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
+      <a href="robotics-en.html" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="robotica" data-mobile-close>Robotics</a>
+      <a href="sectors.html" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
+      <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contact</a>
+      <div class="mobile-nav__footer">
+        <a href="robotics.html" class="lang-toggle" aria-label="Switch to Spanish">
+          <span class="lang-toggle__active">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__inactive">ES</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENU SOLUTIONS ============ -->
+  <div class="megamenu" id="megamenu-soluciones" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request a demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="public-safety-en.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/seguridad-fisica.png" alt="Saimon Public Safety"></div>
+          <span class="megamenu__thumb-label">SAIMON PUBLIC SAFETY <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="robotics-en.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="Saimon Robotics"></div>
+          <span class="megamenu__thumb-label">SAIMON ROBOTICS <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON PUBLIC SAFETY</span>
+          <a href="public-safety-en.html" data-megamenu-close>Comprehensive security</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON VISION</span>
+          <a href="vision-en.html" data-megamenu-close>Video analytics</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ROBOTICS</span>
+          <a href="robotics-en.html" data-megamenu-close>Robotics</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON ANALYTICS</span>
+          <a href="index-en.html#soluciones" data-megamenu-close>Business Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON IA</span>
+          <a href="index-en.html#soluciones" data-megamenu-close>Artificial Intelligence</a>
+        </div>
+        <div class="megamenu__nav-item">
+          <span class="megamenu__nav-label">SAIMON SMART CITIES</span>
+          <a href="index-en.html#soluciones" data-megamenu-close>Smart cities</a>
+        </div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contact@saimonvision.com" class="megamenu__contact-email">contact@saimonvision.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENU SECTORS ============ -->
+  <div class="megamenu" id="megamenu-sectores" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request a demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="sectors.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-privado.png" alt="Private Sector"></div>
+          <span class="megamenu__thumb-label">PRIVATE <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="government.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-gobierno.png" alt="Government Sector"></div>
+          <span class="megamenu__thumb-label">GOVERNMENT <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="sectors.html#corporate" data-megamenu-close>Corporate</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="sectors.html#residential" data-megamenu-close>Residential</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVATE</span><a href="sectors.html#commercial" data-megamenu-close>Commercial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="government.html#public-safety" data-megamenu-close>Public Safety</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="government.html#health" data-megamenu-close>Health</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="government.html#water-management" data-megamenu-close>Water Management</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOVERNMENT</span><a href="government.html#penitentiary" data-megamenu-close>Penitentiary System</a></div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contact@saimonvision.com" class="megamenu__contact-email">contact@saimonvision.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MEGA-MENU ROBOTICS ============ -->
+  <div class="megamenu" id="megamenu-robotica" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close>
+        <i data-lucide="x"></i>
+        <span>MENU</span>
+      </button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Request a demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="robotics-en.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/robot.seguridad.png" alt="RoboSector Catalog"></div>
+          <span class="megamenu__thumb-label">INDUSTRIES CATALOG <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="robotics-en.html#saimoniq" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="SaimonIQ"></div>
+          <span class="megamenu__thumb-label">INTELLIGENT MONITORING <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">CATALOG</span><a href="robotics-en.html" data-megamenu-close>Industries Catalog — 9 sectors, 80+ models</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">IMPLEMENTATION</span><a href="robotics-en.html#saimon-deploy" data-megamenu-close>SaimonDeploy — consulting and integration</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">SERVICES</span><a href="https://saimonrobotics.com" target="_blank" rel="noopener" data-megamenu-close>RoboAlliance — rental, training and support</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">MANAGEMENT</span><a href="robotics-en.html#saimoniq" data-megamenu-close>Intelligent Monitoring — real-time fleet control</a></div>
+        <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="megamenu__catalog-btn">View full catalog <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">Looking for something specific?</p>
+        <a href="mailto:contact@saimonvision.com" class="megamenu__contact-email">contact@saimonvision.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contact us <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="rb-hero">
+    <div class="rb-hero__bg"><img src="assets/robotics-hero-bg.png" alt="Saimon Robotics robot dog in field operations"></div>
+    <div class="rb-hero__overlay"></div>
+    <div class="rb-hero__content">
+      <div class="reveal eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-label">Saimon Robotics</span>
+      </div>
+      <h1 class="rb-hero__title" data-word-reveal>One technology. Five ways to act.</h1>
+      <p class="reveal">The same AI and robotics ecosystem that watches with drones and robot dogs in security also optimizes logistics, hospitality, medicine and heavy payload — 80+ models, 340+ B2B clients.</p>
+      <button type="button" class="reveal btn-white" data-modal-open="contact">
+        Request a demo
+        <i data-lucide="arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ 2 · CATEGORY CAROUSEL ============ -->
+  <section class="rb-cats" data-rb-cats>
+    <div class="rb-cats__blue"></div>
+    <div class="rb-cats__inner">
+      <div class="rb-cats__head">
+        <div class="reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-line eyebrow-line--light"></span>
+            <span class="eyebrow-label eyebrow-label--light">Categories</span>
+          </div>
+          <h2>Robots already working in industry</h2>
+        </div>
+        <div class="rb-cats__arrows">
+          <button type="button" class="rb-arrow" data-rb-cats-prev aria-label="Previous"><i data-lucide="arrow-left"></i></button>
+          <button type="button" class="rb-arrow" data-rb-cats-next aria-label="Next"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="rb-cats__viewport">
+        <div class="rb-cats__track" data-rb-cats-track>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-seguridad.png" alt="Security"></div>
+            <h4>Security</h4>
+            <p>Robot dogs on the first line of response.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-logistica.png" alt="Logistics"></div>
+            <h4>Logistics</h4>
+            <p>Automation that speeds up every delivery.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-drones.png" alt="Drones"></div>
+            <h4>Drones</h4>
+            <p>Aerial surveillance and rapid response from the sky.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-hoteleria.png" alt="Hospitality"></div>
+            <h4>Hospitality</h4>
+            <p>Robotic service that elevates the guest experience.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-medicina.png" alt="Medicine"></div>
+            <h4>Medicine</h4>
+            <p>Robotic precision in service of healthcare.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-alta-carga.png" alt="Heavy payload"></div>
+            <h4>Heavy payload</h4>
+            <p>Strength and precision to move what is heavy.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-agricultura.png" alt="Agriculture"></div>
+            <h4>Agriculture</h4>
+            <p>Robots that optimize planting, monitoring and harvest.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="rb-cats__card reveal">
+            <div class="rb-cats__img"><img src="assets/sr-humanoide.png" alt="Humanoid"></div>
+            <h4>Humanoid</h4>
+            <p>Human-shaped robots for complex tasks and assistance.</p>
+            <div class="rb-cats__link">Learn more <span class="rb-cats__link-icon"><i data-lucide="arrow-right"></i></span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · SAIMONDEPLOY ============ -->
+  <section id="saimon-deploy" class="rb-panels">
+    <div class="sectores__panel-wrap split-panel split-panel--rounded reveal">
+      <div class="split-panel__text">
+        <svg class="split-panel__rings" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Implementation</span>
+          </div>
+          <h2 class="split-panel__title">SaimonDeploy: the right robotics for your operation</h2>
+          <p class="split-panel__body">Every business has different needs. Our team evaluates your operation and designs the right robotics integration — from model selection to go-live.</p>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="link-cta">
+            Learn more
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg">
+          <img src="assets/sr-deploy.png" alt="Consultant reviewing specifications next to a robot">
+        </div>
+        <div class="split-panel__media-gradient"></div>
+        <div class="floating-card" data-carousel="rb-deploy">
+          <div class="floating-card__label">How we work</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · INTELLIGENT MONITORING ============ -->
+  <section id="saimoniq" class="rb-panels rb-panels--gray">
+    <div class="sectores__panel-wrap split-panel split-panel--rounded split-panel--reverse reveal">
+      <div class="split-panel__media">
+        <div class="split-panel__media-bg">
+          <img src="assets/sr-iq.png" alt="Robot fleet monitoring dashboard">
+        </div>
+        <div class="split-panel__media-gradient split-panel__media-gradient--reverse"></div>
+        <div class="floating-card floating-card--left" data-carousel="rb-iq">
+          <div class="floating-card__label">Capabilities</div>
+          <h4 class="floating-card__title" data-carousel-title></h4>
+          <p class="floating-card__body" data-carousel-body></p>
+          <div class="floating-card__progress">
+            <span class="floating-card__count" data-carousel-count></span>
+            <div class="floating-card__track"><div class="floating-card__fill" data-carousel-fill></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-panel__text split-panel__text--reverse" style="background:#1a1c22;">
+        <svg class="split-panel__rings split-panel__rings--right" viewBox="0 0 400 400" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1">
+          <circle cx="200" cy="200" r="90"></circle><circle cx="200" cy="200" r="150"></circle><circle cx="200" cy="200" r="200"></circle>
+          <line x1="60" y1="200" x2="340" y2="200"></line><line x1="200" y1="60" x2="200" y2="340"></line>
+          <line x1="110" y1="110" x2="290" y2="290"></line><line x1="290" y1="110" x2="110" y2="290"></line>
+        </svg>
+        <div class="split-panel__text-inner split-panel__text-inner--reverse">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">Management</span>
+          </div>
+          <h2 class="split-panel__title">Intelligent Monitoring: full fleet control, in real time</h2>
+          <p class="split-panel__body">Monitor status, GPS location and camera of every unit from a single panel — complete visibility of your robot fleet, no matter how many units are operating.</p>
+          <a href="https://saimonrobotics.com" target="_blank" rel="noopener" class="link-cta">
+            Learn more
+            <span class="btn-circle"><i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · CLOSE ============ -->
+  <section class="rb-close">
+    <div class="rb-close__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/0623_optimizado.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="rb-close__overlay"></div>
+    <div class="rb-close__scanlines"></div>
+    <div class="rb-close__inner">
+      <h2 class="reveal">Explore the full catalog</h2>
+      <p class="reveal">Discover 80+ available models, industry use cases and options for rental, training and support.</p>
+      <a class="reveal btn-white btn-white--lg" href="https://saimonrobotics.com" target="_blank" rel="noopener">
+        View full Robotics catalog
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============ CTA + FOOTER ============ -->
+  <section class="contacto">
+    <div class="contacto__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/fondo-footer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="contacto__overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="contacto__cta">
+      <div class="contacto__cta-inner">
+        <h2 class="reveal contacto__cta-title">Ready to transform<br>your operation?</h2>
+        <p class="reveal reveal-d4 contacto__cta-body">Schedule a demo and discover how Saimon Group integrates AI, Business Intelligence and Robotics for your institution or company.</p>
+        <a href="#" class="reveal reveal-d3 pill-solid-lg" data-modal-open="contact">
+          Request a demo
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__divider"></div>
+        <div class="footer__nav">
+          <div>
+            <div class="footer__col-title">Saimon Group</div>
+            <div class="footer__col-links">
+              <a href="about.html">About Us</a>
+              <a href="#" data-modal-open="contact">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Solutions</div>
+            <div class="footer__col-links">
+              <a href="public-safety-en.html">Physical security</a>
+              <a href="index-en.html#soluciones">Data intelligence</a>
+              <a href="index-en.html#soluciones">Technology management</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Robotics</div>
+            <div class="footer__col-links">
+              <a href="robotics-en.html">Saimon Robotics</a>
+              <a href="https://saimonrobotics.com" target="_blank" rel="noopener">View full catalog</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Sectors</div>
+            <div class="footer__col-links">
+              <a href="sectors.html">Private</a>
+              <a href="government.html">Government</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Social</div>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <span>© 2026 Saimon Group — All rights reserved</span>
+            <a href="#">Privacy Notice (pending)</a>
+            <a href="#">Terms of Use (pending)</a>
+          </div>
+          <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="footer__partner-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel">
+      <button class="contact-modal__close" data-modal-close aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="contact-modal__left">
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="contact-modal__logo">
+        <div class="contact-modal__left-body">
+          <h2 id="modalTitle" class="contact-modal__title">Request your demo</h2>
+          <p class="contact-modal__subtitle">Tell us about your project and a specialist will contact you within 24 hours.</p>
+          <div class="contact-modal__info">
+            <div class="contact-modal__info-item">
+              <i data-lucide="phone" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Phone</span>
+                <span class="contact-modal__info-value">(000) 000-0000</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="mail" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Email</span>
+                <span class="contact-modal__info-value">contact@saimonvision.com</span>
+              </div>
+            </div>
+            <div class="contact-modal__info-item">
+              <i data-lucide="map-pin" class="contact-modal__info-icon"></i>
+              <div>
+                <span class="contact-modal__info-label">Location</span>
+                <span class="contact-modal__info-value">3105 NE 107th Avenue, Suite 101, Doral, FL 33178</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-modal__right">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-name">Full name</label>
+              <input class="contact-form__input" type="text" id="cf-name" name="nombre" placeholder="Your full name" required autocomplete="name">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-company">Company / Institution</label>
+              <input class="contact-form__input" type="text" id="cf-company" name="empresa" placeholder="Your organization name" required autocomplete="organization">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Email</label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email" placeholder="you@company.com" required autocomplete="email">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-tel">Phone</label>
+              <input class="contact-form__input" type="tel" id="cf-tel" name="telefono" placeholder="(000) 000-0000" required autocomplete="tel">
+              <span class="contact-form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-msg">Message <span class="contact-form__optional">(optional)</span></label>
+            <textarea class="contact-form__input contact-form__textarea" id="cf-msg" name="mensaje" rows="4" placeholder="Tell us what you need..."></textarea>
+          </div>
+          <button type="submit" class="contact-form__submit" id="cfSubmit">
+            <span class="contact-form__submit-text">Submit request</span>
+            <svg class="contact-form__spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 20"/>
+            </svg>
+          </button>
+          <p class="contact-form__success" id="cfSuccess" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
