@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyWordReveal(document.querySelector('.ps-hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.v-hero__title'), { fallbackMs: 600 });
   applyWordReveal(document.querySelector('.rb-hero__title'), { fallbackMs: 600 });
+  applyWordReveal(document.querySelector('.an-hero__title'), { fallbackMs: 600 });
 
   // Títulos con data-word-reveal (activados por scroll)
   document.querySelectorAll('[data-word-reveal]').forEach(el => {
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el.classList.contains('ps-hero__title')) return;
     if (el.classList.contains('v-hero__title')) return;
     if (el.classList.contains('rb-hero__title')) return;
+    if (el.classList.contains('an-hero__title')) return;
     applyWordReveal(el);
   });
 
@@ -388,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: 'Technology Management', body: 'Integration of different technologies to improve the performance of real time crime center infrastructure, orchestrating sensors like robotics, drones, license plate readers, cameras and dispatch processes to perform as a single system.' }
     ] : [
       { name: 'Seguridad física', body: 'Videovigilancia inteligente, control de accesos y protección perimetral con detección proactiva por IA para resguardar personas y activos.' },
-      { name: 'Inteligencia de datos', body: 'Business Intelligence que convierte cada evento en métricas accionables: afluencia, dwell-time y mermas evitadas, en tiempo real.' },
+      { name: 'Inteligencia de datos', body: 'Analítica de Datos que convierte cada evento en métricas accionables: afluencia, dwell-time y mermas evitadas, en tiempo real.' },
       { name: 'Gestión tecnológica', body: 'Integración de distintas tecnologías para mejorar el desempeño de la infraestructura de centros de crimen en tiempo real, orquestando sensores como robótica, drones, lectores de placas, cámaras y procesos de despacho para operar como un solo sistema.' }
     ]
   });
@@ -448,6 +450,42 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: 'Cámara en vivo', body: 'Visualiza la cámara de cada unidad sin cambiar de sistema.' }
     ]
   });
+
+  /* ---------- modal de video ---------- */
+  (function initVideoModal() {
+    const modal  = document.getElementById('videoModal');
+    const player = modal?.querySelector('.video-modal__player');
+    if (!modal || !player) return;
+
+    function openModal() {
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) window.lucide.createIcons();
+      requestAnimationFrame(() => {
+        player.currentTime = 0;
+        player.play().catch(() => {});
+      });
+    }
+
+    function closeModal() {
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      player.pause();
+      player.currentTime = 0;
+    }
+
+    document.querySelectorAll('[data-modal-open="video"]').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); openModal(); });
+    });
+
+    modal.querySelectorAll('[data-video-modal-close]').forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+    });
+  })();
 
   /* ---------- modal de contacto ---------- */
   (function initContactModal() {
@@ -942,7 +980,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { label: 'Link Networks', body: 'Relate events and entities to reveal patterns that used to go unnoticed.' }
     ] : [
       { label: 'Analítica Avanzada', body: 'Modelos de IA que convierten video en información estructurada y accionable en tiempo real.' },
-      { label: 'Tableros BI', body: 'Business Intelligence con indicadores operativos claros para la toma de decisiones.' },
+      { label: 'Tableros BI', body: 'Analítica de Datos con indicadores operativos claros para la toma de decisiones.' },
       { label: 'Big Data', body: 'Correlación de grandes volúmenes de datos provenientes de sensores y sistemas existentes.' },
       { label: 'Redes de Vínculos', body: 'Relaciona eventos y entidades para revelar patrones que antes pasaban desapercibidos.' }
     ];
@@ -1054,6 +1092,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     setX(false);
+  })();
+
+
+
+  /* ---------- saimon analytics: redes de vínculos carousel ---------- */
+  (function initAnalyticsLinks() {
+    const titleEl = document.querySelector('[data-an-links-title]');
+    if (!titleEl) return;
+    const detailEl = document.querySelector('[data-an-links-detail]');
+    const iconEl = document.querySelector('[data-an-links-icon]');
+    const dotsEl = document.querySelector('[data-an-links-dots]');
+    const prevBtn = document.querySelector('[data-an-links-prev]');
+    const nextBtn = document.querySelector('[data-an-links-next]');
+    if (!detailEl || !iconEl || !dotsEl || !prevBtn || !nextBtn) return;
+
+    const isEn = document.documentElement.lang === 'en';
+    const links = isEn ? [
+      { icon: 'link-2', title: 'CAD systems integration', detail: 'Connects directly with the Saimon CAD system to bring calls, dispatches and incidents into the analysis.' },
+      { icon: 'share-2', title: 'Link analysis across people, vehicles and events', detail: 'Maps hidden relationships between entities to reveal patterns that are not obvious in isolation.' },
+      { icon: 'phone', title: 'Correlation of calls, incidents and evidence', detail: 'Crosses call logs, reports and evidence to reconstruct the full chain of an event.' },
+      { icon: 'scan-eye', title: 'Higher-precision support for investigations', detail: 'Gives investigators a consolidated view that speeds analysis and reduces the margin of error.' }
+    ] : [
+      { icon: 'link-2', title: 'Integración con sistemas CAD', detail: 'Conecta directamente con el sistema CAD Saimon para incorporar llamadas, despachos e incidentes al análisis.' },
+      { icon: 'share-2', title: 'Análisis de vínculos entre personas, vehículos y eventos', detail: 'Mapea relaciones ocultas entre entidades para revelar patrones que no son evidentes de forma aislada.' },
+      { icon: 'phone', title: 'Correlación de llamadas, incidentes y evidencias', detail: 'Cruza registros de llamadas, reportes y evidencia para reconstruir la cadena completa de un evento.' },
+      { icon: 'scan-eye', title: 'Apoyo a investigaciones con mayor precisión', detail: 'Entrega a los investigadores una vista consolidada que acelera el análisis y reduce el margen de error.' }
+    ];
+
+    let linkIdx = 0;
+    links.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => { linkIdx = i; renderLink(); });
+      dotsEl.appendChild(dot);
+    });
+
+    const iconWrap = iconEl.parentElement;
+    function renderLink() {
+      const item = links[linkIdx];
+      titleEl.textContent = item.title;
+      detailEl.textContent = item.detail;
+      iconWrap.innerHTML = '<i data-lucide="' + item.icon + '" data-an-links-icon></i>';
+      if (window.lucide) { try { window.lucide.createIcons({ nodes: [iconWrap] }); } catch (e) {} }
+      Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('is-active', i === linkIdx));
+    }
+    prevBtn.addEventListener('click', () => { linkIdx = (linkIdx - 1 + links.length) % links.length; renderLink(); });
+    nextBtn.addEventListener('click', () => { linkIdx = (linkIdx + 1) % links.length; renderLink(); });
+    renderLink();
   })();
 
 });

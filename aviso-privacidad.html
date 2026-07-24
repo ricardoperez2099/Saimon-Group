@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAiMON GROUP — Aviso de Privacidad</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="page-legal">
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="header">
+    <a href="index.html"><img class="header__logo" src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP"></a>
+    <nav class="header__nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="index.html#soluciones" data-megamenu-trigger="soluciones">Soluciones</a>
+      <a href="index.html#sectores" data-megamenu-trigger="sectores">Sectores</a>
+      <a href="#" class="pill-outline" data-modal-open="contact">Contacto</a>
+      <a href="privacy.html" class="lang-toggle" aria-label="Switch to English">
+        <span class="lang-toggle__active">ES</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__inactive">EN</span>
+      </a>
+    </nav>
+    <button class="header__burger" aria-label="Abrir menú" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="index.html" class="mobile-nav__link" data-mobile-close>Inicio</a>
+      <a href="nosotros.html" class="mobile-nav__link">Nosotros</a>
+      <a href="index.html#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Soluciones</a>
+      <a href="index.html#sectores" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectores</a>
+      <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contacto</a>
+      <div class="mobile-nav__footer">
+        <a href="privacy.html" class="lang-toggle" aria-label="Switch to English">
+          <span class="lang-toggle__active">ES</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__inactive">EN</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="megamenu" id="megamenu-soluciones" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close><i data-lucide="x"></i><span>MENU</span></button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs megamenu__thumbs--soluciones">
+        <a href="public-safety.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/seguridad-fisica.png" alt="Saimon Public Safety"></div>
+          <span class="megamenu__thumb-label">SAIMON PUBLIC SAFETY <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="vision.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/videoanalitica.png" alt="Saimon Vision"></div>
+          <span class="megamenu__thumb-label">SAIMON VISION <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="robotics.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/logistica.png" alt="Saimon Robotics"></div>
+          <span class="megamenu__thumb-label">SAIMON ROBOTICS <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contact@saimonvision.com" class="megamenu__contact-email">contact@saimonvision.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="megamenu" id="megamenu-sectores" aria-hidden="true">
+    <div class="megamenu__bar">
+      <button class="megamenu__close" data-megamenu-close><i data-lucide="x"></i><span>MENU</span></button>
+      <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="megamenu__logo">
+      <a href="#" class="megamenu__demo pill-outline" data-modal-open="contact" data-megamenu-close>Solicitar demo</a>
+    </div>
+    <div class="megamenu__body">
+      <div class="megamenu__thumbs">
+        <a href="sectores.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-privado.png" alt="Sector Privado"></div>
+          <span class="megamenu__thumb-label">PRIVADO <i data-lucide="chevron-right"></i></span>
+        </a>
+        <a href="gobierno.html" class="megamenu__thumb" data-megamenu-close>
+          <div class="megamenu__thumb-img"><img src="assets/sec-gobierno.png" alt="Sector Gobierno"></div>
+          <span class="megamenu__thumb-label">GOBIERNO <i data-lucide="chevron-right"></i></span>
+        </a>
+      </div>
+      <div class="megamenu__nav">
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="sectores.html#corporativo" data-megamenu-close>Corporativo</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="sectores.html#residencial" data-megamenu-close>Residencial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">PRIVADO</span><a href="sectores.html#comercial" data-megamenu-close>Comercial</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="gobierno.html#seguridad-publica" data-megamenu-close>Seguridad Pública</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="gobierno.html#salud" data-megamenu-close>Salud</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="gobierno.html#control-aguas" data-megamenu-close>Control de Aguas</a></div>
+        <div class="megamenu__nav-item"><span class="megamenu__nav-label">GOBIERNO</span><a href="gobierno.html#sistema-penitenciario" data-megamenu-close>Sistema Penitenciario</a></div>
+      </div>
+      <div class="megamenu__contact">
+        <p class="megamenu__contact-title">¿Buscas algo en particular?</p>
+        <a href="mailto:contact@saimonvision.com" class="megamenu__contact-email">contact@saimonvision.com</a>
+        <button class="megamenu__contact-btn" data-modal-open="contact" data-megamenu-close>Contáctanos <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <section class="legal-hero">
+    <div class="legal-hero__overlay"></div>
+    <div class="scanlines"></div>
+    <div class="legal-hero__content">
+      <div class="eyebrow reveal">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-label">Legal</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="reveal reveal-d1 legal-hero__title">Aviso de Privacidad Integral</h1>
+      <p class="reveal reveal-d2 legal-hero__subtitle">Página web y contacto</p>
+    </div>
+  </section>
+
+  <main class="legal">
+    <div class="legal__inner">
+      <p class="legal__intro">En cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante la &ldquo;Ley&rdquo;), su Reglamento y otras disposiciones aplicables, y con el objeto de que pueda decidir de manera informada sobre el tratamiento que podemos dar a su información, ponemos a su disposición este aviso que proporciona información sobre el uso de sus datos personales, identificando a la entidad responsable de su información; las finalidades o acciones que motivan la obtención, uso y custodia de sus datos personales; los terceros a quienes se transferirán o se podrán transferir sus datos personales; los mecanismos para que pueda ejercer sus derechos, entre otra información.</p>
+      <p class="legal__intro">Este Aviso de Privacidad será puesto a disposición de las personas que visitan nuestra página web o que han decidido ponerse en contacto a través de los formularios físicos o digitales para solicitar información acerca de los productos o servicios de Saimon Vision.</p>
+
+      <section class="legal__section">
+        <h2>¿Quién es el responsable de sus datos personales?</h2>
+        <p><span class="legal__pending">[Razón social legal de Saimon Vision — PENDIENTE DE CONFIRMAR]</span> (en adelante &ldquo;Saimon Vision&rdquo; o el &ldquo;Responsable&rdquo;), con domicilio en <span class="legal__pending">[dirección legal completa — PENDIENTE DE CONFIRMAR]</span>, es el Responsable de los datos personales que se recaben en los términos previstos en la Ley.</p>
+        <p>Los datos personales podrán ser transferidos, sin requerir consentimiento del titular, a otras entidades jurídicas que formen parte del mismo grupo corporativo que el Responsable, tales como empresas filiales, subsidiarias o afiliadas, siempre que dichas entidades operen bajo lineamientos comunes en materia de protección de datos personales y exclusivamente para las finalidades previstas en el presente aviso.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>¿Qué datos usamos y podemos solicitar?</h2>
+        <p>Para las finalidades establecidas en este Aviso de Privacidad, Saimon Vision podrá tratar las siguientes categorías de datos personales:</p>
+        <ul>
+          <li>Datos identificativos y de contacto.</li>
+          <li>Datos de navegación, dispositivos y geolocalización.</li>
+        </ul>
+      </section>
+
+      <section class="legal__section">
+        <h2>Tratamiento de datos personales sensibles</h2>
+        <p>El Responsable no solicita datos personales sensibles para las finalidades enumeradas en este Aviso de Privacidad.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>¿Para qué usaremos sus datos personales?</h2>
+        <p>Al navegar por las páginas web de Saimon Vision o realizar una solicitud de información, usted acepta y reconoce que podremos tratar sus datos personales para las siguientes finalidades:</p>
+        <p><strong>Finalidades primarias:</strong></p>
+        <ol>
+          <li>Proporcionar información a los visitantes sobre las unidades de negocio, los productos y los servicios comercializados por Saimon Vision, cuando estos así lo solicitan.</li>
+          <li>Atención a través de medios electrónicos.</li>
+          <li>Gestión y seguimiento de las comunicaciones entre los solicitantes de información y Saimon Vision.</li>
+          <li>Estadística y registro histórico de navegación en la página web de Saimon Vision.</li>
+          <li>Análisis de datos mediante el uso de tecnologías de analítica, inteligencia artificial y/o &ldquo;big data&rdquo;, con el objeto de evaluar el uso de los servicios e información que proporcionamos en la página web de Saimon Vision.</li>
+        </ol>
+        <p><strong>Finalidades secundarias:</strong></p>
+        <ol>
+          <li>Hacerle llegar boletines, comunicados, promociones y/o nuestro Newsletter.</li>
+        </ol>
+      </section>
+
+      <section class="legal__section">
+        <h2>¿Con quién podemos compartir sus datos?</h2>
+        <p>Sus datos personales podrán ser transferidos dentro de <span class="legal__pending">[país]</span> o hacia el extranjero, a las siguientes categorías de destinatarios y para las finalidades identificadas:</p>
+        <ul>
+          <li>Hacia nuestras filiales, subsidiarias y afiliadas que operen bajo los mismos procesos y políticas internas, con finalidades de gestión, administración y resguardo centralizado de información.</li>
+          <li>Administraciones y autoridades federales, estatales y/o municipales; comisiones; institutos, entidades reguladoras; autoridades judiciales o administrativas; y entidades gubernamentales nacionales y/o extranjeras, para el cumplimiento de obligaciones informativas, de transparencia y de prevención de fraudes, delitos u otras actividades ilícitas.</li>
+        </ul>
+      </section>
+
+      <section class="legal__section">
+        <h2>Derechos ARCO</h2>
+        <p>Usted cuenta con los Derechos ARCO como titular de datos personales: Acceso, Rectificación, Cancelación y Oposición. Para ejercer cualquiera de estos derechos, debe presentar una solicitud dirigida a nuestro Departamento de Datos Personales, a través del siguiente correo electrónico: <span class="legal__pending">[privacidad@saimonvision.com — PENDIENTE DE CONFIRMAR DOMINIO FINAL]</span>.</p>
+        <p>Saimon Vision responderá a su solicitud dentro de los 20 (veinte) días hábiles siguientes a la fecha en que sea enviada y recibida.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>¿Quiere revocar su consentimiento?</h2>
+        <p>Puede enviar una solicitud de revocación de consentimiento al correo electrónico señalado anteriormente, siguiendo las instrucciones aplicables al ejercicio de los Derechos ARCO.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>Cookies y Web Beacons</h2>
+        <p>Utilizamos &ldquo;cookies&rdquo; y &ldquo;web beacons&rdquo; para obtener información como las páginas que visita, los vínculos que sigue y su dirección IP. Estas tecnologías pueden ser deshabilitadas desde el menú de ayuda de su navegador.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>Cambios a nuestro Aviso de Privacidad</h2>
+        <p>Nos reservamos el derecho de modificar, actualizar, extender y/o de cualquier otra forma cambiar el contenido y alcance de este Aviso de Privacidad, en cualquier momento. Los cambios serán publicados en este mismo sitio web.</p>
+      </section>
+
+      <section class="legal__section">
+        <h2>Dudas o aclaraciones</h2>
+        <p>En caso de tener dudas o aclaraciones sobre el presente Aviso de Privacidad, puede contactarnos a través de: <span class="legal__pending">[privacidad@saimonvision.com — PENDIENTE]</span>.</p>
+      </section>
+
+      <p class="legal__meta">Fecha de última actualización: <span class="legal__pending">[PENDIENTE]</span></p>
+    </div>
+  </main>
+
+  <section class="contacto contacto--compact">
+    <div class="contacto__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/fondo-footer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="contacto__overlay"></div>
+    <div class="scanlines"></div>
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__divider"></div>
+        <div class="footer__nav">
+          <div>
+            <div class="footer__col-title">Saimon Group</div>
+            <div class="footer__col-links">
+              <a href="nosotros.html">Nosotros</a>
+              <a href="#" data-modal-open="contact">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Soluciones</div>
+            <div class="footer__col-links">
+              <a href="public-safety.html">Seguridad integral</a>
+              <a href="vision.html">Videoanalítica</a>
+              <a href="robotics.html">Robótica</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Robótica</div>
+            <div class="footer__col-links">
+              <a href="robotics.html">Saimon Robotics</a>
+              <a href="https://saimonrobotics.com" target="_blank" rel="noopener">Ver catálogo completo</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Sectores</div>
+            <div class="footer__col-links">
+              <a href="sectores.html">Privado</a>
+              <a href="gobierno.html">Gobierno</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__col-title">Redes</div>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:15px;height:15px;"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <span>© 2026 Saimon Group — Todos los derechos reservados</span>
+            <a href="aviso-privacidad.html" aria-current="page">Aviso de Privacidad</a>
+            <a href="#">Términos de Uso (pendiente)</a>
+          </div>
+          <img src="assets/Logo_Seguritech.png" alt="by SeguriTech" class="footer__partner-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel">
+      <button class="contact-modal__close" data-modal-close aria-label="Cerrar"><i data-lucide="x"></i></button>
+      <div class="contact-modal__left">
+        <img src="assets/logo-saimon-group-blanco.png" alt="SAiMON GROUP" class="contact-modal__logo">
+        <div class="contact-modal__left-body">
+          <h2 id="modalTitle" class="contact-modal__title">Solicita tu demo</h2>
+          <p class="contact-modal__subtitle">Cuéntanos sobre tu proyecto y un especialista te contactará en menos de 24 horas.</p>
+        </div>
+      </div>
+      <div class="contact-modal__right">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-name">Nombre</label>
+              <input class="contact-form__input" type="text" id="cf-name" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+              <span class="contact-form__error"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-company">Empresa</label>
+              <input class="contact-form__input" type="text" id="cf-company" name="empresa" placeholder="Nombre de tu organización" required autocomplete="organization">
+              <span class="contact-form__error"></span>
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-email">Correo</label>
+              <input class="contact-form__input" type="email" id="cf-email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+              <span class="contact-form__error"></span>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="cf-tel">Teléfono</label>
+              <input class="contact-form__input" type="tel" id="cf-tel" name="telefono" placeholder="(000) 000-0000" required autocomplete="tel">
+              <span class="contact-form__error"></span>
+            </div>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-msg">Mensaje</label>
+            <textarea class="contact-form__input contact-form__textarea" id="cf-msg" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+          </div>
+          <button type="submit" class="contact-form__submit" id="cfSubmit">
+            <span class="contact-form__submit-text">Enviar solicitud</span>
+            <span class="contact-form__spinner"></span>
+          </button>
+          <p class="contact-form__success" id="cfSuccess" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
