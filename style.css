@@ -1143,14 +1143,20 @@ img { display: block; max-width: 100%; }
 .footer__wordmark-text { font-size: clamp(64px, 11vw, 168px); line-height: 0.92; font-weight: 900; letter-spacing: -0.03em; color: #fff; white-space: nowrap; }
 .footer__wordmark-text em { color: #1e86c4; font-weight: 900; font-style: normal; }
 .footer__divider { height: 1px; background: rgba(255,255,255,0.16); margin-bottom: 48px; }
-.footer__nav { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto; gap: 32px; margin-bottom: 56px; }
+.footer__nav { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr auto; gap: 32px; margin-bottom: 56px; }
 .footer__col-title { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
 .footer__col-links { display: flex; flex-direction: column; gap: 14px; }
 .footer__col-links a { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.85); white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; }
+.footer__contact { display: flex; flex-direction: column; gap: 18px; }
+.footer__contact-item { display: flex; flex-direction: column; gap: 4px; }
+.footer__contact-label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.footer__contact-value { display: block; font-size: 15px; font-weight: 600; line-height: 1.5; color: rgba(255,255,255,0.92); text-decoration: none; white-space: normal; text-transform: none; letter-spacing: normal; }
+a.footer__contact-value:hover { color: #1e86c4; }
 .footer__locations { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 28px; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.5); }
 .footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 12.5px; color: rgba(255,255,255,0.45); }
 .footer__bottom-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .footer__bottom-left a:last-of-type { display: none; } /* Términos de Uso — oculto temporalmente */
+[data-modal-open="contact"] { display: none !important; } /* Modal contacto — oculto temporalmente */
 .footer__bottom a { color: rgba(255,255,255,0.45); }
 .footer__partner-logo { height: 42px; width: auto; object-fit: contain; opacity: 0.85; }
 
