@@ -232,7 +232,7 @@ img { display: block; max-width: 100%; }
 }
 
 .lang-toggle {
-  display: inline-flex;
+  display: none !important; /* sitio solo EN — toggle oculto */
   align-items: center;
   gap: 4px;
   background: none;
