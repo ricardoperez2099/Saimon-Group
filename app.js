@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     intervalMs: 4800,
     items: document.documentElement.lang === 'en' ? [
       { name: 'Public Safety', body: 'Video surveillance and intelligence platforms to improve prevention and response capabilities through unmatched exploitation tools.' },
-      { name: 'Municipalities', body: 'Municipal technology infrastructure integrated with command centers for safer urban management.' },
+      { name: 'Municipalities', body: 'Municipal technology infrastructure integrated with Real Time Crime Centers for safer urban management.' },
       { name: 'Urban Mobility & Penitentiary', body: 'Monitoring systems for urban mobility and security in penitentiary facilities.' }
     ] : [
       { name: 'Seguridad pública', body: 'Plataformas de videovigilancia e inteligencia para mejorar las capacidades de prevención y respuesta mediante herramientas de explotación sin igual.' },
