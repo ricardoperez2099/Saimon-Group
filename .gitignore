@@ -21,3 +21,5 @@ __pycache__/
 version-*/
 backup-es/
 export-cursor-*/
+firebase.json
+.firebaserc
