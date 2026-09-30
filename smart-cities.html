@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAiMON GROUP — Sectors · Government</title>
+<title>SAiMON GROUP — SAiMON Smart Cities</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="page-gobierno">
+<body class="page-smart-cities">
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -19,8 +19,8 @@
     <nav class="header__nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="index.html#soluciones" data-megamenu-trigger="soluciones">Solutions</a>
-      <a href="sectors.html" class="is-active" data-megamenu-trigger="sectores">Sectors</a>
+      <a href="index.html#soluciones" class="is-active" data-megamenu-trigger="soluciones">Solutions</a>
+      <a href="sectors.html" data-megamenu-trigger="sectores">Sectors</a>
       <a href="#" class="pill-outline" data-modal-open="contact">Contact</a>
     </nav>
     <button class="header__burger" aria-label="Open menu" data-burger>
@@ -33,8 +33,8 @@
     <div class="mobile-nav__inner">
       <a href="index.html" class="mobile-nav__link">Home</a>
       <a href="about.html" class="mobile-nav__link">About Us</a>
-      <a href="index.html#soluciones" class="mobile-nav__link" data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
-      <a href="sectors.html" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
+      <a href="index.html#soluciones" class="mobile-nav__link mobile-nav__link--active" data-megamenu-trigger="soluciones" data-mobile-close>Solutions</a>
+      <a href="sectors.html" class="mobile-nav__link" data-megamenu-trigger="sectores" data-mobile-close>Sectors</a>
       <a href="#" class="mobile-nav__link" data-modal-open="contact" data-mobile-close>Contact</a>
     </div>
   </div>
@@ -152,183 +152,116 @@
   </div>
 
 
-  <!-- ============ GOVERNMENT · INTRO ============ -->
-  <section class="gob-intro">
-    <div class="gob-intro__bg"><img src="assets/gob-intro-bg.png" alt=""></div>
-    <div class="gob-intro__overlay"></div>
-    <div class="gob-intro__grid">
-      <div class="reveal gob-intro__text">
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="sc-hero">
+    <div class="sc-hero__bg"><img src="assets/smart-cities.png" alt="Aerial view of urban highways with smart mobility data overlay"></div>
+    <div class="sc-hero__overlay"></div>
+    <div class="sc-hero__content">
+      <div class="reveal eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-label">SAiMON Smart Cities</span>
+      </div>
+      <h1 class="sc-hero__title reveal" data-word-reveal>The smart choice for smart cities</h1>
+      <p class="reveal">We integrate all road technology into a single predictive platform — transforming data into intelligent mobility.</p>
+      <button type="button" class="reveal btn-white" data-modal-open="contact">
+        Contact Us
+        <i data-lucide="arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ 2 · INTRODUCTION ============ -->
+  <section class="sc-block sc-block--white">
+    <div class="sc-block__inner">
+      <div class="sc-block__text reveal">
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-label">Solutions for the government sector</span>
+          <span class="eyebrow-label">Smart Mobility</span>
         </div>
-        <h1>Technology at the service of security and public services</h1>
-        <p>AI, Business Intelligence and monitoring systems applied to public safety, health, water infrastructure and penitentiary systems.</p>
+        <h2>From reactive traffic to predictive mobility</h2>
+        <p>We integrate all road technology — cameras, radar, sensors and more — into a single predictive platform. Our AI analyzes patterns and anticipates traffic behavior, enabling proactive and efficient management of your road network.</p>
+        <p>With our technology we turn data into intelligent mobility: we centralize all road operations, anticipate congestion and incidents, and optimize existing resources.</p>
       </div>
-      <div class="reveal reveal-d2 gob-intro__media">
-        <img src="assets/portada-sector-gobierno.png" alt="Command center and technology for the government sector">
+      <div class="sc-block__img reveal">
+        <img src="assets/nos-proposito-img.jpg" alt="Smart city aerial view and traffic control center">
       </div>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · PUBLIC SAFETY ============ -->
-  <section id="public-safety" class="subsector subsector--light">
-    <div class="subsector__header reveal">
-      <h3>Public safety</h3>
-      <p>Coordination and emergency response in real time.</p>
-    </div>
-    <div class="ss-carousel ss-carousel--light reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev ss-carousel__arrow--light" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next ss-carousel__arrow--light" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/despacho-automatico.png" alt="Automatic dispatch">
-            <div class="ss-carousel__caption">
-              <h4>Automatic dispatch</h4>
-              <p>Automated distribution of calls and incidents in real time to the corresponding units.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/altos-mandos.png" alt="Senior command">
-            <div class="ss-carousel__caption">
-              <h4>Senior command</h4>
-              <p>Strategic consultation and tracking of critical incidents, with precise information for decision-making.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/botones-panico.png" alt="Panic buttons and LPR/RFID integration">
-            <div class="ss-carousel__caption">
-              <h4>Panic buttons and LPR/RFID integration</h4>
-              <p>Immediate alert reception and automated vehicle plate reading for agile response.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/tableros-reportes.png" alt="Dashboards and reports">
-            <div class="ss-carousel__caption">
-              <h4>Dashboards and reports</h4>
-              <p>Centralized visibility of operational performance for command and coordination.</p>
-            </div>
-          </div>
+  <!-- ============ 3 · INTELLIGENT TRANSPORTATION SYSTEM ============ -->
+  <section class="sc-product sc-product--gray">
+    <div class="sc-product__inner">
+      <div class="sc-product__head reveal">
+        <div class="eyebrow eyebrow--center">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-label">Flagship product</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2>Intelligent Transportation System</h2>
+        <p>Our platform adapts to different operating models, offering a robust solution for efficient urban mobility management.</p>
+      </div>
+
+      <div class="sc-cards sc-cards--4">
+        <div class="sc-card sc-card--cap reveal">
+          <div class="sc-card__icon"><i data-lucide="layout-dashboard"></i></div>
+          <h4>Unified monitoring</h4>
+          <p>Integration of all ITS devices — cameras, radar and sensors — on a single platform.</p>
+        </div>
+        <div class="sc-card sc-card--cap reveal">
+          <div class="sc-card__icon"><i data-lucide="sparkles"></i></div>
+          <h4>AI predictive analytics</h4>
+          <p>Anticipate traffic behavior before it becomes an incident.</p>
+        </div>
+        <div class="sc-card sc-card--cap reveal">
+          <div class="sc-card__icon"><i data-lucide="scan-eye"></i></div>
+          <h4>4D/5D future traffic visualization</h4>
+          <p>Visual projection of expected road behavior.</p>
+        </div>
+        <div class="sc-card sc-card--cap reveal">
+          <div class="sc-card__icon"><i data-lucide="alert-triangle"></i></div>
+          <h4>Automated incident management</h4>
+          <p>Coordinated, automatic response to events across the road network.</p>
         </div>
       </div>
-      <div class="ss-carousel__dots ss-carousel__dots--light" data-ss-dots></div>
+
+      <div class="sc-cards sc-cards--3">
+        <div class="sc-card sc-card--func reveal">
+          <div class="sc-card__iconround"><i data-lucide="bell"></i></div>
+          <p>Alert reception</p>
+        </div>
+        <div class="sc-card sc-card--func reveal">
+          <div class="sc-card__iconround"><i data-lucide="map-pin"></i></div>
+          <p>Real-time location visualization</p>
+        </div>
+        <div class="sc-card sc-card--func reveal">
+          <div class="sc-card__iconround"><i data-lucide="activity"></i></div>
+          <p>Alert tracking and monitoring</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · HEALTH ============ -->
-  <section id="health" class="subsector subsector--navy">
-    <div class="subsector__header reveal">
-      <h3>Health</h3>
-      <p>Monitoring and management systems for the health sector.</p>
-    </div>
-    <div class="ss-carousel reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/administracion-hospitalaria.png" alt="Hospital administration">
-            <div class="ss-carousel__caption">
-              <h4>Hospital administration</h4>
-              <p>Centralization of clinical and operational processes on a single platform.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/expediente-clinico.png" alt="Clinical record">
-            <div class="ss-carousel__caption">
-              <h4>Clinical record</h4>
-              <p>Secure, accessible digital medical history for healthcare staff.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/administracion-citas-medias.png" alt="Medical appointment management">
-            <div class="ss-carousel__caption">
-              <h4>Medical appointment management</h4>
-              <p>Efficient agenda and care management across all locations.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/consulta-estudios-clinicos.png" alt="Clinical studies consultation">
-            <div class="ss-carousel__caption">
-              <h4>Clinical studies consultation</h4>
-              <p>Quick access to results and hospitalization from a single system.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots" data-ss-dots></div>
+  <!-- ============ 4 · IMPACT ============ -->
+  <section class="sc-impact">
+    <div class="sc-impact__inner">
+      <h3 class="reveal sc-impact__line sc-impact__line--1">Centralize all road operations.</h3>
+      <h3 class="reveal sc-impact__line sc-impact__line--2">Anticipate congestion and incidents.</h3>
+      <h3 class="reveal sc-impact__line sc-impact__line--3">Optimize existing resources.</h3>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · WATER MANAGEMENT ============ -->
-  <section id="water-management" class="subsector subsector--light">
-    <div class="subsector__header reveal">
-      <h3>Water management</h3>
-      <p>Water infrastructure monitoring.</p>
-    </div>
-    <div class="ss-carousel ss-carousel--light reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev ss-carousel__arrow--light" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next ss-carousel__arrow--light" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/monitoreo-infraestructura.png" alt="Infrastructure monitoring">
-            <div class="ss-carousel__caption">
-              <h4>Infrastructure monitoring</h4>
-              <p>Real-time supervision of plants and water distribution networks.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/deteccion-fugas.png" alt="Leak detection">
-            <div class="ss-carousel__caption">
-              <h4>Leak detection</h4>
-              <p>Early identification of anomalies for rapid response.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/reportes-consumo.png" alt="Consumption reports">
-            <div class="ss-carousel__caption">
-              <h4>Consumption reports</h4>
-              <p>Centralized visibility of water network usage and status.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots ss-carousel__dots--light" data-ss-dots></div>
+  <!-- ============ 5 · CLOSE ============ -->
+  <section class="sc-close">
+    <div class="sc-close__inner">
+      <h2 class="reveal">The smart choice for smart cities</h2>
+      <button type="button" class="reveal btn-navy btn-navy--lg" data-modal-open="contact">
+        Talk to a specialist
+        <i data-lucide="arrow-right"></i>
+      </button>
     </div>
   </section>
 
-  <!-- ============ SUB-SECTOR · PENITENTIARY SYSTEM ============ -->
-  <section id="penitentiary" class="subsector subsector--navy">
-    <div class="subsector__header reveal">
-      <h3>Penitentiary system</h3>
-      <p>Security and control in penitentiary facilities.</p>
-    </div>
-    <div class="ss-carousel reveal" data-ss-carousel>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--prev" data-ss-prev aria-label="Previous">‹</button>
-      <button type="button" class="ss-carousel__arrow ss-carousel__arrow--next" data-ss-next aria-label="Next">›</button>
-      <div class="ss-carousel__viewport">
-        <div class="ss-carousel__track" data-ss-track>
-          <div class="ss-carousel__slide">
-            <img src="assets/notificaciones-geocerca.png" alt="Geofence notifications">
-            <div class="ss-carousel__caption">
-              <h4>Geofence notifications</h4>
-              <p>Automatic alerts when restricted zones are violated.</p>
-            </div>
-          </div>
-          <div class="ss-carousel__slide">
-            <img src="assets/trazabilidad-ruta.png" alt="Route traceability">
-            <div class="ss-carousel__caption">
-              <h4>Route traceability</h4>
-              <p>Complete movement history for reports and auditing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ss-carousel__dots" data-ss-dots></div>
-    </div>
-  </section>
 
   <!-- ============ CTA + FOOTER ============ -->
   <section class="contacto">

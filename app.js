@@ -362,13 +362,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyEl  = root.querySelector('[data-carousel-body]');
     const countEl = root.querySelector('[data-carousel-count]');
     const fillEl  = root.querySelector('[data-carousel-fill]');
+    const prevBtn = root.querySelector('[data-carousel-prev]');
+    const nextBtn = root.querySelector('[data-carousel-next]');
+    const dotsWrap = root.querySelector('[data-carousel-dots]');
 
     // Busca fondo dinámico vinculado por el mismo nombre de carrusel
     const carouselName = root.getAttribute('data-carousel');
     const bgStack = document.querySelector(`[data-carousel-bg="${carouselName}"]`);
     const bgSlides = bgStack ? [...bgStack.querySelectorAll('.split-panel__bg-slide')] : [];
 
+    let dots = [];
+    if (dotsWrap) {
+      dotsWrap.innerHTML = '';
+      items.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'robotica__dot';
+        dot.setAttribute('aria-label', 'Sub-sector ' + (idx + 1));
+        dotsWrap.appendChild(dot);
+      });
+      dots = [...dotsWrap.querySelectorAll('.robotica__dot')];
+    }
+
     let i = 0;
+    let iv = null;
+
     function render() {
       const item = items[i];
       titleEl.textContent = item.name;
@@ -376,9 +394,30 @@ document.addEventListener('DOMContentLoaded', () => {
       countEl.textContent = `${i + 1} / ${items.length}`;
       fillEl.style.width  = `${((i + 1) / items.length) * 100}%`;
       bgSlides.forEach((el, idx) => el.classList.toggle('is-active', idx === i));
+      dots.forEach((el, idx) => el.classList.toggle('is-active', idx === i));
     }
+
+    function go(newIndex) {
+      i = ((newIndex % items.length) + items.length) % items.length;
+      render();
+    }
+
+    function startAutoplay() {
+      clearInterval(iv);
+      iv = setInterval(() => go(i + 1), intervalMs);
+    }
+
+    function restart(newIndex) {
+      go(newIndex);
+      startAutoplay();
+    }
+
+    dots.forEach((dot, idx) => dot.addEventListener('click', () => restart(idx)));
+    prevBtn && prevBtn.addEventListener('click', () => restart(i - 1));
+    nextBtn && nextBtn.addEventListener('click', () => restart(i + 1));
+
     render();
-    setInterval(() => { i = (i + 1) % items.length; render(); }, intervalMs);
+    startAutoplay();
   }
 
   initTextCarousel({
@@ -397,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initTextCarousel({
     rootSelector: '[data-carousel="privado"]',
-    intervalMs: 4200,
+    intervalMs: 9500,
     items: document.documentElement.lang === 'en' ? [
       { name: 'Corporate', body: 'Comprehensive corporate security: access control, intelligent video surveillance and continuous facility monitoring.' },
       { name: 'Residential', body: 'Intelligent residential management with proactive detection and coordinated response for developments and condominiums.' },
@@ -411,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initTextCarousel({
     rootSelector: '[data-carousel="gobierno"]',
-    intervalMs: 4800,
+    intervalMs: 9500,
     items: document.documentElement.lang === 'en' ? [
       { name: 'Public Safety', body: 'Video surveillance and intelligence platforms to improve prevention and response capabilities through unmatched exploitation tools.' },
       { name: 'Municipalities', body: 'Municipal technology infrastructure integrated with Real Time Crime Centers for safer urban management.' },
@@ -1109,12 +1148,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isEn = document.documentElement.lang === 'en';
     const links = isEn ? [
-      { icon: 'link-2', title: 'CAD systems integration', detail: 'Connects directly with the Saimon CAD system to bring calls, dispatches and incidents into the analysis.' },
+      { icon: 'link-2', title: 'CAD systems integration', detail: 'Connects directly with the SAiMON CAD system to bring calls, dispatches and incidents into the analysis.' },
       { icon: 'share-2', title: 'Link analysis across people, vehicles and events', detail: 'Maps hidden relationships between entities to reveal patterns that are not obvious in isolation.' },
       { icon: 'phone', title: 'Correlation of calls, incidents and evidence', detail: 'Crosses call logs, reports and evidence to reconstruct the full chain of an event.' },
       { icon: 'scan-eye', title: 'Higher-precision support for investigations', detail: 'Gives investigators a consolidated view that speeds analysis and reduces the margin of error.' }
     ] : [
-      { icon: 'link-2', title: 'Integración con sistemas CAD', detail: 'Conecta directamente con el sistema CAD Saimon para incorporar llamadas, despachos e incidentes al análisis.' },
+      { icon: 'link-2', title: 'Integración con sistemas CAD', detail: 'Conecta directamente con el sistema CAD SAiMON para incorporar llamadas, despachos e incidentes al análisis.' },
       { icon: 'share-2', title: 'Análisis de vínculos entre personas, vehículos y eventos', detail: 'Mapea relaciones ocultas entre entidades para revelar patrones que no son evidentes de forma aislada.' },
       { icon: 'phone', title: 'Correlación de llamadas, incidentes y evidencias', detail: 'Cruza registros de llamadas, reportes y evidencia para reconstruir la cadena completa de un evento.' },
       { icon: 'scan-eye', title: 'Apoyo a investigaciones con mayor precisión', detail: 'Entrega a los investigadores una vista consolidada que acelera el análisis y reduce el margen de error.' }
